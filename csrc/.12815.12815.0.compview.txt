@@ -1,0 +1,10 @@
+{"vcs1":{"timestamp_begin":1793909331.190095362, "rt":0.89, "ut":0.77, "st":0.07}}
+{"vcselab":{"timestamp_begin":1793909332.101906804, "rt":0.17, "ut":0.10, "st":0.01}}
+{"link":{"timestamp_begin":1793909332.287516132, "rt":0.07, "ut":0.05, "st":0.02}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1793909331.009020337}
+{"VCS_COMP_START_TIME": 1793909331.009020337}
+{"VCS_COMP_END_TIME": 1793910341.704545003}
+{"elabcom":{"timestamp_begin":1793909331.516310268,"rt":0.12, "ut":0.03, "st":0.02}}
+{"VCS_USER_OPTIONS": "-R -full64 -sverilog -debug_access+all -kdb -gui -f cv32e40p_manifest.flist example_tb/core/include/perturbation_pkg.sv example_tb/core/amo_shim.sv example_tb/core/cv32e40p_random_interrupt_generator.sv example_tb/core/cv32e40p_tb_subsystem.sv example_tb/core/dp_ram.sv example_tb/core/mm_ram.sv example_tb/core/riscv_gnt_stall.sv example_tb/core/riscv_rvalid_stall.sv example_tb/core/tb_top.sv -top tb_top -o simv_tb +firmware=example_tb/core/custom/hello_world.hex +maxcycles=10000"}
+{"vcs1": {"peak_mem": 514868}}
+{"vcselab": {"peak_mem": 275692}}

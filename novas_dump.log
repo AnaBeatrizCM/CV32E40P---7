@@ -1,0 +1,415 @@
+#######################################################################################
+# log primitive debug message of FSDB dumping                                         #
+# This is for R&D to analyze when there are issues happening when FSDB dump           #
+#######################################################################################
+ANF: vcsd_get_serial_mode_status('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_get_serial_mode_status')
+ANF: vcsd_enable_sva_success_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_enable_sva_success_callback')
+ANF: vcsd_disable_sva_success_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_disable_sva_success_callback')
+ANF: vcsd_get_power_scope_name('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_get_power_scope_name')
+ANF: vcsd_dump_var_vpdg('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_dump_var_vpdg')
+ANF: vcsd_begin_no_value_var_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_begin_no_value_var_info')
+ANF: vcsd_end_no_value_var_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_end_no_value_var_info')
+ANF: vcsd_remove_xprop_merge_mode_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vcsd_remove_xprop_merge_mode_callback')
+ANF: vhpi_get_cb_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhpi_get_cb_info')
+ANF: vhpi_free_handle('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhpi_free_handle')
+ANF: vhpi_fetch_vcsd_handle('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhpi_fetch_vcsd_handle')
+ANF: vhpi_fetch_vpi_handle('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhpi_fetch_vpi_handle')
+ANF: vhpi_has_verilog_parent('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhpi_has_verilog_parent')
+ANF: vhpi_is_verilog_scope('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhpi_is_verilog_scope')
+ANF: scsd_xprop_is_enabled('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_is_enabled')
+ANF: scsd_xprop_sig_is_promoted('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_sig_is_promoted')
+ANF: scsd_xprop_int_xvalue('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_int_xvalue')
+ANF: scsd_xprop_bool_xvalue('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_bool_xvalue')
+ANF: scsd_xprop_enum_xvalue('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_enum_xvalue')
+ANF: scsd_xprop_register_merge_mode_cb('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_register_merge_mode_cb')
+ANF: scsd_xprop_delete_merge_mode_cb('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_delete_merge_mode_cb')
+ANF: scsd_xprop_get_merge_mode('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_xprop_get_merge_mode')
+ANF: scsd_thread_get_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_thread_get_info')
+ANF: scsd_thread_vc_init('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_thread_vc_init')
+ANF: scsd_master_set_delta_sync_cbk('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_master_set_delta_sync_cbk')
+ANF: scsd_fgp_get_fsdb_cores('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_fgp_get_fsdb_cores')
+ANF: scsd_fgp_get_is_cpu_affinity_disabled('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: scsd_fgp_get_is_cpu_affinity_disabled')
+ANF: vdi_dbg_set_client_control('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vdi_dbg_set_client_control')
+ANF: vhdi_dt_get_type('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_dt_get_type')
+ANF: vhdi_dt_get_key('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_dt_get_key')
+ANF: vhdi_dt_get_vhdl_enum_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_dt_get_vhdl_enum_info')
+ANF: vhdi_dt_get_vhdl_physical_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_dt_get_vhdl_physical_info')
+ANF: vhdi_dt_get_vhdl_array_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_dt_get_vhdl_array_info')
+ANF: vhdi_dt_get_vhdl_record_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_dt_get_vhdl_record_info')
+ANF: vhdi_dt_get_vhdl_integer_range_info('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_dt_get_vhdl_integer_range_info')
+ANF: vhdi_def_traverse_module('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_def_traverse_module')
+ANF: vhdi_def_traverse_scope('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_def_traverse_scope')
+ANF: vhdi_def_traverse_variable('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_def_traverse_variable')
+ANF: vhdi_def_get_module_id_by_vhpi('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_def_get_module_id_by_vhpi')
+ANF: vhdi_def_get_handle_by_module_id('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_def_get_handle_by_module_id')
+ANF: vhdi_def_get_variable_info_by_vhpi('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_def_get_variable_info_by_vhpi')
+ANF: vhdi_def_free('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_def_free')
+ANF: vhdi_ist_traverse_scope('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_traverse_scope')
+ANF: vhdi_ist_traverse_variable('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_traverse_variable')
+ANF: vhdi_ist_convert_by_vhpi('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_convert_by_vhpi')
+ANF: vhdi_ist_clone('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_clone')
+ANF: vhdi_ist_free('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_free')
+ANF: vhdi_ist_hash_key('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_hash_key')
+ANF: vhdi_ist_compare('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_compare')
+ANF: vhdi_ist_get_value_addr('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_get_value_addr')
+ANF: vhdi_set_scsd_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_set_scsd_callback')
+ANF: vhdi_cbk_set_force_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_cbk_set_force_callback')
+ANF: vhdi_trigger_init_force('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_trigger_init_force')
+ANF: vhdi_ist_check_scsd_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_check_scsd_callback')
+ANF: vhdi_ist_add_scsd_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_add_scsd_callback')
+ANF: vhdi_ist_remove_scsd_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_remove_scsd_callback')
+ANF: vhdi_ist_get_scsd_user_data('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_get_scsd_user_data')
+ANF: vhdi_add_time_change_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_add_time_change_callback')
+ANF: vhdi_get_real_value_by_value_addr('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_get_real_value_by_value_addr')
+ANF: vhdi_get_64_value_by_value_addr('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_get_64_value_by_value_addr')
+ANF: vhdi_xprop_inst_is_promoted('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_xprop_inst_is_promoted')
+ANF: vdi_ist_convert_by_vhdi('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vdi_ist_convert_by_vhdi')
+ANF: vhdi_ist_get_module_id('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_ist_get_module_id')
+ANF: vhdi_refine_foreign_scope_type('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_refine_foreign_scope_type')
+ANF: vhdi_flush_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_flush_callback')
+ANF: vhdi_set_orig_name('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_set_orig_name')
+ANF: vhdi_set_dump_pt('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_set_dump_pt')
+ANF: vhdi_set_int_subtype('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_set_int_subtype')
+ANF: vhdi_set_fixed_point('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_set_fixed_point')
+ANF: vhdi_get_fsdb_option('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_get_fsdb_option')
+ANF: vhdi_fgp_get_mode('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_fgp_get_mode')
+ANF: vhdi_node_register_composite_var('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_node_register_composite_var')
+ANF: vhdi_node_analysis('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_node_analysis')
+ANF: vhdi_node_id('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_node_id')
+ANF: vhdi_node_ist_check_scsd_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_node_ist_check_scsd_callback')
+ANF: vhdi_node_ist_add_scsd_callback('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_node_ist_add_scsd_callback')
+ANF: vhdi_node_ist_get_value_addr('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_node_ist_get_value_addr')
+ANF: vhdi_enc_def_traverse_module('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_enc_def_traverse_module')
+ANF: vhdi_enc_def_traverse_scope('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_enc_def_traverse_scope')
+ANF: vhdi_enc_def_traverse_variable('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_enc_def_traverse_variable')
+ANF: vhdi_enc_ist_traverse_scope('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_enc_ist_traverse_scope')
+ANF: vhdi_enc_ist_traverse_variable('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_enc_ist_traverse_variable')
+ANF: vhdi_enc_ist_get_module_id('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_enc_ist_get_module_id')
+ANF: vhdi_enc_def_get_handle_by_module_id('/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
+VCS compile option:
+ option[0]: /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb
+ option[1]: +firmware=example_tb/core/custom/hello_world.hex
+ option[2]: +maxcycles=10000
+ option[3]: -sml=verdi
+ option[4]: +UVM_VERDI_TRACE=UVM_AWARE
+ option[5]: +fsdb+gate=off
+ option[6]: -ucli2Proc
+ option[7]: -ucli
+ option[8]: -l
+ option[9]: /tmp/vcs_20261105200850_12815/verdi_11_05_2026_xmen-aluno_13567/sim.log
+ option[10]: /Tools/synopsys/vcs/X-2025.06-SP2/linux64/bin/vcs1fe
+ option[11]: -Mcc=gcc
+ option[12]: -Mcplusplus=g++
+ option[13]: -Masflags=
+ option[14]: -Mcfl= -pipe -fPIC -O -I/Tools/synopsys/vcs/X-2025.06-SP2/include 
+ option[15]: -Mxllcflags=
+ option[16]: -Mxcflags= -pipe -fPIC -I/Tools/synopsys/vcs/X-2025.06-SP2/include
+ option[17]: -Mldflags= -rdynamic 
+ option[18]: -Mout=simv_tb
+ option[19]: -Mamsrun=
+ option[20]: -Mvcsaceobjs=
+ option[21]: -Mobjects= /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/libvirsim.so /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/liberrorinf.so /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/libsnpsmalloc.so /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/libvfs.so 
+ option[22]: -Mexternalobj=
+ option[23]: -Msaverestoreobj=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o
+ option[24]: -Mcrt0=
+ option[25]: -Mcrtn=
+ option[26]: -Mcsrc=
+ option[27]: -Msyslibs=/Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl 
+ option[28]: -Xvcs_run_simv=1
+ option[29]: -full64
+ option[30]: -debug_access+all
+ option[31]: +vpi
+ option[32]: +vcsd1
+ option[33]: +itf+/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcsdp_lite.tab
+ option[34]: -kdb
+ option[35]: -Xufe=2steps
+ option[36]: -gui
+ option[37]: -top
+ option[38]: tb_top
+ option[39]: -o
+ option[40]: simv_tb
+ option[41]: +firmware=example_tb/core/custom/hello_world.hex
+ option[42]: +maxcycles=10000
+ option[43]: -Xhdlxmropt
+ option[44]: -picarchive
+ option[45]: -ucli
+ option[46]: -P
+ option[47]: /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/verdi.tab
+ option[48]: -fsdb
+ option[49]: -sverilog
+ option[50]: -gen_obj
+ option[51]: -Xfile_begin_f=cv32e40p_manifest.flist
+ option[52]: +incdir+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include
+ option[53]: +incdir+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/../bhv
+ option[54]: +incdir+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/../bhv/include
+ option[55]: +incdir+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/../sva
+ option[56]: -Xfile_end
+ option[57]: example_tb/core/include/perturbation_pkg.sv
+ option[58]: -load
+ option[59]: /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+ option[60]: nusym_mode
+Chronologic Simulation VCS Release X-2025.06-SP2_Full64
+Linux 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Fri Dec 12 10:42:53 UTC 2025 x86_64
+CPU cores: 32
+Limit information:
+======================================
+cputime		unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8193 kbytes
+coredumpsize		0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		1024
+memorylocked		64 kbytes
+maxproc		126617
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+UVM_HOME=/Tools/synopsys/vcs/X-2025.06-SP2/etc/uvm
+UNAME=/bin/uname
+LC_ALL=C
+LS_COLORS=rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.zst=38;5;9:*.tzst=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.wim=38;5;9:*.swm=38;5;9:*.dwm=38;5;9:*.esd=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.mjpg=38;5;13:*.mjpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/Tools/synopsys/vcs/X-2025.06-SP2/lib:/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib:
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SYS_INST_DIR=/Tools/synopsys/verdi/X-2025.06-SP2
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1793909331.009020337
+DESIGN_RTL_DIR=/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl
+CINNAMON_SLOWDOWN_FACTOR=0.0001
+LANG=C
+GDM_LANG=en_GB.UTF-8
+HISTCONTROL=ignoredups
+LESS=-R
+SNPS_VCS_INTERNAL_MAKE=make
+DISPLAY=:1
+HOSTNAME=xmen16
+SCRNAME=vcs
+OLDPWD=/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb.daidir/debug_dump/fsearch
+HSP_HOME=/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice
+VCS_INTERNAL_CONVERTEDLIBS=
+SNPS_VCS_INTERNAL_CURR_PID=12815
+PRIMEWAVERELIABILITY_HOMEDIR=/Tools/synopsys/primewavereliability/X-2025.06-SP2-2
+GTK_OVERLAY_SCROLLING=0
+CINNAMON_2D=1
+TOOL_HOME=/Tools/synopsys/vcs/X-2025.06-SP2/linux64
+COLORTERM=truecolor
+TESTMAX_HOMEDIR=/Tools/synopsys/testmax/X-2025.06-SP2
+SNPS_VCS_INTERNAL_MAKE_OPT=
+SNPS_VCS_CLANG_PATH=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/clang
+USERNAME=xmen-aluno
+SNPSLMD_LICENSE_FILE=27020@melicense.embedded.ufcg.edu.br
+OVA_UUM=0
+KDEDIRS=/usr
+SYN_HOMEDIR=/Tools/synopsys/syn/X-2025.06-SP2
+XDG_VTNR=2
+ZSH=/home/xmen-aluno/.oh-my-zsh
+SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+VCS_MODE_FLAG=64
+which_declare=typeset -f
+CUSTOM_HOMEDIR=/Tools/synopsys/customcompiler/X-2025.06-SP2-2
+XDG_SESSION_ID=2
+NOVAS_SYNC_MOTIF_DISP=
+SNPS_VCS_PYTHON3=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/bin/Python3/bin/python3
+USER=xmen-aluno
+VCS_MX_HOME_INTERNAL=1
+PAGER=less
+LSCOLORS=Gxfxcxdxbxegedabagacad
+DESKTOP_SESSION=cinnamon2d
+STARRC_HOMEDIR=/Tools/synopsys/starrc/X-2025.06-SP3
+MILK_HOME=/Tools/synopsys/mw/X-2025.06
+MUFFIN_NO_SHADOWS=1
+PRIMESIM_HOMEDIR=/Tools/synopsys/primesim/X-2025.06-SP2-3
+EXECMAN_HOMEDIR=/Tools/synopsys/execman/X-2025.06-SP2/VMS
+VCS_EXEC_DONE=1
+SYNOPSYS_LC_ROOT=/Tools/synopsys/lc/X-2025.06-SP2
+SAED90_PDK=/Tools/PDK/SAED90/PDK_Analog
+SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
+PRIMELIB_HOMEDIR=/Tools/synopsys/primelib/X-2025.06-SP2
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/434b3df7_dc68_4c0f_a763_6e9c425ad309
+PWD=/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7
+FM_HOME=/Tools/synopsys/fm/X-2025.06-SP3
+VMR_MODE_FLAG=64
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+HOME=/home/xmen-aluno
+SSH_AGENT_PID=2863
+VCS_PATHMAP_PRELOAD_DONE=1
+XNLSPATH=/Tools/synopsys/verdi/X-2025.06-SP2/etc/access/nls
+XDG_SESSION_TYPE=x11
+CLUTTER_PAINT=disable-culling
+VCS_ARG_ADDED_FOR_TMP=1
+CLUTTER_DEFAULT_FPS=15
+XDG_DATA_DIRS=/home/xmen-aluno/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+QT_VERDI_ENABLE_ICON_MEM_FIX=1
+VERDI_QT5=1
+XDG_SESSION_DESKTOP=cinnamon2d
+GJS_DEBUG_OUTPUT=stderr
+SPS_XFONT_PATH=/Tools/synopsys/verdi/X-2025.06-SP2/XFont
+ICVALIDATOR_HOME=/Tools/synopsys/icvalidator/X-2025.06-SP2
+VC_STATIC_HOME=/Tools/synopsys/vc_static/X-2025.06-SP2
+MAIL=/var/spool/mail/xmen-aluno
+SYNOPSYS=/Tools/synopsys
+ICC2_HOME=/Tools/synopsys/icc2/X-2025.06-SP2
+WINDOWPATH=2
+LD_NOVERSION=1
+QT_PLUGIN_PATH=/Tools/synopsys/verdi/X-2025.06-SP2/platform/LINUXAMD64/lib/Qt5/plugins
+SHELL=/bin/zsh
+VTE_VERSION=5204
+TERM=xterm-256color
+XA_HOMEDIR=/Tools/synopsys/xa/X-2025.06-SP2
+SNPS_VCS_INTERNAL_ROOT_PID=12815
+SCRIPT_NAME=vcs
+XMODIFIERS=@im=none
+SNPS_VCS_INTERNAL_MEMPRELOAD_USE_LIBC=1
+FPGA_HOMEDIR=/Tools/synopsys/fpga/W-2025.03
+LM_LICENSE_FILE=27020@melicense.embedded.ufcg.edu.br
+SNPS_VCS_TMPDIR=/tmp/vcs_20261105200850_12815
+PPRTL_HOMEDIR=/Tools/synopsys/pprtl/X-2025.06-SP2
+ICV_HOME_DIR=/Tools/synopsys/icvalidator/X-2025.06-SP2
+XDG_CURRENT_DESKTOP=X-Cinnamon
+IDENTIFY_HOMEDIR=/Tools/synopsys/identify/W-2025.03
+GNOME_TERMINAL_SERVICE=:1.104
+VERDI_HOME=/Tools/synopsys/verdi/X-2025.06-SP2
+TURBO_LOG_DIR=/tmp/vcs_20261105200850_12815
+SHLVL=3
+XDG_SEAT=seat0
+VCS_COM=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/bin/vcs1
+WV_HOMEDIR=/Tools/synopsys/wv/X-2025.06-SP2
+VCS_ARCH=linux64
+VCS_DEPTH=0
+SPS_FONT_PATH=/Tools/synopsys/verdi/X-2025.06-SP2/font
+PRIMETIME_HOMEDIR=/Tools/synopsys/prime/X-2025.06-SP2
+PRIMESIM_HOME=/Tools/synopsys/primesim/X-2025.06-SP2-3
+GDK_BACKEND=x11
+GDMSESSION=cinnamon2d
+VERDI_ORIGNAL_LD_LIBRARY_PATH=/Tools/synopsys/vcs/X-2025.06-SP2/lib:/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib:
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LIBGL_ALWAYS_SOFTWARE=1
+LOGNAME=xmen-aluno
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+SPS_RGB_PATH=/Tools/synopsys/verdi/X-2025.06-SP2/etc/rgb
+XDG_RUNTIME_DIR=/run/user/1001
+XAUTHORITY=/run/user/1001/gdm/Xauthority
+SAED32_28_PDK=/Tools/PDK/SAED32/PDK_Analog
+MALLOC_ARENA_MAX=1
+PATH=.:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/home/xmen-aluno/bin:/home/xmen-aluno/.local/bin:/usr/local/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/xmen-aluno/bin
+VCS_HOME=/Tools/synopsys/vcs/X-2025.06-SP2
+CINNAMON_VERSION=4.6.7
+DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
+sysc_uni_pwd=/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7
+SNPS_EUCLIDE_VCS_COMMAND_LINE=-R -full64 -sverilog -debug_access+all -kdb -gui -f cv32e40p_manifest.flist example_tb/core/include/perturbation_pkg.sv example_tb/core/amo_shim.sv example_tb/core/cv32e40p_random_interrupt_generator.sv example_tb/core/cv32e40p_tb_subsystem.sv example_tb/core/dp_ram.sv example_tb/core/mm_ram.sv example_tb/core/riscv_gnt_stall.sv example_tb/core/riscv_rvalid_stall.sv example_tb/core/tb_top.sv -top tb_top -o simv_tb +firmware=example_tb/core/custom/hello_world.hex +maxcycles=10000
+HISTSIZE=2000
+FUSION_HOMEDIR=/Tools/synopsys/fusioncompiler/X-2025.06-SP3
+VCS_PYTHON3=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/bin/Python3/bin/python3
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+SYS_PROG_NAME=verdi
+CINNAMON_SOFTWARE_RENDERING=1
+SPYGLASS_HOME=/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME
+NOVASHLPPATH=/Tools/synopsys/verdi/X-2025.06-SP2/doc
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_HOME=/Tools/synopsys/lc/X-2025.06-SP2
+NOVAS_LC_ALL=C
+SIMV_DAIDIR_PATH=/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb.daidir
+NOVAS_SIGNAL_BASE_EXTRACTION=1
+SIGNAL_BASE_EXTRACTION=1
+NOVAS_VERDI_SVTB_BETA=1
+VERDI_SVTB_BETA=1
+NOVAS_VERDI_SVTB_ALPHA=1
+VERDI_SVTB_ALPHA=1
+NOVAS_VERDI_TB_HT=1
+VERDI_TB_HT=1
+NOVAS_WAVE_REDRAW_ALLVC=1
+WAVE_REDRAW_ALLVC=1
+NOVAS_TCL_LIBRARY=/Tools/synopsys/verdi/X-2025.06-SP2/etc/access/tcl86_library
+TCL_LIBRARY=/Tools/synopsys/verdi/X-2025.06-SP2/etc/access/tcl86_library
+XKEYSYMDB=/Tools/synopsys/verdi/X-2025.06-SP2/etc/access/XKeysymDB2.1
+XLOCALEDIR=/Tools/synopsys/verdi/X-2025.06-SP2/etc/access/locale
+QTWEBENGINE_CHROMIUM_FLAGS=--log-level=3
+QT_XCB_NO_XI2=1
+NOVAS_SIGNAL_BASED_BA=0
+SIGNAL_BASED_BA=0
+SNPS_SIM_DEFAULT_GUI=verdi
+FSDB_FILE=/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/inter.fsdb
+VCS_UCLI_STDIN_BLOCKING=1
+FSDB_VHDL_PROTECTED=1
+FSDB_RD_IR_ENABLE=1
+FSDB_SVA_STATUS=1
+VCS_STACK_EXEC=true
+VCS_STOP_SAFE=1
+DVE_SIM_SELECT_LOOP=on
+FLEXLM_BORROWFILE=/home/xmen-aluno/.xmen16-borrow.txt
+Runtime command line arguments:
+argv[0]=/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb
+argv[1]=+firmware=example_tb/core/custom/hello_world.hex
+argv[2]=+maxcycles=10000
+argv[3]=-sml=verdi
+argv[4]=+UVM_VERDI_TRACE=UVM_AWARE
+argv[5]=+fsdb+gate=off
+argv[6]=-ucli2Proc
+argv[7]=-ucli
+argv[8]=-l
+argv[9]=/tmp/vcs_20261105200850_12815/verdi_11_05_2026_xmen-aluno_13567/sim.log
+**********Message Rewind**************
+351 profile - 100
+          CPU/Mem usage: 0.000 sys,  0.020 user,  325.48M mem
+352 Elapsed time:    0:00:00    Thu Nov  5 17:08:53 2026
+353 User CPU time used: 0 seconds
+354 System CPU time used: 0 seconds
+355 pliAppInit
+356 ndpGetenv(FSDB_FILE): /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/inter.fsdb
+357 ndpGetenv(FSDB_SVA_STATUS): 1
+358 ndpGetenv(FSDB_VHDL_PROTECTED): 1
+359 FSDB_GATE & FSDB_RTL is disabled.
+360 FSDB_DYNAMIC_ALIAS is enabled.
+361 libnuma.so open fail. libnuma.so: cannot open shared object file: No such file or directory
+362 FSDB NUMA optimize not available.
+363 FSDB_PACKED_MODE is enabled.
+364 FSDB_GATE_PACKED is enabled.
+365 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+366 FSDB_REDUCE_VC_MEM is enabled.
+367 Enable Parallel Dumping.
+368 pliAppMiscSet: New Sim Round
+369 pliEntryInit
+370 LIBSSCORE=found /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/lib/LINUXAMD64/libsscore_vcs202506.so through $NOVAS_HOME setting.
+371 FSDB Dumper for VCS, Release Verdi_X-2025.06-SP2, Linux x86_64/64bit, 11/27/2025
+372 (C) 1996 - 2025 by Synopsys, Inc.
+373 sps_tcl_fsdbDumpfile_main at 0
+374 argv[0]: /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/inter.fsdb
+375 *Verdi* : Create FSDB file '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/inter.fsdb'
+376 [spi_vcs_vd_ppi_create_root]: no upf option
+377 DUMPER_MEMORY_REDUCTION is enabled.
+378 compile option from '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb.daidir/vcs_rebuild'.
+379   "vcs '-R' '-full64' '-sverilog' '-debug_access+all' '-kdb' '-gui' '-f' 'cv32e40p_manifest.flist' 'example_tb/core/include/perturbation_pkg.sv' 'example_tb/core/amo_shim.sv' 'example_tb/core/cv32e40p_random_interrupt_generator.sv' 'example_tb/core/cv32e40p_tb_subsystem.sv' 'example_tb/core/dp_ram.sv' 'example_tb/core/mm_ram.sv' 'example_tb/core/riscv_gnt_stall.sv' 'example_tb/core/riscv_rvalid_stall.sv' 'example_tb/core/tb_top.sv' '-top' 'tb_top' '-o' 'simv_tb' '+firmware=example_tb/core/custom/hello_world.hex' '+maxcycles=10000' 2>&1"
+380 sps_tcl_fsdbDumpflush_vd_main at 0 : N/A(0)
+381 *Verdi* : Flush all FSDB Files at 0 s.
+382 sps_tcl_fsdbDumpflush_vd_main at 0 : N/A(0)
+383 *Verdi* : Flush all FSDB Files at 0 s.
+384 sps_tcl_fsdbDumpflush_vd_main at 0 : N/A(0)
+385 *Verdi* : Flush all FSDB Files at 0 s.
+386 End of simulation at 0
+387 Memory usage: 411.410 M
+388 Maximum resident set size: 125 MB
+389 Hard page faults: 2
+390 Soft page faults: 4226
+391 Elapsed time:    0:16:58    Thu Nov  5 17:25:51 2026
+392 User CPU time used: 902 seconds
+393 System CPU time used: 0 seconds
+394 Begin FSDB profile info:
+395 FSDB Writer : bc1(0) bcn(0) mtf/stf(0/3)
+FSDB Writer elapsed time : flush(0.064847) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+396 End FSDB profile info
+397 FSDB closed. Name: /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/inter.fsdb Size: 8464
+398 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+399                      - BlockUsed:1 Acquire:0 BufferUsed:0
+400                      - Flush:5 Expand:0 ProducerWait:0 ConsumerWait:0
+401                      - MainProducerTime:902.249626413 TotalConsumerTime:0.000000000
+402                      - ElapsedTime:1017.320978000
+403 Producer   0 profile - BlockUsed:1 Acquire:0 BufferUsed:0
+404 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
+405                      - BlockUsed:1 Acquire:0 BufferUsed:0
+406 SimExit
+407 Elapsed time:    0:16:58    Thu Nov  5 17:25:51 2026
+408 User CPU time used: 902 seconds
+409 System CPU time used: 0 seconds
+410 Sim process exit

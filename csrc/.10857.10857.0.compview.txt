@@ -1,0 +1,7 @@
+Command exited with non-zero status 255
+{"vcs1":{"timestamp_begin":1793909218.216501389, "rt":0.15, "ut":0.02, "st":0.01}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1793909218.035847140}
+{"VCS_COMP_START_TIME": 1793909218.035847140}
+{"VCS_COMP_END_TIME": 1793909218.384864738}
+{"VCS_USER_OPTIONS": "-R -full64 -sverilog -debug_access+all -kdb -gui -f cv32e40p_manifest.flist example_tb/core/include/perturbation_pkg.sv example_tb/core/amo_shim.sv example_tb/core/cv32e40p_random_interrupt_generator.sv example_tb/core/cv32e40p_tb_subsystem.sv example_tb/core/dp_ram.sv example_tb/core/mm_ram.sv example_tb/core/riscv_gnt_stall.sv example_tb/core/riscv_rvalid_stall.sv example_tb/core/tb_top.sv -top tb_top -o simv_tb +firmware=example_tb/core/custom/hello_world.hex +maxcycles=10000"}
+{"vcs1": {"peak_mem": 495888}}
