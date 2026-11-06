@@ -1,0 +1,488 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_load_store_unit_PULP_OBI0",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_load_store_unit.sv",
+    "Start Line": 26,
+    "End Line": 549,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_req_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_gnt_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_rvalid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_err_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_err_pmp_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_addr_o",
+            "Direction": "output",
+            "Bits": [
+                "data_addr_o[31]",
+                "data_addr_o[30]",
+                "data_addr_o[29]",
+                "data_addr_o[28]",
+                "data_addr_o[27]",
+                "data_addr_o[26]",
+                "data_addr_o[25]",
+                "data_addr_o[24]",
+                "data_addr_o[23]",
+                "data_addr_o[22]",
+                "data_addr_o[21]",
+                "data_addr_o[20]",
+                "data_addr_o[19]",
+                "data_addr_o[18]",
+                "data_addr_o[17]",
+                "data_addr_o[16]",
+                "data_addr_o[15]",
+                "data_addr_o[14]",
+                "data_addr_o[13]",
+                "data_addr_o[12]",
+                "data_addr_o[11]",
+                "data_addr_o[10]",
+                "data_addr_o[9]",
+                "data_addr_o[8]",
+                "data_addr_o[7]",
+                "data_addr_o[6]",
+                "data_addr_o[5]",
+                "data_addr_o[4]",
+                "data_addr_o[3]",
+                "data_addr_o[2]",
+                "data_addr_o[1]",
+                "data_addr_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_we_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_be_o",
+            "Direction": "output",
+            "Bits": [
+                "data_be_o[3]",
+                "data_be_o[2]",
+                "data_be_o[1]",
+                "data_be_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_wdata_o",
+            "Direction": "output",
+            "Bits": [
+                "data_wdata_o[31]",
+                "data_wdata_o[30]",
+                "data_wdata_o[29]",
+                "data_wdata_o[28]",
+                "data_wdata_o[27]",
+                "data_wdata_o[26]",
+                "data_wdata_o[25]",
+                "data_wdata_o[24]",
+                "data_wdata_o[23]",
+                "data_wdata_o[22]",
+                "data_wdata_o[21]",
+                "data_wdata_o[20]",
+                "data_wdata_o[19]",
+                "data_wdata_o[18]",
+                "data_wdata_o[17]",
+                "data_wdata_o[16]",
+                "data_wdata_o[15]",
+                "data_wdata_o[14]",
+                "data_wdata_o[13]",
+                "data_wdata_o[12]",
+                "data_wdata_o[11]",
+                "data_wdata_o[10]",
+                "data_wdata_o[9]",
+                "data_wdata_o[8]",
+                "data_wdata_o[7]",
+                "data_wdata_o[6]",
+                "data_wdata_o[5]",
+                "data_wdata_o[4]",
+                "data_wdata_o[3]",
+                "data_wdata_o[2]",
+                "data_wdata_o[1]",
+                "data_wdata_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_rdata_i",
+            "Direction": "input",
+            "Bits": [
+                "data_rdata_i[31]",
+                "data_rdata_i[30]",
+                "data_rdata_i[29]",
+                "data_rdata_i[28]",
+                "data_rdata_i[27]",
+                "data_rdata_i[26]",
+                "data_rdata_i[25]",
+                "data_rdata_i[24]",
+                "data_rdata_i[23]",
+                "data_rdata_i[22]",
+                "data_rdata_i[21]",
+                "data_rdata_i[20]",
+                "data_rdata_i[19]",
+                "data_rdata_i[18]",
+                "data_rdata_i[17]",
+                "data_rdata_i[16]",
+                "data_rdata_i[15]",
+                "data_rdata_i[14]",
+                "data_rdata_i[13]",
+                "data_rdata_i[12]",
+                "data_rdata_i[11]",
+                "data_rdata_i[10]",
+                "data_rdata_i[9]",
+                "data_rdata_i[8]",
+                "data_rdata_i[7]",
+                "data_rdata_i[6]",
+                "data_rdata_i[5]",
+                "data_rdata_i[4]",
+                "data_rdata_i[3]",
+                "data_rdata_i[2]",
+                "data_rdata_i[1]",
+                "data_rdata_i[0]"
+            ]
+        },
+        {
+            "PortName": "data_we_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_type_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "data_type_ex_i[1]",
+                "data_type_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "data_wdata_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "data_wdata_ex_i[31]",
+                "data_wdata_ex_i[30]",
+                "data_wdata_ex_i[29]",
+                "data_wdata_ex_i[28]",
+                "data_wdata_ex_i[27]",
+                "data_wdata_ex_i[26]",
+                "data_wdata_ex_i[25]",
+                "data_wdata_ex_i[24]",
+                "data_wdata_ex_i[23]",
+                "data_wdata_ex_i[22]",
+                "data_wdata_ex_i[21]",
+                "data_wdata_ex_i[20]",
+                "data_wdata_ex_i[19]",
+                "data_wdata_ex_i[18]",
+                "data_wdata_ex_i[17]",
+                "data_wdata_ex_i[16]",
+                "data_wdata_ex_i[15]",
+                "data_wdata_ex_i[14]",
+                "data_wdata_ex_i[13]",
+                "data_wdata_ex_i[12]",
+                "data_wdata_ex_i[11]",
+                "data_wdata_ex_i[10]",
+                "data_wdata_ex_i[9]",
+                "data_wdata_ex_i[8]",
+                "data_wdata_ex_i[7]",
+                "data_wdata_ex_i[6]",
+                "data_wdata_ex_i[5]",
+                "data_wdata_ex_i[4]",
+                "data_wdata_ex_i[3]",
+                "data_wdata_ex_i[2]",
+                "data_wdata_ex_i[1]",
+                "data_wdata_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "data_reg_offset_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "data_reg_offset_ex_i[1]",
+                "data_reg_offset_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "data_load_event_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_sign_ext_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "data_sign_ext_ex_i[1]",
+                "data_sign_ext_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "data_rdata_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "data_rdata_ex_o[31]",
+                "data_rdata_ex_o[30]",
+                "data_rdata_ex_o[29]",
+                "data_rdata_ex_o[28]",
+                "data_rdata_ex_o[27]",
+                "data_rdata_ex_o[26]",
+                "data_rdata_ex_o[25]",
+                "data_rdata_ex_o[24]",
+                "data_rdata_ex_o[23]",
+                "data_rdata_ex_o[22]",
+                "data_rdata_ex_o[21]",
+                "data_rdata_ex_o[20]",
+                "data_rdata_ex_o[19]",
+                "data_rdata_ex_o[18]",
+                "data_rdata_ex_o[17]",
+                "data_rdata_ex_o[16]",
+                "data_rdata_ex_o[15]",
+                "data_rdata_ex_o[14]",
+                "data_rdata_ex_o[13]",
+                "data_rdata_ex_o[12]",
+                "data_rdata_ex_o[11]",
+                "data_rdata_ex_o[10]",
+                "data_rdata_ex_o[9]",
+                "data_rdata_ex_o[8]",
+                "data_rdata_ex_o[7]",
+                "data_rdata_ex_o[6]",
+                "data_rdata_ex_o[5]",
+                "data_rdata_ex_o[4]",
+                "data_rdata_ex_o[3]",
+                "data_rdata_ex_o[2]",
+                "data_rdata_ex_o[1]",
+                "data_rdata_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_req_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "operand_a_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "operand_a_ex_i[31]",
+                "operand_a_ex_i[30]",
+                "operand_a_ex_i[29]",
+                "operand_a_ex_i[28]",
+                "operand_a_ex_i[27]",
+                "operand_a_ex_i[26]",
+                "operand_a_ex_i[25]",
+                "operand_a_ex_i[24]",
+                "operand_a_ex_i[23]",
+                "operand_a_ex_i[22]",
+                "operand_a_ex_i[21]",
+                "operand_a_ex_i[20]",
+                "operand_a_ex_i[19]",
+                "operand_a_ex_i[18]",
+                "operand_a_ex_i[17]",
+                "operand_a_ex_i[16]",
+                "operand_a_ex_i[15]",
+                "operand_a_ex_i[14]",
+                "operand_a_ex_i[13]",
+                "operand_a_ex_i[12]",
+                "operand_a_ex_i[11]",
+                "operand_a_ex_i[10]",
+                "operand_a_ex_i[9]",
+                "operand_a_ex_i[8]",
+                "operand_a_ex_i[7]",
+                "operand_a_ex_i[6]",
+                "operand_a_ex_i[5]",
+                "operand_a_ex_i[4]",
+                "operand_a_ex_i[3]",
+                "operand_a_ex_i[2]",
+                "operand_a_ex_i[1]",
+                "operand_a_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "operand_b_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "operand_b_ex_i[31]",
+                "operand_b_ex_i[30]",
+                "operand_b_ex_i[29]",
+                "operand_b_ex_i[28]",
+                "operand_b_ex_i[27]",
+                "operand_b_ex_i[26]",
+                "operand_b_ex_i[25]",
+                "operand_b_ex_i[24]",
+                "operand_b_ex_i[23]",
+                "operand_b_ex_i[22]",
+                "operand_b_ex_i[21]",
+                "operand_b_ex_i[20]",
+                "operand_b_ex_i[19]",
+                "operand_b_ex_i[18]",
+                "operand_b_ex_i[17]",
+                "operand_b_ex_i[16]",
+                "operand_b_ex_i[15]",
+                "operand_b_ex_i[14]",
+                "operand_b_ex_i[13]",
+                "operand_b_ex_i[12]",
+                "operand_b_ex_i[11]",
+                "operand_b_ex_i[10]",
+                "operand_b_ex_i[9]",
+                "operand_b_ex_i[8]",
+                "operand_b_ex_i[7]",
+                "operand_b_ex_i[6]",
+                "operand_b_ex_i[5]",
+                "operand_b_ex_i[4]",
+                "operand_b_ex_i[3]",
+                "operand_b_ex_i[2]",
+                "operand_b_ex_i[1]",
+                "operand_b_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "addr_useincr_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_misaligned_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_misaligned_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_atop_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "data_atop_ex_i[5]",
+                "data_atop_ex_i[4]",
+                "data_atop_ex_i[3]",
+                "data_atop_ex_i[2]",
+                "data_atop_ex_i[1]",
+                "data_atop_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "data_atop_o",
+            "Direction": "output",
+            "Bits": [
+                "data_atop_o[5]",
+                "data_atop_o[4]",
+                "data_atop_o[3]",
+                "data_atop_o[2]",
+                "data_atop_o[1]",
+                "data_atop_o[0]"
+            ]
+        },
+        {
+            "PortName": "p_elw_start_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "p_elw_finish_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "lsu_ready_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "lsu_ready_wb_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "busy_o",
+            "Direction": "output"
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "rdata_q",
+            "Bits": [
+                "rdata_q_reg[0]",
+                "rdata_q_reg[1]",
+                "rdata_q_reg[2]",
+                "rdata_q_reg[3]",
+                "rdata_q_reg[4]",
+                "rdata_q_reg[5]",
+                "rdata_q_reg[6]",
+                "rdata_q_reg[7]",
+                "rdata_q_reg[8]",
+                "rdata_q_reg[9]",
+                "rdata_q_reg[10]",
+                "rdata_q_reg[11]",
+                "rdata_q_reg[12]",
+                "rdata_q_reg[13]",
+                "rdata_q_reg[14]",
+                "rdata_q_reg[15]",
+                "rdata_q_reg[16]",
+                "rdata_q_reg[17]",
+                "rdata_q_reg[18]",
+                "rdata_q_reg[19]",
+                "rdata_q_reg[20]",
+                "rdata_q_reg[21]",
+                "rdata_q_reg[22]",
+                "rdata_q_reg[23]",
+                "rdata_q_reg[24]",
+                "rdata_q_reg[25]",
+                "rdata_q_reg[26]",
+                "rdata_q_reg[27]",
+                "rdata_q_reg[28]",
+                "rdata_q_reg[29]",
+                "rdata_q_reg[30]",
+                "rdata_q_reg[31]"
+            ]
+        },
+        {
+            "CellName": "data_load_event_q",
+            "Bits": [
+                "data_load_event_q_reg"
+            ]
+        },
+        {
+            "CellName": "cnt_q",
+            "Bits": [
+                "cnt_q_reg[0]",
+                "cnt_q_reg[1]"
+            ]
+        },
+        {
+            "CellName": "data_we_q",
+            "Bits": [
+                "data_we_q_reg"
+            ]
+        },
+        {
+            "CellName": "rdata_offset_q",
+            "Bits": [
+                "rdata_offset_q_reg[0]",
+                "rdata_offset_q_reg[1]"
+            ]
+        },
+        {
+            "CellName": "data_sign_ext_q",
+            "Bits": [
+                "data_sign_ext_q_reg[0]",
+                "data_sign_ext_q_reg[1]"
+            ]
+        },
+        {
+            "CellName": "data_type_q",
+            "Bits": [
+                "data_type_q_reg[0]",
+                "data_type_q_reg[1]"
+            ]
+        }
+    ]
+}

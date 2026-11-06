@@ -1,0 +1,104 @@
+**************************************************
+Report         : unmatched_points
+
+Reference      : r:/WORK/cv32e40p_top
+Implementation : i:/WORK/cv32e40p_top
+Version        : X-2025.06-SP3
+Date           : Fri Nov  6 10:17:59 2026
+**************************************************
+
+32 Unmatched points (32 reference, 0 implementation):
+
+  Ref  DFF0X      r:/WORK/cv32e40p_top/core_i/id_stage_i/int_controller_i/irq_sec_q_reg
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[10]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[11]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[12]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[13]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[14]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[15]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[16]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[17]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[18]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[19]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[1]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[20]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[21]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[22]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[23]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[24]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[25]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[26]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[27]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[28]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[29]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[2]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[30]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[31]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[3]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[4]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[5]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[6]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[7]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[8]
+
+  Ref  DFF        r:/WORK/cv32e40p_top/core_i/id_stage_i/pc_ex_o_reg[9]
+
+ [BBNet: multiply-driven net
+  BBox:  black-box
+  BBPin: black-box pin
+  Block: hierarchical block
+  BlPin: hierarchical block pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Net:   matchable net
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1

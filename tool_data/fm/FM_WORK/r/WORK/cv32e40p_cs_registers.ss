@@ -1,0 +1,6 @@
+-1 12 91 22 16 57 5116 1043 2 FMR_ELAB-116/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv/cv32e40p_cs_registerscsr_save_cause_iYou are using the unique case but some items may overlap.
+-1 12 91 22 18 57 5116 1067 2 FMR_ELAB-116/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv/cv32e40p_cs_registerscsr_restore_mret_iYou are using the unique case but some items may overlap.
+-1 12 91 22 18 57 5116 1074 2 FMR_ELAB-116/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv/cv32e40p_cs_registerscsr_restore_dret_iYou are using the unique case but some items may overlap.
+-1 12 91 22 13 57 5116 1045 2 FMR_ELAB-116/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv/cv32e40p_cs_registerscsr_save_if_iYou are using the unique case but some items may overlap.
+-1 12 91 22 13 57 5116 1046 2 FMR_ELAB-116/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv/cv32e40p_cs_registerscsr_save_id_iYou are using the unique case but some items may overlap.
+-1 12 91 22 13 57 5116 1047 2 FMR_ELAB-116/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv/cv32e40p_cs_registerscsr_save_ex_iYou are using the unique case but some items may overlap.

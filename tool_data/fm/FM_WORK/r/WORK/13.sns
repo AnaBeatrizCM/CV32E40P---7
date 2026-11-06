@@ -1,0 +1,13 @@
+# struct_name_map
+regfile_waddr_lsu[0]
+regfile_waddr_lsu_reg[0]
+regfile_waddr_lsu[1]
+regfile_waddr_lsu_reg[1]
+regfile_waddr_lsu[2]
+regfile_waddr_lsu_reg[2]
+regfile_waddr_lsu[3]
+regfile_waddr_lsu_reg[3]
+regfile_waddr_lsu[4]
+regfile_waddr_lsu_reg[4]
+regfile_waddr_lsu[5]
+regfile_waddr_lsu_reg[5]

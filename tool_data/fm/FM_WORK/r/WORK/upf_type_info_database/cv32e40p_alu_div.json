@@ -1,0 +1,320 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_alu_div",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu_div.sv",
+    "Start Line": 26,
+    "End Line": 226,
+    "Ports": [
+        {
+            "PortName": "Clk_CI",
+            "Direction": "input"
+        },
+        {
+            "PortName": "Rst_RBI",
+            "Direction": "input"
+        },
+        {
+            "PortName": "OpA_DI",
+            "Direction": "input",
+            "Bits": [
+                "OpA_DI[31]",
+                "OpA_DI[30]",
+                "OpA_DI[29]",
+                "OpA_DI[28]",
+                "OpA_DI[27]",
+                "OpA_DI[26]",
+                "OpA_DI[25]",
+                "OpA_DI[24]",
+                "OpA_DI[23]",
+                "OpA_DI[22]",
+                "OpA_DI[21]",
+                "OpA_DI[20]",
+                "OpA_DI[19]",
+                "OpA_DI[18]",
+                "OpA_DI[17]",
+                "OpA_DI[16]",
+                "OpA_DI[15]",
+                "OpA_DI[14]",
+                "OpA_DI[13]",
+                "OpA_DI[12]",
+                "OpA_DI[11]",
+                "OpA_DI[10]",
+                "OpA_DI[9]",
+                "OpA_DI[8]",
+                "OpA_DI[7]",
+                "OpA_DI[6]",
+                "OpA_DI[5]",
+                "OpA_DI[4]",
+                "OpA_DI[3]",
+                "OpA_DI[2]",
+                "OpA_DI[1]",
+                "OpA_DI[0]"
+            ]
+        },
+        {
+            "PortName": "OpB_DI",
+            "Direction": "input",
+            "Bits": [
+                "OpB_DI[31]",
+                "OpB_DI[30]",
+                "OpB_DI[29]",
+                "OpB_DI[28]",
+                "OpB_DI[27]",
+                "OpB_DI[26]",
+                "OpB_DI[25]",
+                "OpB_DI[24]",
+                "OpB_DI[23]",
+                "OpB_DI[22]",
+                "OpB_DI[21]",
+                "OpB_DI[20]",
+                "OpB_DI[19]",
+                "OpB_DI[18]",
+                "OpB_DI[17]",
+                "OpB_DI[16]",
+                "OpB_DI[15]",
+                "OpB_DI[14]",
+                "OpB_DI[13]",
+                "OpB_DI[12]",
+                "OpB_DI[11]",
+                "OpB_DI[10]",
+                "OpB_DI[9]",
+                "OpB_DI[8]",
+                "OpB_DI[7]",
+                "OpB_DI[6]",
+                "OpB_DI[5]",
+                "OpB_DI[4]",
+                "OpB_DI[3]",
+                "OpB_DI[2]",
+                "OpB_DI[1]",
+                "OpB_DI[0]"
+            ]
+        },
+        {
+            "PortName": "OpBShift_DI",
+            "Direction": "input",
+            "Bits": [
+                "OpBShift_DI[5]",
+                "OpBShift_DI[4]",
+                "OpBShift_DI[3]",
+                "OpBShift_DI[2]",
+                "OpBShift_DI[1]",
+                "OpBShift_DI[0]"
+            ]
+        },
+        {
+            "PortName": "OpBIsZero_SI",
+            "Direction": "input"
+        },
+        {
+            "PortName": "OpBSign_SI",
+            "Direction": "input"
+        },
+        {
+            "PortName": "OpCode_SI",
+            "Direction": "input",
+            "Bits": [
+                "OpCode_SI[1]",
+                "OpCode_SI[0]"
+            ]
+        },
+        {
+            "PortName": "InVld_SI",
+            "Direction": "input"
+        },
+        {
+            "PortName": "OutRdy_SI",
+            "Direction": "input"
+        },
+        {
+            "PortName": "OutVld_SO",
+            "Direction": "output"
+        },
+        {
+            "PortName": "Res_DO",
+            "Direction": "output",
+            "Bits": [
+                "Res_DO[31]",
+                "Res_DO[30]",
+                "Res_DO[29]",
+                "Res_DO[28]",
+                "Res_DO[27]",
+                "Res_DO[26]",
+                "Res_DO[25]",
+                "Res_DO[24]",
+                "Res_DO[23]",
+                "Res_DO[22]",
+                "Res_DO[21]",
+                "Res_DO[20]",
+                "Res_DO[19]",
+                "Res_DO[18]",
+                "Res_DO[17]",
+                "Res_DO[16]",
+                "Res_DO[15]",
+                "Res_DO[14]",
+                "Res_DO[13]",
+                "Res_DO[12]",
+                "Res_DO[11]",
+                "Res_DO[10]",
+                "Res_DO[9]",
+                "Res_DO[8]",
+                "Res_DO[7]",
+                "Res_DO[6]",
+                "Res_DO[5]",
+                "Res_DO[4]",
+                "Res_DO[3]",
+                "Res_DO[2]",
+                "Res_DO[1]",
+                "Res_DO[0]"
+            ]
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "ResInv_SP",
+            "Bits": [
+                "ResInv_SP_reg"
+            ]
+        },
+        {
+            "CellName": "RemSel_SP",
+            "Bits": [
+                "RemSel_SP_reg"
+            ]
+        },
+        {
+            "CellName": "Cnt_DP",
+            "Bits": [
+                "Cnt_DP_reg[0]",
+                "Cnt_DP_reg[1]",
+                "Cnt_DP_reg[2]",
+                "Cnt_DP_reg[3]",
+                "Cnt_DP_reg[4]",
+                "Cnt_DP_reg[5]"
+            ]
+        },
+        {
+            "CellName": "BReg_DP",
+            "Bits": [
+                "BReg_DP_reg[0]",
+                "BReg_DP_reg[1]",
+                "BReg_DP_reg[2]",
+                "BReg_DP_reg[3]",
+                "BReg_DP_reg[4]",
+                "BReg_DP_reg[5]",
+                "BReg_DP_reg[6]",
+                "BReg_DP_reg[7]",
+                "BReg_DP_reg[8]",
+                "BReg_DP_reg[9]",
+                "BReg_DP_reg[10]",
+                "BReg_DP_reg[11]",
+                "BReg_DP_reg[12]",
+                "BReg_DP_reg[13]",
+                "BReg_DP_reg[14]",
+                "BReg_DP_reg[15]",
+                "BReg_DP_reg[16]",
+                "BReg_DP_reg[17]",
+                "BReg_DP_reg[18]",
+                "BReg_DP_reg[19]",
+                "BReg_DP_reg[20]",
+                "BReg_DP_reg[21]",
+                "BReg_DP_reg[22]",
+                "BReg_DP_reg[23]",
+                "BReg_DP_reg[24]",
+                "BReg_DP_reg[25]",
+                "BReg_DP_reg[26]",
+                "BReg_DP_reg[27]",
+                "BReg_DP_reg[28]",
+                "BReg_DP_reg[29]",
+                "BReg_DP_reg[30]",
+                "BReg_DP_reg[31]"
+            ]
+        },
+        {
+            "CellName": "AReg_DP",
+            "Bits": [
+                "AReg_DP_reg[0]",
+                "AReg_DP_reg[1]",
+                "AReg_DP_reg[2]",
+                "AReg_DP_reg[3]",
+                "AReg_DP_reg[4]",
+                "AReg_DP_reg[5]",
+                "AReg_DP_reg[6]",
+                "AReg_DP_reg[7]",
+                "AReg_DP_reg[8]",
+                "AReg_DP_reg[9]",
+                "AReg_DP_reg[10]",
+                "AReg_DP_reg[11]",
+                "AReg_DP_reg[12]",
+                "AReg_DP_reg[13]",
+                "AReg_DP_reg[14]",
+                "AReg_DP_reg[15]",
+                "AReg_DP_reg[16]",
+                "AReg_DP_reg[17]",
+                "AReg_DP_reg[18]",
+                "AReg_DP_reg[19]",
+                "AReg_DP_reg[20]",
+                "AReg_DP_reg[21]",
+                "AReg_DP_reg[22]",
+                "AReg_DP_reg[23]",
+                "AReg_DP_reg[24]",
+                "AReg_DP_reg[25]",
+                "AReg_DP_reg[26]",
+                "AReg_DP_reg[27]",
+                "AReg_DP_reg[28]",
+                "AReg_DP_reg[29]",
+                "AReg_DP_reg[30]",
+                "AReg_DP_reg[31]"
+            ]
+        },
+        {
+            "CellName": "CompInv_SP",
+            "Bits": [
+                "CompInv_SP_reg"
+            ]
+        },
+        {
+            "CellName": "ResReg_DP",
+            "Bits": [
+                "ResReg_DP_reg[0]",
+                "ResReg_DP_reg[1]",
+                "ResReg_DP_reg[2]",
+                "ResReg_DP_reg[3]",
+                "ResReg_DP_reg[4]",
+                "ResReg_DP_reg[5]",
+                "ResReg_DP_reg[6]",
+                "ResReg_DP_reg[7]",
+                "ResReg_DP_reg[8]",
+                "ResReg_DP_reg[9]",
+                "ResReg_DP_reg[10]",
+                "ResReg_DP_reg[11]",
+                "ResReg_DP_reg[12]",
+                "ResReg_DP_reg[13]",
+                "ResReg_DP_reg[14]",
+                "ResReg_DP_reg[15]",
+                "ResReg_DP_reg[16]",
+                "ResReg_DP_reg[17]",
+                "ResReg_DP_reg[18]",
+                "ResReg_DP_reg[19]",
+                "ResReg_DP_reg[20]",
+                "ResReg_DP_reg[21]",
+                "ResReg_DP_reg[22]",
+                "ResReg_DP_reg[23]",
+                "ResReg_DP_reg[24]",
+                "ResReg_DP_reg[25]",
+                "ResReg_DP_reg[26]",
+                "ResReg_DP_reg[27]",
+                "ResReg_DP_reg[28]",
+                "ResReg_DP_reg[29]",
+                "ResReg_DP_reg[30]",
+                "ResReg_DP_reg[31]"
+            ]
+        },
+        {
+            "CellName": "State_SP",
+            "Bits": [
+                "State_SP_reg[0]",
+                "State_SP_reg[1]"
+            ]
+        }
+    ]
+}

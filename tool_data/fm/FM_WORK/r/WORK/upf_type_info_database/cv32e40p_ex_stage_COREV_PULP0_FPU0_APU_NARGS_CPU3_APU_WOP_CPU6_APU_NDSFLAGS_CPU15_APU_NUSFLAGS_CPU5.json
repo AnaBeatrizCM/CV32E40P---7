@@ -1,0 +1,1258 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ex_stage.sv",
+    "Start Line": 32,
+    "End Line": 479,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "alu_operator_i",
+            "Direction": "input",
+            "Bits": [
+                "alu_operator_i[6]",
+                "alu_operator_i[5]",
+                "alu_operator_i[4]",
+                "alu_operator_i[3]",
+                "alu_operator_i[2]",
+                "alu_operator_i[1]",
+                "alu_operator_i[0]"
+            ]
+        },
+        {
+            "PortName": "alu_operand_a_i",
+            "Direction": "input",
+            "Bits": [
+                "alu_operand_a_i[31]",
+                "alu_operand_a_i[30]",
+                "alu_operand_a_i[29]",
+                "alu_operand_a_i[28]",
+                "alu_operand_a_i[27]",
+                "alu_operand_a_i[26]",
+                "alu_operand_a_i[25]",
+                "alu_operand_a_i[24]",
+                "alu_operand_a_i[23]",
+                "alu_operand_a_i[22]",
+                "alu_operand_a_i[21]",
+                "alu_operand_a_i[20]",
+                "alu_operand_a_i[19]",
+                "alu_operand_a_i[18]",
+                "alu_operand_a_i[17]",
+                "alu_operand_a_i[16]",
+                "alu_operand_a_i[15]",
+                "alu_operand_a_i[14]",
+                "alu_operand_a_i[13]",
+                "alu_operand_a_i[12]",
+                "alu_operand_a_i[11]",
+                "alu_operand_a_i[10]",
+                "alu_operand_a_i[9]",
+                "alu_operand_a_i[8]",
+                "alu_operand_a_i[7]",
+                "alu_operand_a_i[6]",
+                "alu_operand_a_i[5]",
+                "alu_operand_a_i[4]",
+                "alu_operand_a_i[3]",
+                "alu_operand_a_i[2]",
+                "alu_operand_a_i[1]",
+                "alu_operand_a_i[0]"
+            ]
+        },
+        {
+            "PortName": "alu_operand_b_i",
+            "Direction": "input",
+            "Bits": [
+                "alu_operand_b_i[31]",
+                "alu_operand_b_i[30]",
+                "alu_operand_b_i[29]",
+                "alu_operand_b_i[28]",
+                "alu_operand_b_i[27]",
+                "alu_operand_b_i[26]",
+                "alu_operand_b_i[25]",
+                "alu_operand_b_i[24]",
+                "alu_operand_b_i[23]",
+                "alu_operand_b_i[22]",
+                "alu_operand_b_i[21]",
+                "alu_operand_b_i[20]",
+                "alu_operand_b_i[19]",
+                "alu_operand_b_i[18]",
+                "alu_operand_b_i[17]",
+                "alu_operand_b_i[16]",
+                "alu_operand_b_i[15]",
+                "alu_operand_b_i[14]",
+                "alu_operand_b_i[13]",
+                "alu_operand_b_i[12]",
+                "alu_operand_b_i[11]",
+                "alu_operand_b_i[10]",
+                "alu_operand_b_i[9]",
+                "alu_operand_b_i[8]",
+                "alu_operand_b_i[7]",
+                "alu_operand_b_i[6]",
+                "alu_operand_b_i[5]",
+                "alu_operand_b_i[4]",
+                "alu_operand_b_i[3]",
+                "alu_operand_b_i[2]",
+                "alu_operand_b_i[1]",
+                "alu_operand_b_i[0]"
+            ]
+        },
+        {
+            "PortName": "alu_operand_c_i",
+            "Direction": "input",
+            "Bits": [
+                "alu_operand_c_i[31]",
+                "alu_operand_c_i[30]",
+                "alu_operand_c_i[29]",
+                "alu_operand_c_i[28]",
+                "alu_operand_c_i[27]",
+                "alu_operand_c_i[26]",
+                "alu_operand_c_i[25]",
+                "alu_operand_c_i[24]",
+                "alu_operand_c_i[23]",
+                "alu_operand_c_i[22]",
+                "alu_operand_c_i[21]",
+                "alu_operand_c_i[20]",
+                "alu_operand_c_i[19]",
+                "alu_operand_c_i[18]",
+                "alu_operand_c_i[17]",
+                "alu_operand_c_i[16]",
+                "alu_operand_c_i[15]",
+                "alu_operand_c_i[14]",
+                "alu_operand_c_i[13]",
+                "alu_operand_c_i[12]",
+                "alu_operand_c_i[11]",
+                "alu_operand_c_i[10]",
+                "alu_operand_c_i[9]",
+                "alu_operand_c_i[8]",
+                "alu_operand_c_i[7]",
+                "alu_operand_c_i[6]",
+                "alu_operand_c_i[5]",
+                "alu_operand_c_i[4]",
+                "alu_operand_c_i[3]",
+                "alu_operand_c_i[2]",
+                "alu_operand_c_i[1]",
+                "alu_operand_c_i[0]"
+            ]
+        },
+        {
+            "PortName": "alu_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "bmask_a_i",
+            "Direction": "input",
+            "Bits": [
+                "bmask_a_i[4]",
+                "bmask_a_i[3]",
+                "bmask_a_i[2]",
+                "bmask_a_i[1]",
+                "bmask_a_i[0]"
+            ]
+        },
+        {
+            "PortName": "bmask_b_i",
+            "Direction": "input",
+            "Bits": [
+                "bmask_b_i[4]",
+                "bmask_b_i[3]",
+                "bmask_b_i[2]",
+                "bmask_b_i[1]",
+                "bmask_b_i[0]"
+            ]
+        },
+        {
+            "PortName": "imm_vec_ext_i",
+            "Direction": "input",
+            "Bits": [
+                "imm_vec_ext_i[1]",
+                "imm_vec_ext_i[0]"
+            ]
+        },
+        {
+            "PortName": "alu_vec_mode_i",
+            "Direction": "input",
+            "Bits": [
+                "alu_vec_mode_i[1]",
+                "alu_vec_mode_i[0]"
+            ]
+        },
+        {
+            "PortName": "alu_is_clpx_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "alu_is_subrot_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "alu_clpx_shift_i",
+            "Direction": "input",
+            "Bits": [
+                "alu_clpx_shift_i[1]",
+                "alu_clpx_shift_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operator_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_operator_i[2]",
+                "mult_operator_i[1]",
+                "mult_operator_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operand_a_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_operand_a_i[31]",
+                "mult_operand_a_i[30]",
+                "mult_operand_a_i[29]",
+                "mult_operand_a_i[28]",
+                "mult_operand_a_i[27]",
+                "mult_operand_a_i[26]",
+                "mult_operand_a_i[25]",
+                "mult_operand_a_i[24]",
+                "mult_operand_a_i[23]",
+                "mult_operand_a_i[22]",
+                "mult_operand_a_i[21]",
+                "mult_operand_a_i[20]",
+                "mult_operand_a_i[19]",
+                "mult_operand_a_i[18]",
+                "mult_operand_a_i[17]",
+                "mult_operand_a_i[16]",
+                "mult_operand_a_i[15]",
+                "mult_operand_a_i[14]",
+                "mult_operand_a_i[13]",
+                "mult_operand_a_i[12]",
+                "mult_operand_a_i[11]",
+                "mult_operand_a_i[10]",
+                "mult_operand_a_i[9]",
+                "mult_operand_a_i[8]",
+                "mult_operand_a_i[7]",
+                "mult_operand_a_i[6]",
+                "mult_operand_a_i[5]",
+                "mult_operand_a_i[4]",
+                "mult_operand_a_i[3]",
+                "mult_operand_a_i[2]",
+                "mult_operand_a_i[1]",
+                "mult_operand_a_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operand_b_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_operand_b_i[31]",
+                "mult_operand_b_i[30]",
+                "mult_operand_b_i[29]",
+                "mult_operand_b_i[28]",
+                "mult_operand_b_i[27]",
+                "mult_operand_b_i[26]",
+                "mult_operand_b_i[25]",
+                "mult_operand_b_i[24]",
+                "mult_operand_b_i[23]",
+                "mult_operand_b_i[22]",
+                "mult_operand_b_i[21]",
+                "mult_operand_b_i[20]",
+                "mult_operand_b_i[19]",
+                "mult_operand_b_i[18]",
+                "mult_operand_b_i[17]",
+                "mult_operand_b_i[16]",
+                "mult_operand_b_i[15]",
+                "mult_operand_b_i[14]",
+                "mult_operand_b_i[13]",
+                "mult_operand_b_i[12]",
+                "mult_operand_b_i[11]",
+                "mult_operand_b_i[10]",
+                "mult_operand_b_i[9]",
+                "mult_operand_b_i[8]",
+                "mult_operand_b_i[7]",
+                "mult_operand_b_i[6]",
+                "mult_operand_b_i[5]",
+                "mult_operand_b_i[4]",
+                "mult_operand_b_i[3]",
+                "mult_operand_b_i[2]",
+                "mult_operand_b_i[1]",
+                "mult_operand_b_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operand_c_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_operand_c_i[31]",
+                "mult_operand_c_i[30]",
+                "mult_operand_c_i[29]",
+                "mult_operand_c_i[28]",
+                "mult_operand_c_i[27]",
+                "mult_operand_c_i[26]",
+                "mult_operand_c_i[25]",
+                "mult_operand_c_i[24]",
+                "mult_operand_c_i[23]",
+                "mult_operand_c_i[22]",
+                "mult_operand_c_i[21]",
+                "mult_operand_c_i[20]",
+                "mult_operand_c_i[19]",
+                "mult_operand_c_i[18]",
+                "mult_operand_c_i[17]",
+                "mult_operand_c_i[16]",
+                "mult_operand_c_i[15]",
+                "mult_operand_c_i[14]",
+                "mult_operand_c_i[13]",
+                "mult_operand_c_i[12]",
+                "mult_operand_c_i[11]",
+                "mult_operand_c_i[10]",
+                "mult_operand_c_i[9]",
+                "mult_operand_c_i[8]",
+                "mult_operand_c_i[7]",
+                "mult_operand_c_i[6]",
+                "mult_operand_c_i[5]",
+                "mult_operand_c_i[4]",
+                "mult_operand_c_i[3]",
+                "mult_operand_c_i[2]",
+                "mult_operand_c_i[1]",
+                "mult_operand_c_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mult_sel_subword_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mult_signed_mode_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_signed_mode_i[1]",
+                "mult_signed_mode_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_imm_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_imm_i[4]",
+                "mult_imm_i[3]",
+                "mult_imm_i[2]",
+                "mult_imm_i[1]",
+                "mult_imm_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_op_a_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_dot_op_a_i[31]",
+                "mult_dot_op_a_i[30]",
+                "mult_dot_op_a_i[29]",
+                "mult_dot_op_a_i[28]",
+                "mult_dot_op_a_i[27]",
+                "mult_dot_op_a_i[26]",
+                "mult_dot_op_a_i[25]",
+                "mult_dot_op_a_i[24]",
+                "mult_dot_op_a_i[23]",
+                "mult_dot_op_a_i[22]",
+                "mult_dot_op_a_i[21]",
+                "mult_dot_op_a_i[20]",
+                "mult_dot_op_a_i[19]",
+                "mult_dot_op_a_i[18]",
+                "mult_dot_op_a_i[17]",
+                "mult_dot_op_a_i[16]",
+                "mult_dot_op_a_i[15]",
+                "mult_dot_op_a_i[14]",
+                "mult_dot_op_a_i[13]",
+                "mult_dot_op_a_i[12]",
+                "mult_dot_op_a_i[11]",
+                "mult_dot_op_a_i[10]",
+                "mult_dot_op_a_i[9]",
+                "mult_dot_op_a_i[8]",
+                "mult_dot_op_a_i[7]",
+                "mult_dot_op_a_i[6]",
+                "mult_dot_op_a_i[5]",
+                "mult_dot_op_a_i[4]",
+                "mult_dot_op_a_i[3]",
+                "mult_dot_op_a_i[2]",
+                "mult_dot_op_a_i[1]",
+                "mult_dot_op_a_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_op_b_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_dot_op_b_i[31]",
+                "mult_dot_op_b_i[30]",
+                "mult_dot_op_b_i[29]",
+                "mult_dot_op_b_i[28]",
+                "mult_dot_op_b_i[27]",
+                "mult_dot_op_b_i[26]",
+                "mult_dot_op_b_i[25]",
+                "mult_dot_op_b_i[24]",
+                "mult_dot_op_b_i[23]",
+                "mult_dot_op_b_i[22]",
+                "mult_dot_op_b_i[21]",
+                "mult_dot_op_b_i[20]",
+                "mult_dot_op_b_i[19]",
+                "mult_dot_op_b_i[18]",
+                "mult_dot_op_b_i[17]",
+                "mult_dot_op_b_i[16]",
+                "mult_dot_op_b_i[15]",
+                "mult_dot_op_b_i[14]",
+                "mult_dot_op_b_i[13]",
+                "mult_dot_op_b_i[12]",
+                "mult_dot_op_b_i[11]",
+                "mult_dot_op_b_i[10]",
+                "mult_dot_op_b_i[9]",
+                "mult_dot_op_b_i[8]",
+                "mult_dot_op_b_i[7]",
+                "mult_dot_op_b_i[6]",
+                "mult_dot_op_b_i[5]",
+                "mult_dot_op_b_i[4]",
+                "mult_dot_op_b_i[3]",
+                "mult_dot_op_b_i[2]",
+                "mult_dot_op_b_i[1]",
+                "mult_dot_op_b_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_op_c_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_dot_op_c_i[31]",
+                "mult_dot_op_c_i[30]",
+                "mult_dot_op_c_i[29]",
+                "mult_dot_op_c_i[28]",
+                "mult_dot_op_c_i[27]",
+                "mult_dot_op_c_i[26]",
+                "mult_dot_op_c_i[25]",
+                "mult_dot_op_c_i[24]",
+                "mult_dot_op_c_i[23]",
+                "mult_dot_op_c_i[22]",
+                "mult_dot_op_c_i[21]",
+                "mult_dot_op_c_i[20]",
+                "mult_dot_op_c_i[19]",
+                "mult_dot_op_c_i[18]",
+                "mult_dot_op_c_i[17]",
+                "mult_dot_op_c_i[16]",
+                "mult_dot_op_c_i[15]",
+                "mult_dot_op_c_i[14]",
+                "mult_dot_op_c_i[13]",
+                "mult_dot_op_c_i[12]",
+                "mult_dot_op_c_i[11]",
+                "mult_dot_op_c_i[10]",
+                "mult_dot_op_c_i[9]",
+                "mult_dot_op_c_i[8]",
+                "mult_dot_op_c_i[7]",
+                "mult_dot_op_c_i[6]",
+                "mult_dot_op_c_i[5]",
+                "mult_dot_op_c_i[4]",
+                "mult_dot_op_c_i[3]",
+                "mult_dot_op_c_i[2]",
+                "mult_dot_op_c_i[1]",
+                "mult_dot_op_c_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_signed_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_dot_signed_i[1]",
+                "mult_dot_signed_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_is_clpx_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mult_clpx_shift_i",
+            "Direction": "input",
+            "Bits": [
+                "mult_clpx_shift_i[1]",
+                "mult_clpx_shift_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_clpx_img_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mult_multicycle_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_req_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_rvalid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_misaligned_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_misaligned_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ctrl_transfer_insn_in_dec_i",
+            "Direction": "input",
+            "Bits": [
+                "ctrl_transfer_insn_in_dec_i[1]",
+                "ctrl_transfer_insn_in_dec_i[0]"
+            ]
+        },
+        {
+            "PortName": "fpu_fflags_we_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fpu_fflags_o",
+            "Direction": "output",
+            "Bits": [
+                "fpu_fflags_o[4]",
+                "fpu_fflags_o[3]",
+                "fpu_fflags_o[2]",
+                "fpu_fflags_o[1]",
+                "fpu_fflags_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_op_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_op_i[5]",
+                "apu_op_i[4]",
+                "apu_op_i[3]",
+                "apu_op_i[2]",
+                "apu_op_i[1]",
+                "apu_op_i[0]"
+            ]
+        },
+        {
+            "PortName": "apu_lat_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_lat_i[1]",
+                "apu_lat_i[0]"
+            ]
+        },
+        {
+            "PortName": "apu_operands_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_operands_i[2][31]",
+                "apu_operands_i[2][30]",
+                "apu_operands_i[2][29]",
+                "apu_operands_i[2][28]",
+                "apu_operands_i[2][27]",
+                "apu_operands_i[2][26]",
+                "apu_operands_i[2][25]",
+                "apu_operands_i[2][24]",
+                "apu_operands_i[2][23]",
+                "apu_operands_i[2][22]",
+                "apu_operands_i[2][21]",
+                "apu_operands_i[2][20]",
+                "apu_operands_i[2][19]",
+                "apu_operands_i[2][18]",
+                "apu_operands_i[2][17]",
+                "apu_operands_i[2][16]",
+                "apu_operands_i[2][15]",
+                "apu_operands_i[2][14]",
+                "apu_operands_i[2][13]",
+                "apu_operands_i[2][12]",
+                "apu_operands_i[2][11]",
+                "apu_operands_i[2][10]",
+                "apu_operands_i[2][9]",
+                "apu_operands_i[2][8]",
+                "apu_operands_i[2][7]",
+                "apu_operands_i[2][6]",
+                "apu_operands_i[2][5]",
+                "apu_operands_i[2][4]",
+                "apu_operands_i[2][3]",
+                "apu_operands_i[2][2]",
+                "apu_operands_i[2][1]",
+                "apu_operands_i[2][0]",
+                "apu_operands_i[1][31]",
+                "apu_operands_i[1][30]",
+                "apu_operands_i[1][29]",
+                "apu_operands_i[1][28]",
+                "apu_operands_i[1][27]",
+                "apu_operands_i[1][26]",
+                "apu_operands_i[1][25]",
+                "apu_operands_i[1][24]",
+                "apu_operands_i[1][23]",
+                "apu_operands_i[1][22]",
+                "apu_operands_i[1][21]",
+                "apu_operands_i[1][20]",
+                "apu_operands_i[1][19]",
+                "apu_operands_i[1][18]",
+                "apu_operands_i[1][17]",
+                "apu_operands_i[1][16]",
+                "apu_operands_i[1][15]",
+                "apu_operands_i[1][14]",
+                "apu_operands_i[1][13]",
+                "apu_operands_i[1][12]",
+                "apu_operands_i[1][11]",
+                "apu_operands_i[1][10]",
+                "apu_operands_i[1][9]",
+                "apu_operands_i[1][8]",
+                "apu_operands_i[1][7]",
+                "apu_operands_i[1][6]",
+                "apu_operands_i[1][5]",
+                "apu_operands_i[1][4]",
+                "apu_operands_i[1][3]",
+                "apu_operands_i[1][2]",
+                "apu_operands_i[1][1]",
+                "apu_operands_i[1][0]",
+                "apu_operands_i[0][31]",
+                "apu_operands_i[0][30]",
+                "apu_operands_i[0][29]",
+                "apu_operands_i[0][28]",
+                "apu_operands_i[0][27]",
+                "apu_operands_i[0][26]",
+                "apu_operands_i[0][25]",
+                "apu_operands_i[0][24]",
+                "apu_operands_i[0][23]",
+                "apu_operands_i[0][22]",
+                "apu_operands_i[0][21]",
+                "apu_operands_i[0][20]",
+                "apu_operands_i[0][19]",
+                "apu_operands_i[0][18]",
+                "apu_operands_i[0][17]",
+                "apu_operands_i[0][16]",
+                "apu_operands_i[0][15]",
+                "apu_operands_i[0][14]",
+                "apu_operands_i[0][13]",
+                "apu_operands_i[0][12]",
+                "apu_operands_i[0][11]",
+                "apu_operands_i[0][10]",
+                "apu_operands_i[0][9]",
+                "apu_operands_i[0][8]",
+                "apu_operands_i[0][7]",
+                "apu_operands_i[0][6]",
+                "apu_operands_i[0][5]",
+                "apu_operands_i[0][4]",
+                "apu_operands_i[0][3]",
+                "apu_operands_i[0][2]",
+                "apu_operands_i[0][1]",
+                "apu_operands_i[0][0]"
+            ]
+        },
+        {
+            "PortName": "apu_waddr_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_waddr_i[5]",
+                "apu_waddr_i[4]",
+                "apu_waddr_i[3]",
+                "apu_waddr_i[2]",
+                "apu_waddr_i[1]",
+                "apu_waddr_i[0]"
+            ]
+        },
+        {
+            "PortName": "apu_flags_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_flags_i[4]",
+                "apu_flags_i[3]",
+                "apu_flags_i[2]",
+                "apu_flags_i[1]",
+                "apu_flags_i[0]"
+            ]
+        },
+        {
+            "PortName": "apu_read_regs_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_read_regs_i[2][5]",
+                "apu_read_regs_i[2][4]",
+                "apu_read_regs_i[2][3]",
+                "apu_read_regs_i[2][2]",
+                "apu_read_regs_i[2][1]",
+                "apu_read_regs_i[2][0]",
+                "apu_read_regs_i[1][5]",
+                "apu_read_regs_i[1][4]",
+                "apu_read_regs_i[1][3]",
+                "apu_read_regs_i[1][2]",
+                "apu_read_regs_i[1][1]",
+                "apu_read_regs_i[1][0]",
+                "apu_read_regs_i[0][5]",
+                "apu_read_regs_i[0][4]",
+                "apu_read_regs_i[0][3]",
+                "apu_read_regs_i[0][2]",
+                "apu_read_regs_i[0][1]",
+                "apu_read_regs_i[0][0]"
+            ]
+        },
+        {
+            "PortName": "apu_read_regs_valid_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_read_regs_valid_i[2]",
+                "apu_read_regs_valid_i[1]",
+                "apu_read_regs_valid_i[0]"
+            ]
+        },
+        {
+            "PortName": "apu_read_dep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_read_dep_for_jalr_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_write_regs_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_write_regs_i[1][5]",
+                "apu_write_regs_i[1][4]",
+                "apu_write_regs_i[1][3]",
+                "apu_write_regs_i[1][2]",
+                "apu_write_regs_i[1][1]",
+                "apu_write_regs_i[1][0]",
+                "apu_write_regs_i[0][5]",
+                "apu_write_regs_i[0][4]",
+                "apu_write_regs_i[0][3]",
+                "apu_write_regs_i[0][2]",
+                "apu_write_regs_i[0][1]",
+                "apu_write_regs_i[0][0]"
+            ]
+        },
+        {
+            "PortName": "apu_write_regs_valid_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_write_regs_valid_i[1]",
+                "apu_write_regs_valid_i[0]"
+            ]
+        },
+        {
+            "PortName": "apu_write_dep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_perf_type_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_perf_cont_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_perf_wb_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_busy_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_ready_wb_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_req_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_gnt_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_operands_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_operands_o[2][31]",
+                "apu_operands_o[2][30]",
+                "apu_operands_o[2][29]",
+                "apu_operands_o[2][28]",
+                "apu_operands_o[2][27]",
+                "apu_operands_o[2][26]",
+                "apu_operands_o[2][25]",
+                "apu_operands_o[2][24]",
+                "apu_operands_o[2][23]",
+                "apu_operands_o[2][22]",
+                "apu_operands_o[2][21]",
+                "apu_operands_o[2][20]",
+                "apu_operands_o[2][19]",
+                "apu_operands_o[2][18]",
+                "apu_operands_o[2][17]",
+                "apu_operands_o[2][16]",
+                "apu_operands_o[2][15]",
+                "apu_operands_o[2][14]",
+                "apu_operands_o[2][13]",
+                "apu_operands_o[2][12]",
+                "apu_operands_o[2][11]",
+                "apu_operands_o[2][10]",
+                "apu_operands_o[2][9]",
+                "apu_operands_o[2][8]",
+                "apu_operands_o[2][7]",
+                "apu_operands_o[2][6]",
+                "apu_operands_o[2][5]",
+                "apu_operands_o[2][4]",
+                "apu_operands_o[2][3]",
+                "apu_operands_o[2][2]",
+                "apu_operands_o[2][1]",
+                "apu_operands_o[2][0]",
+                "apu_operands_o[1][31]",
+                "apu_operands_o[1][30]",
+                "apu_operands_o[1][29]",
+                "apu_operands_o[1][28]",
+                "apu_operands_o[1][27]",
+                "apu_operands_o[1][26]",
+                "apu_operands_o[1][25]",
+                "apu_operands_o[1][24]",
+                "apu_operands_o[1][23]",
+                "apu_operands_o[1][22]",
+                "apu_operands_o[1][21]",
+                "apu_operands_o[1][20]",
+                "apu_operands_o[1][19]",
+                "apu_operands_o[1][18]",
+                "apu_operands_o[1][17]",
+                "apu_operands_o[1][16]",
+                "apu_operands_o[1][15]",
+                "apu_operands_o[1][14]",
+                "apu_operands_o[1][13]",
+                "apu_operands_o[1][12]",
+                "apu_operands_o[1][11]",
+                "apu_operands_o[1][10]",
+                "apu_operands_o[1][9]",
+                "apu_operands_o[1][8]",
+                "apu_operands_o[1][7]",
+                "apu_operands_o[1][6]",
+                "apu_operands_o[1][5]",
+                "apu_operands_o[1][4]",
+                "apu_operands_o[1][3]",
+                "apu_operands_o[1][2]",
+                "apu_operands_o[1][1]",
+                "apu_operands_o[1][0]",
+                "apu_operands_o[0][31]",
+                "apu_operands_o[0][30]",
+                "apu_operands_o[0][29]",
+                "apu_operands_o[0][28]",
+                "apu_operands_o[0][27]",
+                "apu_operands_o[0][26]",
+                "apu_operands_o[0][25]",
+                "apu_operands_o[0][24]",
+                "apu_operands_o[0][23]",
+                "apu_operands_o[0][22]",
+                "apu_operands_o[0][21]",
+                "apu_operands_o[0][20]",
+                "apu_operands_o[0][19]",
+                "apu_operands_o[0][18]",
+                "apu_operands_o[0][17]",
+                "apu_operands_o[0][16]",
+                "apu_operands_o[0][15]",
+                "apu_operands_o[0][14]",
+                "apu_operands_o[0][13]",
+                "apu_operands_o[0][12]",
+                "apu_operands_o[0][11]",
+                "apu_operands_o[0][10]",
+                "apu_operands_o[0][9]",
+                "apu_operands_o[0][8]",
+                "apu_operands_o[0][7]",
+                "apu_operands_o[0][6]",
+                "apu_operands_o[0][5]",
+                "apu_operands_o[0][4]",
+                "apu_operands_o[0][3]",
+                "apu_operands_o[0][2]",
+                "apu_operands_o[0][1]",
+                "apu_operands_o[0][0]"
+            ]
+        },
+        {
+            "PortName": "apu_op_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_op_o[5]",
+                "apu_op_o[4]",
+                "apu_op_o[3]",
+                "apu_op_o[2]",
+                "apu_op_o[1]",
+                "apu_op_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_rvalid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_result_i",
+            "Direction": "input",
+            "Bits": [
+                "apu_result_i[31]",
+                "apu_result_i[30]",
+                "apu_result_i[29]",
+                "apu_result_i[28]",
+                "apu_result_i[27]",
+                "apu_result_i[26]",
+                "apu_result_i[25]",
+                "apu_result_i[24]",
+                "apu_result_i[23]",
+                "apu_result_i[22]",
+                "apu_result_i[21]",
+                "apu_result_i[20]",
+                "apu_result_i[19]",
+                "apu_result_i[18]",
+                "apu_result_i[17]",
+                "apu_result_i[16]",
+                "apu_result_i[15]",
+                "apu_result_i[14]",
+                "apu_result_i[13]",
+                "apu_result_i[12]",
+                "apu_result_i[11]",
+                "apu_result_i[10]",
+                "apu_result_i[9]",
+                "apu_result_i[8]",
+                "apu_result_i[7]",
+                "apu_result_i[6]",
+                "apu_result_i[5]",
+                "apu_result_i[4]",
+                "apu_result_i[3]",
+                "apu_result_i[2]",
+                "apu_result_i[1]",
+                "apu_result_i[0]"
+            ]
+        },
+        {
+            "PortName": "lsu_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "lsu_rdata_i",
+            "Direction": "input",
+            "Bits": [
+                "lsu_rdata_i[31]",
+                "lsu_rdata_i[30]",
+                "lsu_rdata_i[29]",
+                "lsu_rdata_i[28]",
+                "lsu_rdata_i[27]",
+                "lsu_rdata_i[26]",
+                "lsu_rdata_i[25]",
+                "lsu_rdata_i[24]",
+                "lsu_rdata_i[23]",
+                "lsu_rdata_i[22]",
+                "lsu_rdata_i[21]",
+                "lsu_rdata_i[20]",
+                "lsu_rdata_i[19]",
+                "lsu_rdata_i[18]",
+                "lsu_rdata_i[17]",
+                "lsu_rdata_i[16]",
+                "lsu_rdata_i[15]",
+                "lsu_rdata_i[14]",
+                "lsu_rdata_i[13]",
+                "lsu_rdata_i[12]",
+                "lsu_rdata_i[11]",
+                "lsu_rdata_i[10]",
+                "lsu_rdata_i[9]",
+                "lsu_rdata_i[8]",
+                "lsu_rdata_i[7]",
+                "lsu_rdata_i[6]",
+                "lsu_rdata_i[5]",
+                "lsu_rdata_i[4]",
+                "lsu_rdata_i[3]",
+                "lsu_rdata_i[2]",
+                "lsu_rdata_i[1]",
+                "lsu_rdata_i[0]"
+            ]
+        },
+        {
+            "PortName": "branch_in_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_alu_waddr_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_alu_waddr_i[5]",
+                "regfile_alu_waddr_i[4]",
+                "regfile_alu_waddr_i[3]",
+                "regfile_alu_waddr_i[2]",
+                "regfile_alu_waddr_i[1]",
+                "regfile_alu_waddr_i[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_alu_we_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_we_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_waddr_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_waddr_i[5]",
+                "regfile_waddr_i[4]",
+                "regfile_waddr_i[3]",
+                "regfile_waddr_i[2]",
+                "regfile_waddr_i[1]",
+                "regfile_waddr_i[0]"
+            ]
+        },
+        {
+            "PortName": "csr_access_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "csr_rdata_i",
+            "Direction": "input",
+            "Bits": [
+                "csr_rdata_i[31]",
+                "csr_rdata_i[30]",
+                "csr_rdata_i[29]",
+                "csr_rdata_i[28]",
+                "csr_rdata_i[27]",
+                "csr_rdata_i[26]",
+                "csr_rdata_i[25]",
+                "csr_rdata_i[24]",
+                "csr_rdata_i[23]",
+                "csr_rdata_i[22]",
+                "csr_rdata_i[21]",
+                "csr_rdata_i[20]",
+                "csr_rdata_i[19]",
+                "csr_rdata_i[18]",
+                "csr_rdata_i[17]",
+                "csr_rdata_i[16]",
+                "csr_rdata_i[15]",
+                "csr_rdata_i[14]",
+                "csr_rdata_i[13]",
+                "csr_rdata_i[12]",
+                "csr_rdata_i[11]",
+                "csr_rdata_i[10]",
+                "csr_rdata_i[9]",
+                "csr_rdata_i[8]",
+                "csr_rdata_i[7]",
+                "csr_rdata_i[6]",
+                "csr_rdata_i[5]",
+                "csr_rdata_i[4]",
+                "csr_rdata_i[3]",
+                "csr_rdata_i[2]",
+                "csr_rdata_i[1]",
+                "csr_rdata_i[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_waddr_wb_o",
+            "Direction": "output",
+            "Bits": [
+                "regfile_waddr_wb_o[5]",
+                "regfile_waddr_wb_o[4]",
+                "regfile_waddr_wb_o[3]",
+                "regfile_waddr_wb_o[2]",
+                "regfile_waddr_wb_o[1]",
+                "regfile_waddr_wb_o[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_we_wb_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "regfile_we_wb_power_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "regfile_wdata_wb_o",
+            "Direction": "output",
+            "Bits": [
+                "regfile_wdata_wb_o[31]",
+                "regfile_wdata_wb_o[30]",
+                "regfile_wdata_wb_o[29]",
+                "regfile_wdata_wb_o[28]",
+                "regfile_wdata_wb_o[27]",
+                "regfile_wdata_wb_o[26]",
+                "regfile_wdata_wb_o[25]",
+                "regfile_wdata_wb_o[24]",
+                "regfile_wdata_wb_o[23]",
+                "regfile_wdata_wb_o[22]",
+                "regfile_wdata_wb_o[21]",
+                "regfile_wdata_wb_o[20]",
+                "regfile_wdata_wb_o[19]",
+                "regfile_wdata_wb_o[18]",
+                "regfile_wdata_wb_o[17]",
+                "regfile_wdata_wb_o[16]",
+                "regfile_wdata_wb_o[15]",
+                "regfile_wdata_wb_o[14]",
+                "regfile_wdata_wb_o[13]",
+                "regfile_wdata_wb_o[12]",
+                "regfile_wdata_wb_o[11]",
+                "regfile_wdata_wb_o[10]",
+                "regfile_wdata_wb_o[9]",
+                "regfile_wdata_wb_o[8]",
+                "regfile_wdata_wb_o[7]",
+                "regfile_wdata_wb_o[6]",
+                "regfile_wdata_wb_o[5]",
+                "regfile_wdata_wb_o[4]",
+                "regfile_wdata_wb_o[3]",
+                "regfile_wdata_wb_o[2]",
+                "regfile_wdata_wb_o[1]",
+                "regfile_wdata_wb_o[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_alu_waddr_fw_o",
+            "Direction": "output",
+            "Bits": [
+                "regfile_alu_waddr_fw_o[5]",
+                "regfile_alu_waddr_fw_o[4]",
+                "regfile_alu_waddr_fw_o[3]",
+                "regfile_alu_waddr_fw_o[2]",
+                "regfile_alu_waddr_fw_o[1]",
+                "regfile_alu_waddr_fw_o[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_alu_we_fw_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "regfile_alu_we_fw_power_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "regfile_alu_wdata_fw_o",
+            "Direction": "output",
+            "Bits": [
+                "regfile_alu_wdata_fw_o[31]",
+                "regfile_alu_wdata_fw_o[30]",
+                "regfile_alu_wdata_fw_o[29]",
+                "regfile_alu_wdata_fw_o[28]",
+                "regfile_alu_wdata_fw_o[27]",
+                "regfile_alu_wdata_fw_o[26]",
+                "regfile_alu_wdata_fw_o[25]",
+                "regfile_alu_wdata_fw_o[24]",
+                "regfile_alu_wdata_fw_o[23]",
+                "regfile_alu_wdata_fw_o[22]",
+                "regfile_alu_wdata_fw_o[21]",
+                "regfile_alu_wdata_fw_o[20]",
+                "regfile_alu_wdata_fw_o[19]",
+                "regfile_alu_wdata_fw_o[18]",
+                "regfile_alu_wdata_fw_o[17]",
+                "regfile_alu_wdata_fw_o[16]",
+                "regfile_alu_wdata_fw_o[15]",
+                "regfile_alu_wdata_fw_o[14]",
+                "regfile_alu_wdata_fw_o[13]",
+                "regfile_alu_wdata_fw_o[12]",
+                "regfile_alu_wdata_fw_o[11]",
+                "regfile_alu_wdata_fw_o[10]",
+                "regfile_alu_wdata_fw_o[9]",
+                "regfile_alu_wdata_fw_o[8]",
+                "regfile_alu_wdata_fw_o[7]",
+                "regfile_alu_wdata_fw_o[6]",
+                "regfile_alu_wdata_fw_o[5]",
+                "regfile_alu_wdata_fw_o[4]",
+                "regfile_alu_wdata_fw_o[3]",
+                "regfile_alu_wdata_fw_o[2]",
+                "regfile_alu_wdata_fw_o[1]",
+                "regfile_alu_wdata_fw_o[0]"
+            ]
+        },
+        {
+            "PortName": "jump_target_o",
+            "Direction": "output",
+            "Bits": [
+                "jump_target_o[31]",
+                "jump_target_o[30]",
+                "jump_target_o[29]",
+                "jump_target_o[28]",
+                "jump_target_o[27]",
+                "jump_target_o[26]",
+                "jump_target_o[25]",
+                "jump_target_o[24]",
+                "jump_target_o[23]",
+                "jump_target_o[22]",
+                "jump_target_o[21]",
+                "jump_target_o[20]",
+                "jump_target_o[19]",
+                "jump_target_o[18]",
+                "jump_target_o[17]",
+                "jump_target_o[16]",
+                "jump_target_o[15]",
+                "jump_target_o[14]",
+                "jump_target_o[13]",
+                "jump_target_o[12]",
+                "jump_target_o[11]",
+                "jump_target_o[10]",
+                "jump_target_o[9]",
+                "jump_target_o[8]",
+                "jump_target_o[7]",
+                "jump_target_o[6]",
+                "jump_target_o[5]",
+                "jump_target_o[4]",
+                "jump_target_o[3]",
+                "jump_target_o[2]",
+                "jump_target_o[1]",
+                "jump_target_o[0]"
+            ]
+        },
+        {
+            "PortName": "branch_decision_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "is_decoding_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "lsu_ready_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "lsu_err_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ex_ready_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "ex_valid_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "wb_ready_i",
+            "Direction": "input"
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "regfile_we_lsu",
+            "Bits": [
+                "regfile_we_lsu_reg"
+            ]
+        },
+        {
+            "CellName": "regfile_waddr_lsu",
+            "Bits": [
+                "regfile_waddr_lsu_reg[0]",
+                "regfile_waddr_lsu_reg[1]",
+                "regfile_waddr_lsu_reg[2]",
+                "regfile_waddr_lsu_reg[3]",
+                "regfile_waddr_lsu_reg[4]",
+                "regfile_waddr_lsu_reg[5]"
+            ]
+        }
+    ]
+}

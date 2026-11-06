@@ -1,0 +1,253 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_alu",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv",
+    "Start Line": 28,
+    "End Line": 986,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "enable_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "operator_i",
+            "Direction": "input",
+            "Bits": [
+                "operator_i[6]",
+                "operator_i[5]",
+                "operator_i[4]",
+                "operator_i[3]",
+                "operator_i[2]",
+                "operator_i[1]",
+                "operator_i[0]"
+            ]
+        },
+        {
+            "PortName": "operand_a_i",
+            "Direction": "input",
+            "Bits": [
+                "operand_a_i[31]",
+                "operand_a_i[30]",
+                "operand_a_i[29]",
+                "operand_a_i[28]",
+                "operand_a_i[27]",
+                "operand_a_i[26]",
+                "operand_a_i[25]",
+                "operand_a_i[24]",
+                "operand_a_i[23]",
+                "operand_a_i[22]",
+                "operand_a_i[21]",
+                "operand_a_i[20]",
+                "operand_a_i[19]",
+                "operand_a_i[18]",
+                "operand_a_i[17]",
+                "operand_a_i[16]",
+                "operand_a_i[15]",
+                "operand_a_i[14]",
+                "operand_a_i[13]",
+                "operand_a_i[12]",
+                "operand_a_i[11]",
+                "operand_a_i[10]",
+                "operand_a_i[9]",
+                "operand_a_i[8]",
+                "operand_a_i[7]",
+                "operand_a_i[6]",
+                "operand_a_i[5]",
+                "operand_a_i[4]",
+                "operand_a_i[3]",
+                "operand_a_i[2]",
+                "operand_a_i[1]",
+                "operand_a_i[0]"
+            ]
+        },
+        {
+            "PortName": "operand_b_i",
+            "Direction": "input",
+            "Bits": [
+                "operand_b_i[31]",
+                "operand_b_i[30]",
+                "operand_b_i[29]",
+                "operand_b_i[28]",
+                "operand_b_i[27]",
+                "operand_b_i[26]",
+                "operand_b_i[25]",
+                "operand_b_i[24]",
+                "operand_b_i[23]",
+                "operand_b_i[22]",
+                "operand_b_i[21]",
+                "operand_b_i[20]",
+                "operand_b_i[19]",
+                "operand_b_i[18]",
+                "operand_b_i[17]",
+                "operand_b_i[16]",
+                "operand_b_i[15]",
+                "operand_b_i[14]",
+                "operand_b_i[13]",
+                "operand_b_i[12]",
+                "operand_b_i[11]",
+                "operand_b_i[10]",
+                "operand_b_i[9]",
+                "operand_b_i[8]",
+                "operand_b_i[7]",
+                "operand_b_i[6]",
+                "operand_b_i[5]",
+                "operand_b_i[4]",
+                "operand_b_i[3]",
+                "operand_b_i[2]",
+                "operand_b_i[1]",
+                "operand_b_i[0]"
+            ]
+        },
+        {
+            "PortName": "operand_c_i",
+            "Direction": "input",
+            "Bits": [
+                "operand_c_i[31]",
+                "operand_c_i[30]",
+                "operand_c_i[29]",
+                "operand_c_i[28]",
+                "operand_c_i[27]",
+                "operand_c_i[26]",
+                "operand_c_i[25]",
+                "operand_c_i[24]",
+                "operand_c_i[23]",
+                "operand_c_i[22]",
+                "operand_c_i[21]",
+                "operand_c_i[20]",
+                "operand_c_i[19]",
+                "operand_c_i[18]",
+                "operand_c_i[17]",
+                "operand_c_i[16]",
+                "operand_c_i[15]",
+                "operand_c_i[14]",
+                "operand_c_i[13]",
+                "operand_c_i[12]",
+                "operand_c_i[11]",
+                "operand_c_i[10]",
+                "operand_c_i[9]",
+                "operand_c_i[8]",
+                "operand_c_i[7]",
+                "operand_c_i[6]",
+                "operand_c_i[5]",
+                "operand_c_i[4]",
+                "operand_c_i[3]",
+                "operand_c_i[2]",
+                "operand_c_i[1]",
+                "operand_c_i[0]"
+            ]
+        },
+        {
+            "PortName": "vector_mode_i",
+            "Direction": "input",
+            "Bits": [
+                "vector_mode_i[1]",
+                "vector_mode_i[0]"
+            ]
+        },
+        {
+            "PortName": "bmask_a_i",
+            "Direction": "input",
+            "Bits": [
+                "bmask_a_i[4]",
+                "bmask_a_i[3]",
+                "bmask_a_i[2]",
+                "bmask_a_i[1]",
+                "bmask_a_i[0]"
+            ]
+        },
+        {
+            "PortName": "bmask_b_i",
+            "Direction": "input",
+            "Bits": [
+                "bmask_b_i[4]",
+                "bmask_b_i[3]",
+                "bmask_b_i[2]",
+                "bmask_b_i[1]",
+                "bmask_b_i[0]"
+            ]
+        },
+        {
+            "PortName": "imm_vec_ext_i",
+            "Direction": "input",
+            "Bits": [
+                "imm_vec_ext_i[1]",
+                "imm_vec_ext_i[0]"
+            ]
+        },
+        {
+            "PortName": "is_clpx_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "is_subrot_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "clpx_shift_i",
+            "Direction": "input",
+            "Bits": [
+                "clpx_shift_i[1]",
+                "clpx_shift_i[0]"
+            ]
+        },
+        {
+            "PortName": "result_o",
+            "Direction": "output",
+            "Bits": [
+                "result_o[31]",
+                "result_o[30]",
+                "result_o[29]",
+                "result_o[28]",
+                "result_o[27]",
+                "result_o[26]",
+                "result_o[25]",
+                "result_o[24]",
+                "result_o[23]",
+                "result_o[22]",
+                "result_o[21]",
+                "result_o[20]",
+                "result_o[19]",
+                "result_o[18]",
+                "result_o[17]",
+                "result_o[16]",
+                "result_o[15]",
+                "result_o[14]",
+                "result_o[13]",
+                "result_o[12]",
+                "result_o[11]",
+                "result_o[10]",
+                "result_o[9]",
+                "result_o[8]",
+                "result_o[7]",
+                "result_o[6]",
+                "result_o[5]",
+                "result_o[4]",
+                "result_o[3]",
+                "result_o[2]",
+                "result_o[1]",
+                "result_o[0]"
+            ]
+        },
+        {
+            "PortName": "comparison_result_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "ready_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "ex_ready_i",
+            "Direction": "input"
+        }
+    ],
+    "Cells": []
+}

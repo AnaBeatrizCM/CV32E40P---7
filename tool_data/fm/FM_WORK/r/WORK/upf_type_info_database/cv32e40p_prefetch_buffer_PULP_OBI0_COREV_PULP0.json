@@ -1,0 +1,252 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_buffer.sv",
+    "Start Line": 27,
+    "End Line": 254,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "req_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "branch_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "branch_addr_i",
+            "Direction": "input",
+            "Bits": [
+                "branch_addr_i[31]",
+                "branch_addr_i[30]",
+                "branch_addr_i[29]",
+                "branch_addr_i[28]",
+                "branch_addr_i[27]",
+                "branch_addr_i[26]",
+                "branch_addr_i[25]",
+                "branch_addr_i[24]",
+                "branch_addr_i[23]",
+                "branch_addr_i[22]",
+                "branch_addr_i[21]",
+                "branch_addr_i[20]",
+                "branch_addr_i[19]",
+                "branch_addr_i[18]",
+                "branch_addr_i[17]",
+                "branch_addr_i[16]",
+                "branch_addr_i[15]",
+                "branch_addr_i[14]",
+                "branch_addr_i[13]",
+                "branch_addr_i[12]",
+                "branch_addr_i[11]",
+                "branch_addr_i[10]",
+                "branch_addr_i[9]",
+                "branch_addr_i[8]",
+                "branch_addr_i[7]",
+                "branch_addr_i[6]",
+                "branch_addr_i[5]",
+                "branch_addr_i[4]",
+                "branch_addr_i[3]",
+                "branch_addr_i[2]",
+                "branch_addr_i[1]",
+                "branch_addr_i[0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_jump_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "hwlp_target_i",
+            "Direction": "input",
+            "Bits": [
+                "hwlp_target_i[31]",
+                "hwlp_target_i[30]",
+                "hwlp_target_i[29]",
+                "hwlp_target_i[28]",
+                "hwlp_target_i[27]",
+                "hwlp_target_i[26]",
+                "hwlp_target_i[25]",
+                "hwlp_target_i[24]",
+                "hwlp_target_i[23]",
+                "hwlp_target_i[22]",
+                "hwlp_target_i[21]",
+                "hwlp_target_i[20]",
+                "hwlp_target_i[19]",
+                "hwlp_target_i[18]",
+                "hwlp_target_i[17]",
+                "hwlp_target_i[16]",
+                "hwlp_target_i[15]",
+                "hwlp_target_i[14]",
+                "hwlp_target_i[13]",
+                "hwlp_target_i[12]",
+                "hwlp_target_i[11]",
+                "hwlp_target_i[10]",
+                "hwlp_target_i[9]",
+                "hwlp_target_i[8]",
+                "hwlp_target_i[7]",
+                "hwlp_target_i[6]",
+                "hwlp_target_i[5]",
+                "hwlp_target_i[4]",
+                "hwlp_target_i[3]",
+                "hwlp_target_i[2]",
+                "hwlp_target_i[1]",
+                "hwlp_target_i[0]"
+            ]
+        },
+        {
+            "PortName": "fetch_ready_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fetch_valid_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fetch_rdata_o",
+            "Direction": "output",
+            "Bits": [
+                "fetch_rdata_o[31]",
+                "fetch_rdata_o[30]",
+                "fetch_rdata_o[29]",
+                "fetch_rdata_o[28]",
+                "fetch_rdata_o[27]",
+                "fetch_rdata_o[26]",
+                "fetch_rdata_o[25]",
+                "fetch_rdata_o[24]",
+                "fetch_rdata_o[23]",
+                "fetch_rdata_o[22]",
+                "fetch_rdata_o[21]",
+                "fetch_rdata_o[20]",
+                "fetch_rdata_o[19]",
+                "fetch_rdata_o[18]",
+                "fetch_rdata_o[17]",
+                "fetch_rdata_o[16]",
+                "fetch_rdata_o[15]",
+                "fetch_rdata_o[14]",
+                "fetch_rdata_o[13]",
+                "fetch_rdata_o[12]",
+                "fetch_rdata_o[11]",
+                "fetch_rdata_o[10]",
+                "fetch_rdata_o[9]",
+                "fetch_rdata_o[8]",
+                "fetch_rdata_o[7]",
+                "fetch_rdata_o[6]",
+                "fetch_rdata_o[5]",
+                "fetch_rdata_o[4]",
+                "fetch_rdata_o[3]",
+                "fetch_rdata_o[2]",
+                "fetch_rdata_o[1]",
+                "fetch_rdata_o[0]"
+            ]
+        },
+        {
+            "PortName": "instr_req_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "instr_gnt_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "instr_addr_o",
+            "Direction": "output",
+            "Bits": [
+                "instr_addr_o[31]",
+                "instr_addr_o[30]",
+                "instr_addr_o[29]",
+                "instr_addr_o[28]",
+                "instr_addr_o[27]",
+                "instr_addr_o[26]",
+                "instr_addr_o[25]",
+                "instr_addr_o[24]",
+                "instr_addr_o[23]",
+                "instr_addr_o[22]",
+                "instr_addr_o[21]",
+                "instr_addr_o[20]",
+                "instr_addr_o[19]",
+                "instr_addr_o[18]",
+                "instr_addr_o[17]",
+                "instr_addr_o[16]",
+                "instr_addr_o[15]",
+                "instr_addr_o[14]",
+                "instr_addr_o[13]",
+                "instr_addr_o[12]",
+                "instr_addr_o[11]",
+                "instr_addr_o[10]",
+                "instr_addr_o[9]",
+                "instr_addr_o[8]",
+                "instr_addr_o[7]",
+                "instr_addr_o[6]",
+                "instr_addr_o[5]",
+                "instr_addr_o[4]",
+                "instr_addr_o[3]",
+                "instr_addr_o[2]",
+                "instr_addr_o[1]",
+                "instr_addr_o[0]"
+            ]
+        },
+        {
+            "PortName": "instr_rdata_i",
+            "Direction": "input",
+            "Bits": [
+                "instr_rdata_i[31]",
+                "instr_rdata_i[30]",
+                "instr_rdata_i[29]",
+                "instr_rdata_i[28]",
+                "instr_rdata_i[27]",
+                "instr_rdata_i[26]",
+                "instr_rdata_i[25]",
+                "instr_rdata_i[24]",
+                "instr_rdata_i[23]",
+                "instr_rdata_i[22]",
+                "instr_rdata_i[21]",
+                "instr_rdata_i[20]",
+                "instr_rdata_i[19]",
+                "instr_rdata_i[18]",
+                "instr_rdata_i[17]",
+                "instr_rdata_i[16]",
+                "instr_rdata_i[15]",
+                "instr_rdata_i[14]",
+                "instr_rdata_i[13]",
+                "instr_rdata_i[12]",
+                "instr_rdata_i[11]",
+                "instr_rdata_i[10]",
+                "instr_rdata_i[9]",
+                "instr_rdata_i[8]",
+                "instr_rdata_i[7]",
+                "instr_rdata_i[6]",
+                "instr_rdata_i[5]",
+                "instr_rdata_i[4]",
+                "instr_rdata_i[3]",
+                "instr_rdata_i[2]",
+                "instr_rdata_i[1]",
+                "instr_rdata_i[0]"
+            ]
+        },
+        {
+            "PortName": "instr_rvalid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "instr_err_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "instr_err_pmp_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "busy_o",
+            "Direction": "output"
+        }
+    ],
+    "Cells": []
+}

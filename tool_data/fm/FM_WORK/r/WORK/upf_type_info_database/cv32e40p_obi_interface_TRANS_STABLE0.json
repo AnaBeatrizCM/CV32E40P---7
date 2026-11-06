@@ -1,0 +1,437 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_obi_interface_TRANS_STABLE0",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_obi_interface.sv",
+    "Start Line": 38,
+    "End Line": 206,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "trans_valid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "trans_ready_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "trans_addr_i",
+            "Direction": "input",
+            "Bits": [
+                "trans_addr_i[31]",
+                "trans_addr_i[30]",
+                "trans_addr_i[29]",
+                "trans_addr_i[28]",
+                "trans_addr_i[27]",
+                "trans_addr_i[26]",
+                "trans_addr_i[25]",
+                "trans_addr_i[24]",
+                "trans_addr_i[23]",
+                "trans_addr_i[22]",
+                "trans_addr_i[21]",
+                "trans_addr_i[20]",
+                "trans_addr_i[19]",
+                "trans_addr_i[18]",
+                "trans_addr_i[17]",
+                "trans_addr_i[16]",
+                "trans_addr_i[15]",
+                "trans_addr_i[14]",
+                "trans_addr_i[13]",
+                "trans_addr_i[12]",
+                "trans_addr_i[11]",
+                "trans_addr_i[10]",
+                "trans_addr_i[9]",
+                "trans_addr_i[8]",
+                "trans_addr_i[7]",
+                "trans_addr_i[6]",
+                "trans_addr_i[5]",
+                "trans_addr_i[4]",
+                "trans_addr_i[3]",
+                "trans_addr_i[2]",
+                "trans_addr_i[1]",
+                "trans_addr_i[0]"
+            ]
+        },
+        {
+            "PortName": "trans_we_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "trans_be_i",
+            "Direction": "input",
+            "Bits": [
+                "trans_be_i[3]",
+                "trans_be_i[2]",
+                "trans_be_i[1]",
+                "trans_be_i[0]"
+            ]
+        },
+        {
+            "PortName": "trans_wdata_i",
+            "Direction": "input",
+            "Bits": [
+                "trans_wdata_i[31]",
+                "trans_wdata_i[30]",
+                "trans_wdata_i[29]",
+                "trans_wdata_i[28]",
+                "trans_wdata_i[27]",
+                "trans_wdata_i[26]",
+                "trans_wdata_i[25]",
+                "trans_wdata_i[24]",
+                "trans_wdata_i[23]",
+                "trans_wdata_i[22]",
+                "trans_wdata_i[21]",
+                "trans_wdata_i[20]",
+                "trans_wdata_i[19]",
+                "trans_wdata_i[18]",
+                "trans_wdata_i[17]",
+                "trans_wdata_i[16]",
+                "trans_wdata_i[15]",
+                "trans_wdata_i[14]",
+                "trans_wdata_i[13]",
+                "trans_wdata_i[12]",
+                "trans_wdata_i[11]",
+                "trans_wdata_i[10]",
+                "trans_wdata_i[9]",
+                "trans_wdata_i[8]",
+                "trans_wdata_i[7]",
+                "trans_wdata_i[6]",
+                "trans_wdata_i[5]",
+                "trans_wdata_i[4]",
+                "trans_wdata_i[3]",
+                "trans_wdata_i[2]",
+                "trans_wdata_i[1]",
+                "trans_wdata_i[0]"
+            ]
+        },
+        {
+            "PortName": "trans_atop_i",
+            "Direction": "input",
+            "Bits": [
+                "trans_atop_i[5]",
+                "trans_atop_i[4]",
+                "trans_atop_i[3]",
+                "trans_atop_i[2]",
+                "trans_atop_i[1]",
+                "trans_atop_i[0]"
+            ]
+        },
+        {
+            "PortName": "resp_valid_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "resp_rdata_o",
+            "Direction": "output",
+            "Bits": [
+                "resp_rdata_o[31]",
+                "resp_rdata_o[30]",
+                "resp_rdata_o[29]",
+                "resp_rdata_o[28]",
+                "resp_rdata_o[27]",
+                "resp_rdata_o[26]",
+                "resp_rdata_o[25]",
+                "resp_rdata_o[24]",
+                "resp_rdata_o[23]",
+                "resp_rdata_o[22]",
+                "resp_rdata_o[21]",
+                "resp_rdata_o[20]",
+                "resp_rdata_o[19]",
+                "resp_rdata_o[18]",
+                "resp_rdata_o[17]",
+                "resp_rdata_o[16]",
+                "resp_rdata_o[15]",
+                "resp_rdata_o[14]",
+                "resp_rdata_o[13]",
+                "resp_rdata_o[12]",
+                "resp_rdata_o[11]",
+                "resp_rdata_o[10]",
+                "resp_rdata_o[9]",
+                "resp_rdata_o[8]",
+                "resp_rdata_o[7]",
+                "resp_rdata_o[6]",
+                "resp_rdata_o[5]",
+                "resp_rdata_o[4]",
+                "resp_rdata_o[3]",
+                "resp_rdata_o[2]",
+                "resp_rdata_o[1]",
+                "resp_rdata_o[0]"
+            ]
+        },
+        {
+            "PortName": "resp_err_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "obi_req_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "obi_gnt_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "obi_addr_o",
+            "Direction": "output",
+            "Bits": [
+                "obi_addr_o[31]",
+                "obi_addr_o[30]",
+                "obi_addr_o[29]",
+                "obi_addr_o[28]",
+                "obi_addr_o[27]",
+                "obi_addr_o[26]",
+                "obi_addr_o[25]",
+                "obi_addr_o[24]",
+                "obi_addr_o[23]",
+                "obi_addr_o[22]",
+                "obi_addr_o[21]",
+                "obi_addr_o[20]",
+                "obi_addr_o[19]",
+                "obi_addr_o[18]",
+                "obi_addr_o[17]",
+                "obi_addr_o[16]",
+                "obi_addr_o[15]",
+                "obi_addr_o[14]",
+                "obi_addr_o[13]",
+                "obi_addr_o[12]",
+                "obi_addr_o[11]",
+                "obi_addr_o[10]",
+                "obi_addr_o[9]",
+                "obi_addr_o[8]",
+                "obi_addr_o[7]",
+                "obi_addr_o[6]",
+                "obi_addr_o[5]",
+                "obi_addr_o[4]",
+                "obi_addr_o[3]",
+                "obi_addr_o[2]",
+                "obi_addr_o[1]",
+                "obi_addr_o[0]"
+            ]
+        },
+        {
+            "PortName": "obi_we_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "obi_be_o",
+            "Direction": "output",
+            "Bits": [
+                "obi_be_o[3]",
+                "obi_be_o[2]",
+                "obi_be_o[1]",
+                "obi_be_o[0]"
+            ]
+        },
+        {
+            "PortName": "obi_wdata_o",
+            "Direction": "output",
+            "Bits": [
+                "obi_wdata_o[31]",
+                "obi_wdata_o[30]",
+                "obi_wdata_o[29]",
+                "obi_wdata_o[28]",
+                "obi_wdata_o[27]",
+                "obi_wdata_o[26]",
+                "obi_wdata_o[25]",
+                "obi_wdata_o[24]",
+                "obi_wdata_o[23]",
+                "obi_wdata_o[22]",
+                "obi_wdata_o[21]",
+                "obi_wdata_o[20]",
+                "obi_wdata_o[19]",
+                "obi_wdata_o[18]",
+                "obi_wdata_o[17]",
+                "obi_wdata_o[16]",
+                "obi_wdata_o[15]",
+                "obi_wdata_o[14]",
+                "obi_wdata_o[13]",
+                "obi_wdata_o[12]",
+                "obi_wdata_o[11]",
+                "obi_wdata_o[10]",
+                "obi_wdata_o[9]",
+                "obi_wdata_o[8]",
+                "obi_wdata_o[7]",
+                "obi_wdata_o[6]",
+                "obi_wdata_o[5]",
+                "obi_wdata_o[4]",
+                "obi_wdata_o[3]",
+                "obi_wdata_o[2]",
+                "obi_wdata_o[1]",
+                "obi_wdata_o[0]"
+            ]
+        },
+        {
+            "PortName": "obi_atop_o",
+            "Direction": "output",
+            "Bits": [
+                "obi_atop_o[5]",
+                "obi_atop_o[4]",
+                "obi_atop_o[3]",
+                "obi_atop_o[2]",
+                "obi_atop_o[1]",
+                "obi_atop_o[0]"
+            ]
+        },
+        {
+            "PortName": "obi_rdata_i",
+            "Direction": "input",
+            "Bits": [
+                "obi_rdata_i[31]",
+                "obi_rdata_i[30]",
+                "obi_rdata_i[29]",
+                "obi_rdata_i[28]",
+                "obi_rdata_i[27]",
+                "obi_rdata_i[26]",
+                "obi_rdata_i[25]",
+                "obi_rdata_i[24]",
+                "obi_rdata_i[23]",
+                "obi_rdata_i[22]",
+                "obi_rdata_i[21]",
+                "obi_rdata_i[20]",
+                "obi_rdata_i[19]",
+                "obi_rdata_i[18]",
+                "obi_rdata_i[17]",
+                "obi_rdata_i[16]",
+                "obi_rdata_i[15]",
+                "obi_rdata_i[14]",
+                "obi_rdata_i[13]",
+                "obi_rdata_i[12]",
+                "obi_rdata_i[11]",
+                "obi_rdata_i[10]",
+                "obi_rdata_i[9]",
+                "obi_rdata_i[8]",
+                "obi_rdata_i[7]",
+                "obi_rdata_i[6]",
+                "obi_rdata_i[5]",
+                "obi_rdata_i[4]",
+                "obi_rdata_i[3]",
+                "obi_rdata_i[2]",
+                "obi_rdata_i[1]",
+                "obi_rdata_i[0]"
+            ]
+        },
+        {
+            "PortName": "obi_rvalid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "obi_err_i",
+            "Direction": "input"
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "gen_no_trans_stable.obi_wdata_q",
+            "Bits": [
+                "gen_no_trans_stable.obi_wdata_q_reg[0]",
+                "gen_no_trans_stable.obi_wdata_q_reg[1]",
+                "gen_no_trans_stable.obi_wdata_q_reg[2]",
+                "gen_no_trans_stable.obi_wdata_q_reg[3]",
+                "gen_no_trans_stable.obi_wdata_q_reg[4]",
+                "gen_no_trans_stable.obi_wdata_q_reg[5]",
+                "gen_no_trans_stable.obi_wdata_q_reg[6]",
+                "gen_no_trans_stable.obi_wdata_q_reg[7]",
+                "gen_no_trans_stable.obi_wdata_q_reg[8]",
+                "gen_no_trans_stable.obi_wdata_q_reg[9]",
+                "gen_no_trans_stable.obi_wdata_q_reg[10]",
+                "gen_no_trans_stable.obi_wdata_q_reg[11]",
+                "gen_no_trans_stable.obi_wdata_q_reg[12]",
+                "gen_no_trans_stable.obi_wdata_q_reg[13]",
+                "gen_no_trans_stable.obi_wdata_q_reg[14]",
+                "gen_no_trans_stable.obi_wdata_q_reg[15]",
+                "gen_no_trans_stable.obi_wdata_q_reg[16]",
+                "gen_no_trans_stable.obi_wdata_q_reg[17]",
+                "gen_no_trans_stable.obi_wdata_q_reg[18]",
+                "gen_no_trans_stable.obi_wdata_q_reg[19]",
+                "gen_no_trans_stable.obi_wdata_q_reg[20]",
+                "gen_no_trans_stable.obi_wdata_q_reg[21]",
+                "gen_no_trans_stable.obi_wdata_q_reg[22]",
+                "gen_no_trans_stable.obi_wdata_q_reg[23]",
+                "gen_no_trans_stable.obi_wdata_q_reg[24]",
+                "gen_no_trans_stable.obi_wdata_q_reg[25]",
+                "gen_no_trans_stable.obi_wdata_q_reg[26]",
+                "gen_no_trans_stable.obi_wdata_q_reg[27]",
+                "gen_no_trans_stable.obi_wdata_q_reg[28]",
+                "gen_no_trans_stable.obi_wdata_q_reg[29]",
+                "gen_no_trans_stable.obi_wdata_q_reg[30]",
+                "gen_no_trans_stable.obi_wdata_q_reg[31]"
+            ]
+        },
+        {
+            "CellName": "gen_no_trans_stable.obi_atop_q",
+            "Bits": [
+                "gen_no_trans_stable.obi_atop_q_reg[0]",
+                "gen_no_trans_stable.obi_atop_q_reg[1]",
+                "gen_no_trans_stable.obi_atop_q_reg[2]",
+                "gen_no_trans_stable.obi_atop_q_reg[3]",
+                "gen_no_trans_stable.obi_atop_q_reg[4]",
+                "gen_no_trans_stable.obi_atop_q_reg[5]"
+            ]
+        },
+        {
+            "CellName": "gen_no_trans_stable.obi_be_q",
+            "Bits": [
+                "gen_no_trans_stable.obi_be_q_reg[0]",
+                "gen_no_trans_stable.obi_be_q_reg[1]",
+                "gen_no_trans_stable.obi_be_q_reg[2]",
+                "gen_no_trans_stable.obi_be_q_reg[3]"
+            ]
+        },
+        {
+            "CellName": "gen_no_trans_stable.obi_we_q",
+            "Bits": [
+                "gen_no_trans_stable.obi_we_q_reg"
+            ]
+        },
+        {
+            "CellName": "gen_no_trans_stable.obi_addr_q",
+            "Bits": [
+                "gen_no_trans_stable.obi_addr_q_reg[0]",
+                "gen_no_trans_stable.obi_addr_q_reg[1]",
+                "gen_no_trans_stable.obi_addr_q_reg[2]",
+                "gen_no_trans_stable.obi_addr_q_reg[3]",
+                "gen_no_trans_stable.obi_addr_q_reg[4]",
+                "gen_no_trans_stable.obi_addr_q_reg[5]",
+                "gen_no_trans_stable.obi_addr_q_reg[6]",
+                "gen_no_trans_stable.obi_addr_q_reg[7]",
+                "gen_no_trans_stable.obi_addr_q_reg[8]",
+                "gen_no_trans_stable.obi_addr_q_reg[9]",
+                "gen_no_trans_stable.obi_addr_q_reg[10]",
+                "gen_no_trans_stable.obi_addr_q_reg[11]",
+                "gen_no_trans_stable.obi_addr_q_reg[12]",
+                "gen_no_trans_stable.obi_addr_q_reg[13]",
+                "gen_no_trans_stable.obi_addr_q_reg[14]",
+                "gen_no_trans_stable.obi_addr_q_reg[15]",
+                "gen_no_trans_stable.obi_addr_q_reg[16]",
+                "gen_no_trans_stable.obi_addr_q_reg[17]",
+                "gen_no_trans_stable.obi_addr_q_reg[18]",
+                "gen_no_trans_stable.obi_addr_q_reg[19]",
+                "gen_no_trans_stable.obi_addr_q_reg[20]",
+                "gen_no_trans_stable.obi_addr_q_reg[21]",
+                "gen_no_trans_stable.obi_addr_q_reg[22]",
+                "gen_no_trans_stable.obi_addr_q_reg[23]",
+                "gen_no_trans_stable.obi_addr_q_reg[24]",
+                "gen_no_trans_stable.obi_addr_q_reg[25]",
+                "gen_no_trans_stable.obi_addr_q_reg[26]",
+                "gen_no_trans_stable.obi_addr_q_reg[27]",
+                "gen_no_trans_stable.obi_addr_q_reg[28]",
+                "gen_no_trans_stable.obi_addr_q_reg[29]",
+                "gen_no_trans_stable.obi_addr_q_reg[30]",
+                "gen_no_trans_stable.obi_addr_q_reg[31]"
+            ]
+        },
+        {
+            "CellName": "state_q",
+            "Bits": [
+                "state_q_reg"
+            ]
+        }
+    ]
+}

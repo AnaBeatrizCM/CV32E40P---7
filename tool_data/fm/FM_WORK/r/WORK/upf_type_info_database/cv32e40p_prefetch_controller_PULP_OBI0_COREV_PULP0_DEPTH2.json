@@ -1,0 +1,254 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_controller.sv",
+    "Start Line": 40,
+    "End Line": 363,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "req_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "branch_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "branch_addr_i",
+            "Direction": "input",
+            "Bits": [
+                "branch_addr_i[31]",
+                "branch_addr_i[30]",
+                "branch_addr_i[29]",
+                "branch_addr_i[28]",
+                "branch_addr_i[27]",
+                "branch_addr_i[26]",
+                "branch_addr_i[25]",
+                "branch_addr_i[24]",
+                "branch_addr_i[23]",
+                "branch_addr_i[22]",
+                "branch_addr_i[21]",
+                "branch_addr_i[20]",
+                "branch_addr_i[19]",
+                "branch_addr_i[18]",
+                "branch_addr_i[17]",
+                "branch_addr_i[16]",
+                "branch_addr_i[15]",
+                "branch_addr_i[14]",
+                "branch_addr_i[13]",
+                "branch_addr_i[12]",
+                "branch_addr_i[11]",
+                "branch_addr_i[10]",
+                "branch_addr_i[9]",
+                "branch_addr_i[8]",
+                "branch_addr_i[7]",
+                "branch_addr_i[6]",
+                "branch_addr_i[5]",
+                "branch_addr_i[4]",
+                "branch_addr_i[3]",
+                "branch_addr_i[2]",
+                "branch_addr_i[1]",
+                "branch_addr_i[0]"
+            ]
+        },
+        {
+            "PortName": "busy_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "hwlp_jump_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "hwlp_target_i",
+            "Direction": "input",
+            "Bits": [
+                "hwlp_target_i[31]",
+                "hwlp_target_i[30]",
+                "hwlp_target_i[29]",
+                "hwlp_target_i[28]",
+                "hwlp_target_i[27]",
+                "hwlp_target_i[26]",
+                "hwlp_target_i[25]",
+                "hwlp_target_i[24]",
+                "hwlp_target_i[23]",
+                "hwlp_target_i[22]",
+                "hwlp_target_i[21]",
+                "hwlp_target_i[20]",
+                "hwlp_target_i[19]",
+                "hwlp_target_i[18]",
+                "hwlp_target_i[17]",
+                "hwlp_target_i[16]",
+                "hwlp_target_i[15]",
+                "hwlp_target_i[14]",
+                "hwlp_target_i[13]",
+                "hwlp_target_i[12]",
+                "hwlp_target_i[11]",
+                "hwlp_target_i[10]",
+                "hwlp_target_i[9]",
+                "hwlp_target_i[8]",
+                "hwlp_target_i[7]",
+                "hwlp_target_i[6]",
+                "hwlp_target_i[5]",
+                "hwlp_target_i[4]",
+                "hwlp_target_i[3]",
+                "hwlp_target_i[2]",
+                "hwlp_target_i[1]",
+                "hwlp_target_i[0]"
+            ]
+        },
+        {
+            "PortName": "trans_valid_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "trans_ready_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "trans_addr_o",
+            "Direction": "output",
+            "Bits": [
+                "trans_addr_o[31]",
+                "trans_addr_o[30]",
+                "trans_addr_o[29]",
+                "trans_addr_o[28]",
+                "trans_addr_o[27]",
+                "trans_addr_o[26]",
+                "trans_addr_o[25]",
+                "trans_addr_o[24]",
+                "trans_addr_o[23]",
+                "trans_addr_o[22]",
+                "trans_addr_o[21]",
+                "trans_addr_o[20]",
+                "trans_addr_o[19]",
+                "trans_addr_o[18]",
+                "trans_addr_o[17]",
+                "trans_addr_o[16]",
+                "trans_addr_o[15]",
+                "trans_addr_o[14]",
+                "trans_addr_o[13]",
+                "trans_addr_o[12]",
+                "trans_addr_o[11]",
+                "trans_addr_o[10]",
+                "trans_addr_o[9]",
+                "trans_addr_o[8]",
+                "trans_addr_o[7]",
+                "trans_addr_o[6]",
+                "trans_addr_o[5]",
+                "trans_addr_o[4]",
+                "trans_addr_o[3]",
+                "trans_addr_o[2]",
+                "trans_addr_o[1]",
+                "trans_addr_o[0]"
+            ]
+        },
+        {
+            "PortName": "resp_valid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fetch_ready_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fetch_valid_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fifo_push_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fifo_pop_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fifo_flush_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fifo_flush_but_first_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fifo_cnt_i",
+            "Direction": "input",
+            "Bits": [
+                "fifo_cnt_i[1]",
+                "fifo_cnt_i[0]"
+            ]
+        },
+        {
+            "PortName": "fifo_empty_i",
+            "Direction": "input"
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "trans_addr_q",
+            "Bits": [
+                "trans_addr_q_reg[0]",
+                "trans_addr_q_reg[1]",
+                "trans_addr_q_reg[2]",
+                "trans_addr_q_reg[3]",
+                "trans_addr_q_reg[4]",
+                "trans_addr_q_reg[5]",
+                "trans_addr_q_reg[6]",
+                "trans_addr_q_reg[7]",
+                "trans_addr_q_reg[8]",
+                "trans_addr_q_reg[9]",
+                "trans_addr_q_reg[10]",
+                "trans_addr_q_reg[11]",
+                "trans_addr_q_reg[12]",
+                "trans_addr_q_reg[13]",
+                "trans_addr_q_reg[14]",
+                "trans_addr_q_reg[15]",
+                "trans_addr_q_reg[16]",
+                "trans_addr_q_reg[17]",
+                "trans_addr_q_reg[18]",
+                "trans_addr_q_reg[19]",
+                "trans_addr_q_reg[20]",
+                "trans_addr_q_reg[21]",
+                "trans_addr_q_reg[22]",
+                "trans_addr_q_reg[23]",
+                "trans_addr_q_reg[24]",
+                "trans_addr_q_reg[25]",
+                "trans_addr_q_reg[26]",
+                "trans_addr_q_reg[27]",
+                "trans_addr_q_reg[28]",
+                "trans_addr_q_reg[29]",
+                "trans_addr_q_reg[30]",
+                "trans_addr_q_reg[31]"
+            ]
+        },
+        {
+            "CellName": "flush_cnt_q",
+            "Bits": [
+                "flush_cnt_q_reg[0]",
+                "flush_cnt_q_reg[1]"
+            ]
+        },
+        {
+            "CellName": "cnt_q",
+            "Bits": [
+                "cnt_q_reg[0]",
+                "cnt_q_reg[1]"
+            ]
+        },
+        {
+            "CellName": "state_q",
+            "Bits": [
+                "state_q_reg"
+            ]
+        }
+    ]
+}

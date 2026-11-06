@@ -1,0 +1,21 @@
+                                         Status
+Command                 Accepted   Rejected    Pending Unprocessed     Total
+----------------------------------------------------------------------------
+architecture_netlist:          2          0          0          0          2
+boundary            :         17          0          0          0         17
+boundary_netlist    :          2          0          0          0          2
+change_names        :         82          0          0          0         82
+constraints         :          6          0          0          0          6
+datapath            :         17          0          0          0         17
+environment         :         13          0          0          0         13
+file_info           :         27          0          0          0         27
+hier_map            :         23          0          0          0         23
+instance_map        :          4          0          0          0          4
+mark                :         52          0          0          0         52
+merge               :         14          0          0          0         14
+reg_constant        :        383          0          0          0        383
+replace             :         61          0          0          0         61
+ungroup             :          4          0          0          0          4
+uniquify            :          5          0          0          0          5
+----------------------------------------------------------------------------
+Total               :        712          0          0          0        712

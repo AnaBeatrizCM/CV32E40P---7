@@ -1,0 +1,2688 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_id_stage.sv",
+    "Start Line": 30,
+    "End Line": 1837,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "clk_ungated_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "scan_cg_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fetch_enable_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ctrl_busy_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "is_decoding_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "instr_valid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "instr_rdata_i",
+            "Direction": "input",
+            "Bits": [
+                "instr_rdata_i[31]",
+                "instr_rdata_i[30]",
+                "instr_rdata_i[29]",
+                "instr_rdata_i[28]",
+                "instr_rdata_i[27]",
+                "instr_rdata_i[26]",
+                "instr_rdata_i[25]",
+                "instr_rdata_i[24]",
+                "instr_rdata_i[23]",
+                "instr_rdata_i[22]",
+                "instr_rdata_i[21]",
+                "instr_rdata_i[20]",
+                "instr_rdata_i[19]",
+                "instr_rdata_i[18]",
+                "instr_rdata_i[17]",
+                "instr_rdata_i[16]",
+                "instr_rdata_i[15]",
+                "instr_rdata_i[14]",
+                "instr_rdata_i[13]",
+                "instr_rdata_i[12]",
+                "instr_rdata_i[11]",
+                "instr_rdata_i[10]",
+                "instr_rdata_i[9]",
+                "instr_rdata_i[8]",
+                "instr_rdata_i[7]",
+                "instr_rdata_i[6]",
+                "instr_rdata_i[5]",
+                "instr_rdata_i[4]",
+                "instr_rdata_i[3]",
+                "instr_rdata_i[2]",
+                "instr_rdata_i[1]",
+                "instr_rdata_i[0]"
+            ]
+        },
+        {
+            "PortName": "instr_req_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "is_compressed_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "illegal_c_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "branch_in_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "branch_decision_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "jump_target_o",
+            "Direction": "output",
+            "Bits": [
+                "jump_target_o[31]",
+                "jump_target_o[30]",
+                "jump_target_o[29]",
+                "jump_target_o[28]",
+                "jump_target_o[27]",
+                "jump_target_o[26]",
+                "jump_target_o[25]",
+                "jump_target_o[24]",
+                "jump_target_o[23]",
+                "jump_target_o[22]",
+                "jump_target_o[21]",
+                "jump_target_o[20]",
+                "jump_target_o[19]",
+                "jump_target_o[18]",
+                "jump_target_o[17]",
+                "jump_target_o[16]",
+                "jump_target_o[15]",
+                "jump_target_o[14]",
+                "jump_target_o[13]",
+                "jump_target_o[12]",
+                "jump_target_o[11]",
+                "jump_target_o[10]",
+                "jump_target_o[9]",
+                "jump_target_o[8]",
+                "jump_target_o[7]",
+                "jump_target_o[6]",
+                "jump_target_o[5]",
+                "jump_target_o[4]",
+                "jump_target_o[3]",
+                "jump_target_o[2]",
+                "jump_target_o[1]",
+                "jump_target_o[0]"
+            ]
+        },
+        {
+            "PortName": "ctrl_transfer_insn_in_dec_o",
+            "Direction": "output",
+            "Bits": [
+                "ctrl_transfer_insn_in_dec_o[1]",
+                "ctrl_transfer_insn_in_dec_o[0]"
+            ]
+        },
+        {
+            "PortName": "clear_instr_valid_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "pc_set_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "pc_mux_o",
+            "Direction": "output",
+            "Bits": [
+                "pc_mux_o[3]",
+                "pc_mux_o[2]",
+                "pc_mux_o[1]",
+                "pc_mux_o[0]"
+            ]
+        },
+        {
+            "PortName": "exc_pc_mux_o",
+            "Direction": "output",
+            "Bits": [
+                "exc_pc_mux_o[2]",
+                "exc_pc_mux_o[1]",
+                "exc_pc_mux_o[0]"
+            ]
+        },
+        {
+            "PortName": "trap_addr_mux_o",
+            "Direction": "output",
+            "Bits": [
+                "trap_addr_mux_o[1]",
+                "trap_addr_mux_o[0]"
+            ]
+        },
+        {
+            "PortName": "is_fetch_failed_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "pc_id_i",
+            "Direction": "input",
+            "Bits": [
+                "pc_id_i[31]",
+                "pc_id_i[30]",
+                "pc_id_i[29]",
+                "pc_id_i[28]",
+                "pc_id_i[27]",
+                "pc_id_i[26]",
+                "pc_id_i[25]",
+                "pc_id_i[24]",
+                "pc_id_i[23]",
+                "pc_id_i[22]",
+                "pc_id_i[21]",
+                "pc_id_i[20]",
+                "pc_id_i[19]",
+                "pc_id_i[18]",
+                "pc_id_i[17]",
+                "pc_id_i[16]",
+                "pc_id_i[15]",
+                "pc_id_i[14]",
+                "pc_id_i[13]",
+                "pc_id_i[12]",
+                "pc_id_i[11]",
+                "pc_id_i[10]",
+                "pc_id_i[9]",
+                "pc_id_i[8]",
+                "pc_id_i[7]",
+                "pc_id_i[6]",
+                "pc_id_i[5]",
+                "pc_id_i[4]",
+                "pc_id_i[3]",
+                "pc_id_i[2]",
+                "pc_id_i[1]",
+                "pc_id_i[0]"
+            ]
+        },
+        {
+            "PortName": "halt_if_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "id_ready_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "ex_ready_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "wb_ready_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "id_valid_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "ex_valid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "pc_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "pc_ex_o[31]",
+                "pc_ex_o[30]",
+                "pc_ex_o[29]",
+                "pc_ex_o[28]",
+                "pc_ex_o[27]",
+                "pc_ex_o[26]",
+                "pc_ex_o[25]",
+                "pc_ex_o[24]",
+                "pc_ex_o[23]",
+                "pc_ex_o[22]",
+                "pc_ex_o[21]",
+                "pc_ex_o[20]",
+                "pc_ex_o[19]",
+                "pc_ex_o[18]",
+                "pc_ex_o[17]",
+                "pc_ex_o[16]",
+                "pc_ex_o[15]",
+                "pc_ex_o[14]",
+                "pc_ex_o[13]",
+                "pc_ex_o[12]",
+                "pc_ex_o[11]",
+                "pc_ex_o[10]",
+                "pc_ex_o[9]",
+                "pc_ex_o[8]",
+                "pc_ex_o[7]",
+                "pc_ex_o[6]",
+                "pc_ex_o[5]",
+                "pc_ex_o[4]",
+                "pc_ex_o[3]",
+                "pc_ex_o[2]",
+                "pc_ex_o[1]",
+                "pc_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "alu_operand_a_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "alu_operand_a_ex_o[31]",
+                "alu_operand_a_ex_o[30]",
+                "alu_operand_a_ex_o[29]",
+                "alu_operand_a_ex_o[28]",
+                "alu_operand_a_ex_o[27]",
+                "alu_operand_a_ex_o[26]",
+                "alu_operand_a_ex_o[25]",
+                "alu_operand_a_ex_o[24]",
+                "alu_operand_a_ex_o[23]",
+                "alu_operand_a_ex_o[22]",
+                "alu_operand_a_ex_o[21]",
+                "alu_operand_a_ex_o[20]",
+                "alu_operand_a_ex_o[19]",
+                "alu_operand_a_ex_o[18]",
+                "alu_operand_a_ex_o[17]",
+                "alu_operand_a_ex_o[16]",
+                "alu_operand_a_ex_o[15]",
+                "alu_operand_a_ex_o[14]",
+                "alu_operand_a_ex_o[13]",
+                "alu_operand_a_ex_o[12]",
+                "alu_operand_a_ex_o[11]",
+                "alu_operand_a_ex_o[10]",
+                "alu_operand_a_ex_o[9]",
+                "alu_operand_a_ex_o[8]",
+                "alu_operand_a_ex_o[7]",
+                "alu_operand_a_ex_o[6]",
+                "alu_operand_a_ex_o[5]",
+                "alu_operand_a_ex_o[4]",
+                "alu_operand_a_ex_o[3]",
+                "alu_operand_a_ex_o[2]",
+                "alu_operand_a_ex_o[1]",
+                "alu_operand_a_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "alu_operand_b_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "alu_operand_b_ex_o[31]",
+                "alu_operand_b_ex_o[30]",
+                "alu_operand_b_ex_o[29]",
+                "alu_operand_b_ex_o[28]",
+                "alu_operand_b_ex_o[27]",
+                "alu_operand_b_ex_o[26]",
+                "alu_operand_b_ex_o[25]",
+                "alu_operand_b_ex_o[24]",
+                "alu_operand_b_ex_o[23]",
+                "alu_operand_b_ex_o[22]",
+                "alu_operand_b_ex_o[21]",
+                "alu_operand_b_ex_o[20]",
+                "alu_operand_b_ex_o[19]",
+                "alu_operand_b_ex_o[18]",
+                "alu_operand_b_ex_o[17]",
+                "alu_operand_b_ex_o[16]",
+                "alu_operand_b_ex_o[15]",
+                "alu_operand_b_ex_o[14]",
+                "alu_operand_b_ex_o[13]",
+                "alu_operand_b_ex_o[12]",
+                "alu_operand_b_ex_o[11]",
+                "alu_operand_b_ex_o[10]",
+                "alu_operand_b_ex_o[9]",
+                "alu_operand_b_ex_o[8]",
+                "alu_operand_b_ex_o[7]",
+                "alu_operand_b_ex_o[6]",
+                "alu_operand_b_ex_o[5]",
+                "alu_operand_b_ex_o[4]",
+                "alu_operand_b_ex_o[3]",
+                "alu_operand_b_ex_o[2]",
+                "alu_operand_b_ex_o[1]",
+                "alu_operand_b_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "alu_operand_c_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "alu_operand_c_ex_o[31]",
+                "alu_operand_c_ex_o[30]",
+                "alu_operand_c_ex_o[29]",
+                "alu_operand_c_ex_o[28]",
+                "alu_operand_c_ex_o[27]",
+                "alu_operand_c_ex_o[26]",
+                "alu_operand_c_ex_o[25]",
+                "alu_operand_c_ex_o[24]",
+                "alu_operand_c_ex_o[23]",
+                "alu_operand_c_ex_o[22]",
+                "alu_operand_c_ex_o[21]",
+                "alu_operand_c_ex_o[20]",
+                "alu_operand_c_ex_o[19]",
+                "alu_operand_c_ex_o[18]",
+                "alu_operand_c_ex_o[17]",
+                "alu_operand_c_ex_o[16]",
+                "alu_operand_c_ex_o[15]",
+                "alu_operand_c_ex_o[14]",
+                "alu_operand_c_ex_o[13]",
+                "alu_operand_c_ex_o[12]",
+                "alu_operand_c_ex_o[11]",
+                "alu_operand_c_ex_o[10]",
+                "alu_operand_c_ex_o[9]",
+                "alu_operand_c_ex_o[8]",
+                "alu_operand_c_ex_o[7]",
+                "alu_operand_c_ex_o[6]",
+                "alu_operand_c_ex_o[5]",
+                "alu_operand_c_ex_o[4]",
+                "alu_operand_c_ex_o[3]",
+                "alu_operand_c_ex_o[2]",
+                "alu_operand_c_ex_o[1]",
+                "alu_operand_c_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "bmask_a_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "bmask_a_ex_o[4]",
+                "bmask_a_ex_o[3]",
+                "bmask_a_ex_o[2]",
+                "bmask_a_ex_o[1]",
+                "bmask_a_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "bmask_b_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "bmask_b_ex_o[4]",
+                "bmask_b_ex_o[3]",
+                "bmask_b_ex_o[2]",
+                "bmask_b_ex_o[1]",
+                "bmask_b_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "imm_vec_ext_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "imm_vec_ext_ex_o[1]",
+                "imm_vec_ext_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "alu_vec_mode_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "alu_vec_mode_ex_o[1]",
+                "alu_vec_mode_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_waddr_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "regfile_waddr_ex_o[5]",
+                "regfile_waddr_ex_o[4]",
+                "regfile_waddr_ex_o[3]",
+                "regfile_waddr_ex_o[2]",
+                "regfile_waddr_ex_o[1]",
+                "regfile_waddr_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_we_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "regfile_alu_waddr_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "regfile_alu_waddr_ex_o[5]",
+                "regfile_alu_waddr_ex_o[4]",
+                "regfile_alu_waddr_ex_o[3]",
+                "regfile_alu_waddr_ex_o[2]",
+                "regfile_alu_waddr_ex_o[1]",
+                "regfile_alu_waddr_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_alu_we_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "alu_en_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "alu_operator_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "alu_operator_ex_o[6]",
+                "alu_operator_ex_o[5]",
+                "alu_operator_ex_o[4]",
+                "alu_operator_ex_o[3]",
+                "alu_operator_ex_o[2]",
+                "alu_operator_ex_o[1]",
+                "alu_operator_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "alu_is_clpx_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "alu_is_subrot_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "alu_clpx_shift_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "alu_clpx_shift_ex_o[1]",
+                "alu_clpx_shift_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operator_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_operator_ex_o[2]",
+                "mult_operator_ex_o[1]",
+                "mult_operator_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operand_a_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_operand_a_ex_o[31]",
+                "mult_operand_a_ex_o[30]",
+                "mult_operand_a_ex_o[29]",
+                "mult_operand_a_ex_o[28]",
+                "mult_operand_a_ex_o[27]",
+                "mult_operand_a_ex_o[26]",
+                "mult_operand_a_ex_o[25]",
+                "mult_operand_a_ex_o[24]",
+                "mult_operand_a_ex_o[23]",
+                "mult_operand_a_ex_o[22]",
+                "mult_operand_a_ex_o[21]",
+                "mult_operand_a_ex_o[20]",
+                "mult_operand_a_ex_o[19]",
+                "mult_operand_a_ex_o[18]",
+                "mult_operand_a_ex_o[17]",
+                "mult_operand_a_ex_o[16]",
+                "mult_operand_a_ex_o[15]",
+                "mult_operand_a_ex_o[14]",
+                "mult_operand_a_ex_o[13]",
+                "mult_operand_a_ex_o[12]",
+                "mult_operand_a_ex_o[11]",
+                "mult_operand_a_ex_o[10]",
+                "mult_operand_a_ex_o[9]",
+                "mult_operand_a_ex_o[8]",
+                "mult_operand_a_ex_o[7]",
+                "mult_operand_a_ex_o[6]",
+                "mult_operand_a_ex_o[5]",
+                "mult_operand_a_ex_o[4]",
+                "mult_operand_a_ex_o[3]",
+                "mult_operand_a_ex_o[2]",
+                "mult_operand_a_ex_o[1]",
+                "mult_operand_a_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operand_b_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_operand_b_ex_o[31]",
+                "mult_operand_b_ex_o[30]",
+                "mult_operand_b_ex_o[29]",
+                "mult_operand_b_ex_o[28]",
+                "mult_operand_b_ex_o[27]",
+                "mult_operand_b_ex_o[26]",
+                "mult_operand_b_ex_o[25]",
+                "mult_operand_b_ex_o[24]",
+                "mult_operand_b_ex_o[23]",
+                "mult_operand_b_ex_o[22]",
+                "mult_operand_b_ex_o[21]",
+                "mult_operand_b_ex_o[20]",
+                "mult_operand_b_ex_o[19]",
+                "mult_operand_b_ex_o[18]",
+                "mult_operand_b_ex_o[17]",
+                "mult_operand_b_ex_o[16]",
+                "mult_operand_b_ex_o[15]",
+                "mult_operand_b_ex_o[14]",
+                "mult_operand_b_ex_o[13]",
+                "mult_operand_b_ex_o[12]",
+                "mult_operand_b_ex_o[11]",
+                "mult_operand_b_ex_o[10]",
+                "mult_operand_b_ex_o[9]",
+                "mult_operand_b_ex_o[8]",
+                "mult_operand_b_ex_o[7]",
+                "mult_operand_b_ex_o[6]",
+                "mult_operand_b_ex_o[5]",
+                "mult_operand_b_ex_o[4]",
+                "mult_operand_b_ex_o[3]",
+                "mult_operand_b_ex_o[2]",
+                "mult_operand_b_ex_o[1]",
+                "mult_operand_b_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_operand_c_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_operand_c_ex_o[31]",
+                "mult_operand_c_ex_o[30]",
+                "mult_operand_c_ex_o[29]",
+                "mult_operand_c_ex_o[28]",
+                "mult_operand_c_ex_o[27]",
+                "mult_operand_c_ex_o[26]",
+                "mult_operand_c_ex_o[25]",
+                "mult_operand_c_ex_o[24]",
+                "mult_operand_c_ex_o[23]",
+                "mult_operand_c_ex_o[22]",
+                "mult_operand_c_ex_o[21]",
+                "mult_operand_c_ex_o[20]",
+                "mult_operand_c_ex_o[19]",
+                "mult_operand_c_ex_o[18]",
+                "mult_operand_c_ex_o[17]",
+                "mult_operand_c_ex_o[16]",
+                "mult_operand_c_ex_o[15]",
+                "mult_operand_c_ex_o[14]",
+                "mult_operand_c_ex_o[13]",
+                "mult_operand_c_ex_o[12]",
+                "mult_operand_c_ex_o[11]",
+                "mult_operand_c_ex_o[10]",
+                "mult_operand_c_ex_o[9]",
+                "mult_operand_c_ex_o[8]",
+                "mult_operand_c_ex_o[7]",
+                "mult_operand_c_ex_o[6]",
+                "mult_operand_c_ex_o[5]",
+                "mult_operand_c_ex_o[4]",
+                "mult_operand_c_ex_o[3]",
+                "mult_operand_c_ex_o[2]",
+                "mult_operand_c_ex_o[1]",
+                "mult_operand_c_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_en_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mult_sel_subword_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mult_signed_mode_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_signed_mode_ex_o[1]",
+                "mult_signed_mode_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_imm_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_imm_ex_o[4]",
+                "mult_imm_ex_o[3]",
+                "mult_imm_ex_o[2]",
+                "mult_imm_ex_o[1]",
+                "mult_imm_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_op_a_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_dot_op_a_ex_o[31]",
+                "mult_dot_op_a_ex_o[30]",
+                "mult_dot_op_a_ex_o[29]",
+                "mult_dot_op_a_ex_o[28]",
+                "mult_dot_op_a_ex_o[27]",
+                "mult_dot_op_a_ex_o[26]",
+                "mult_dot_op_a_ex_o[25]",
+                "mult_dot_op_a_ex_o[24]",
+                "mult_dot_op_a_ex_o[23]",
+                "mult_dot_op_a_ex_o[22]",
+                "mult_dot_op_a_ex_o[21]",
+                "mult_dot_op_a_ex_o[20]",
+                "mult_dot_op_a_ex_o[19]",
+                "mult_dot_op_a_ex_o[18]",
+                "mult_dot_op_a_ex_o[17]",
+                "mult_dot_op_a_ex_o[16]",
+                "mult_dot_op_a_ex_o[15]",
+                "mult_dot_op_a_ex_o[14]",
+                "mult_dot_op_a_ex_o[13]",
+                "mult_dot_op_a_ex_o[12]",
+                "mult_dot_op_a_ex_o[11]",
+                "mult_dot_op_a_ex_o[10]",
+                "mult_dot_op_a_ex_o[9]",
+                "mult_dot_op_a_ex_o[8]",
+                "mult_dot_op_a_ex_o[7]",
+                "mult_dot_op_a_ex_o[6]",
+                "mult_dot_op_a_ex_o[5]",
+                "mult_dot_op_a_ex_o[4]",
+                "mult_dot_op_a_ex_o[3]",
+                "mult_dot_op_a_ex_o[2]",
+                "mult_dot_op_a_ex_o[1]",
+                "mult_dot_op_a_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_op_b_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_dot_op_b_ex_o[31]",
+                "mult_dot_op_b_ex_o[30]",
+                "mult_dot_op_b_ex_o[29]",
+                "mult_dot_op_b_ex_o[28]",
+                "mult_dot_op_b_ex_o[27]",
+                "mult_dot_op_b_ex_o[26]",
+                "mult_dot_op_b_ex_o[25]",
+                "mult_dot_op_b_ex_o[24]",
+                "mult_dot_op_b_ex_o[23]",
+                "mult_dot_op_b_ex_o[22]",
+                "mult_dot_op_b_ex_o[21]",
+                "mult_dot_op_b_ex_o[20]",
+                "mult_dot_op_b_ex_o[19]",
+                "mult_dot_op_b_ex_o[18]",
+                "mult_dot_op_b_ex_o[17]",
+                "mult_dot_op_b_ex_o[16]",
+                "mult_dot_op_b_ex_o[15]",
+                "mult_dot_op_b_ex_o[14]",
+                "mult_dot_op_b_ex_o[13]",
+                "mult_dot_op_b_ex_o[12]",
+                "mult_dot_op_b_ex_o[11]",
+                "mult_dot_op_b_ex_o[10]",
+                "mult_dot_op_b_ex_o[9]",
+                "mult_dot_op_b_ex_o[8]",
+                "mult_dot_op_b_ex_o[7]",
+                "mult_dot_op_b_ex_o[6]",
+                "mult_dot_op_b_ex_o[5]",
+                "mult_dot_op_b_ex_o[4]",
+                "mult_dot_op_b_ex_o[3]",
+                "mult_dot_op_b_ex_o[2]",
+                "mult_dot_op_b_ex_o[1]",
+                "mult_dot_op_b_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_op_c_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_dot_op_c_ex_o[31]",
+                "mult_dot_op_c_ex_o[30]",
+                "mult_dot_op_c_ex_o[29]",
+                "mult_dot_op_c_ex_o[28]",
+                "mult_dot_op_c_ex_o[27]",
+                "mult_dot_op_c_ex_o[26]",
+                "mult_dot_op_c_ex_o[25]",
+                "mult_dot_op_c_ex_o[24]",
+                "mult_dot_op_c_ex_o[23]",
+                "mult_dot_op_c_ex_o[22]",
+                "mult_dot_op_c_ex_o[21]",
+                "mult_dot_op_c_ex_o[20]",
+                "mult_dot_op_c_ex_o[19]",
+                "mult_dot_op_c_ex_o[18]",
+                "mult_dot_op_c_ex_o[17]",
+                "mult_dot_op_c_ex_o[16]",
+                "mult_dot_op_c_ex_o[15]",
+                "mult_dot_op_c_ex_o[14]",
+                "mult_dot_op_c_ex_o[13]",
+                "mult_dot_op_c_ex_o[12]",
+                "mult_dot_op_c_ex_o[11]",
+                "mult_dot_op_c_ex_o[10]",
+                "mult_dot_op_c_ex_o[9]",
+                "mult_dot_op_c_ex_o[8]",
+                "mult_dot_op_c_ex_o[7]",
+                "mult_dot_op_c_ex_o[6]",
+                "mult_dot_op_c_ex_o[5]",
+                "mult_dot_op_c_ex_o[4]",
+                "mult_dot_op_c_ex_o[3]",
+                "mult_dot_op_c_ex_o[2]",
+                "mult_dot_op_c_ex_o[1]",
+                "mult_dot_op_c_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_dot_signed_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_dot_signed_ex_o[1]",
+                "mult_dot_signed_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_is_clpx_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mult_clpx_shift_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "mult_clpx_shift_ex_o[1]",
+                "mult_clpx_shift_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "mult_clpx_img_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_en_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_op_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_op_ex_o[5]",
+                "apu_op_ex_o[4]",
+                "apu_op_ex_o[3]",
+                "apu_op_ex_o[2]",
+                "apu_op_ex_o[1]",
+                "apu_op_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_lat_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_lat_ex_o[1]",
+                "apu_lat_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_operands_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_operands_ex_o[2][31]",
+                "apu_operands_ex_o[2][30]",
+                "apu_operands_ex_o[2][29]",
+                "apu_operands_ex_o[2][28]",
+                "apu_operands_ex_o[2][27]",
+                "apu_operands_ex_o[2][26]",
+                "apu_operands_ex_o[2][25]",
+                "apu_operands_ex_o[2][24]",
+                "apu_operands_ex_o[2][23]",
+                "apu_operands_ex_o[2][22]",
+                "apu_operands_ex_o[2][21]",
+                "apu_operands_ex_o[2][20]",
+                "apu_operands_ex_o[2][19]",
+                "apu_operands_ex_o[2][18]",
+                "apu_operands_ex_o[2][17]",
+                "apu_operands_ex_o[2][16]",
+                "apu_operands_ex_o[2][15]",
+                "apu_operands_ex_o[2][14]",
+                "apu_operands_ex_o[2][13]",
+                "apu_operands_ex_o[2][12]",
+                "apu_operands_ex_o[2][11]",
+                "apu_operands_ex_o[2][10]",
+                "apu_operands_ex_o[2][9]",
+                "apu_operands_ex_o[2][8]",
+                "apu_operands_ex_o[2][7]",
+                "apu_operands_ex_o[2][6]",
+                "apu_operands_ex_o[2][5]",
+                "apu_operands_ex_o[2][4]",
+                "apu_operands_ex_o[2][3]",
+                "apu_operands_ex_o[2][2]",
+                "apu_operands_ex_o[2][1]",
+                "apu_operands_ex_o[2][0]",
+                "apu_operands_ex_o[1][31]",
+                "apu_operands_ex_o[1][30]",
+                "apu_operands_ex_o[1][29]",
+                "apu_operands_ex_o[1][28]",
+                "apu_operands_ex_o[1][27]",
+                "apu_operands_ex_o[1][26]",
+                "apu_operands_ex_o[1][25]",
+                "apu_operands_ex_o[1][24]",
+                "apu_operands_ex_o[1][23]",
+                "apu_operands_ex_o[1][22]",
+                "apu_operands_ex_o[1][21]",
+                "apu_operands_ex_o[1][20]",
+                "apu_operands_ex_o[1][19]",
+                "apu_operands_ex_o[1][18]",
+                "apu_operands_ex_o[1][17]",
+                "apu_operands_ex_o[1][16]",
+                "apu_operands_ex_o[1][15]",
+                "apu_operands_ex_o[1][14]",
+                "apu_operands_ex_o[1][13]",
+                "apu_operands_ex_o[1][12]",
+                "apu_operands_ex_o[1][11]",
+                "apu_operands_ex_o[1][10]",
+                "apu_operands_ex_o[1][9]",
+                "apu_operands_ex_o[1][8]",
+                "apu_operands_ex_o[1][7]",
+                "apu_operands_ex_o[1][6]",
+                "apu_operands_ex_o[1][5]",
+                "apu_operands_ex_o[1][4]",
+                "apu_operands_ex_o[1][3]",
+                "apu_operands_ex_o[1][2]",
+                "apu_operands_ex_o[1][1]",
+                "apu_operands_ex_o[1][0]",
+                "apu_operands_ex_o[0][31]",
+                "apu_operands_ex_o[0][30]",
+                "apu_operands_ex_o[0][29]",
+                "apu_operands_ex_o[0][28]",
+                "apu_operands_ex_o[0][27]",
+                "apu_operands_ex_o[0][26]",
+                "apu_operands_ex_o[0][25]",
+                "apu_operands_ex_o[0][24]",
+                "apu_operands_ex_o[0][23]",
+                "apu_operands_ex_o[0][22]",
+                "apu_operands_ex_o[0][21]",
+                "apu_operands_ex_o[0][20]",
+                "apu_operands_ex_o[0][19]",
+                "apu_operands_ex_o[0][18]",
+                "apu_operands_ex_o[0][17]",
+                "apu_operands_ex_o[0][16]",
+                "apu_operands_ex_o[0][15]",
+                "apu_operands_ex_o[0][14]",
+                "apu_operands_ex_o[0][13]",
+                "apu_operands_ex_o[0][12]",
+                "apu_operands_ex_o[0][11]",
+                "apu_operands_ex_o[0][10]",
+                "apu_operands_ex_o[0][9]",
+                "apu_operands_ex_o[0][8]",
+                "apu_operands_ex_o[0][7]",
+                "apu_operands_ex_o[0][6]",
+                "apu_operands_ex_o[0][5]",
+                "apu_operands_ex_o[0][4]",
+                "apu_operands_ex_o[0][3]",
+                "apu_operands_ex_o[0][2]",
+                "apu_operands_ex_o[0][1]",
+                "apu_operands_ex_o[0][0]"
+            ]
+        },
+        {
+            "PortName": "apu_flags_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_flags_ex_o[14]",
+                "apu_flags_ex_o[13]",
+                "apu_flags_ex_o[12]",
+                "apu_flags_ex_o[11]",
+                "apu_flags_ex_o[10]",
+                "apu_flags_ex_o[9]",
+                "apu_flags_ex_o[8]",
+                "apu_flags_ex_o[7]",
+                "apu_flags_ex_o[6]",
+                "apu_flags_ex_o[5]",
+                "apu_flags_ex_o[4]",
+                "apu_flags_ex_o[3]",
+                "apu_flags_ex_o[2]",
+                "apu_flags_ex_o[1]",
+                "apu_flags_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_waddr_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_waddr_ex_o[5]",
+                "apu_waddr_ex_o[4]",
+                "apu_waddr_ex_o[3]",
+                "apu_waddr_ex_o[2]",
+                "apu_waddr_ex_o[1]",
+                "apu_waddr_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_read_regs_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_read_regs_o[2][5]",
+                "apu_read_regs_o[2][4]",
+                "apu_read_regs_o[2][3]",
+                "apu_read_regs_o[2][2]",
+                "apu_read_regs_o[2][1]",
+                "apu_read_regs_o[2][0]",
+                "apu_read_regs_o[1][5]",
+                "apu_read_regs_o[1][4]",
+                "apu_read_regs_o[1][3]",
+                "apu_read_regs_o[1][2]",
+                "apu_read_regs_o[1][1]",
+                "apu_read_regs_o[1][0]",
+                "apu_read_regs_o[0][5]",
+                "apu_read_regs_o[0][4]",
+                "apu_read_regs_o[0][3]",
+                "apu_read_regs_o[0][2]",
+                "apu_read_regs_o[0][1]",
+                "apu_read_regs_o[0][0]"
+            ]
+        },
+        {
+            "PortName": "apu_read_regs_valid_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_read_regs_valid_o[2]",
+                "apu_read_regs_valid_o[1]",
+                "apu_read_regs_valid_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_read_dep_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_read_dep_for_jalr_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_write_regs_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_write_regs_o[1][5]",
+                "apu_write_regs_o[1][4]",
+                "apu_write_regs_o[1][3]",
+                "apu_write_regs_o[1][2]",
+                "apu_write_regs_o[1][1]",
+                "apu_write_regs_o[1][0]",
+                "apu_write_regs_o[0][5]",
+                "apu_write_regs_o[0][4]",
+                "apu_write_regs_o[0][3]",
+                "apu_write_regs_o[0][2]",
+                "apu_write_regs_o[0][1]",
+                "apu_write_regs_o[0][0]"
+            ]
+        },
+        {
+            "PortName": "apu_write_regs_valid_o",
+            "Direction": "output",
+            "Bits": [
+                "apu_write_regs_valid_o[1]",
+                "apu_write_regs_valid_o[0]"
+            ]
+        },
+        {
+            "PortName": "apu_write_dep_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_perf_dep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "apu_busy_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fs_off_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "frm_i",
+            "Direction": "input",
+            "Bits": [
+                "frm_i[2]",
+                "frm_i[1]",
+                "frm_i[0]"
+            ]
+        },
+        {
+            "PortName": "csr_access_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_op_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "csr_op_ex_o[1]",
+                "csr_op_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "current_priv_lvl_i",
+            "Direction": "input",
+            "Bits": [
+                "current_priv_lvl_i[1]",
+                "current_priv_lvl_i[0]"
+            ]
+        },
+        {
+            "PortName": "csr_irq_sec_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_cause_o",
+            "Direction": "output",
+            "Bits": [
+                "csr_cause_o[5]",
+                "csr_cause_o[4]",
+                "csr_cause_o[3]",
+                "csr_cause_o[2]",
+                "csr_cause_o[1]",
+                "csr_cause_o[0]"
+            ]
+        },
+        {
+            "PortName": "csr_save_if_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_save_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_save_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_restore_mret_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_restore_uret_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_restore_dret_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_save_cause_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "hwlp_start_o",
+            "Direction": "output",
+            "Bits": [
+                "hwlp_start_o[1][31]",
+                "hwlp_start_o[1][30]",
+                "hwlp_start_o[1][29]",
+                "hwlp_start_o[1][28]",
+                "hwlp_start_o[1][27]",
+                "hwlp_start_o[1][26]",
+                "hwlp_start_o[1][25]",
+                "hwlp_start_o[1][24]",
+                "hwlp_start_o[1][23]",
+                "hwlp_start_o[1][22]",
+                "hwlp_start_o[1][21]",
+                "hwlp_start_o[1][20]",
+                "hwlp_start_o[1][19]",
+                "hwlp_start_o[1][18]",
+                "hwlp_start_o[1][17]",
+                "hwlp_start_o[1][16]",
+                "hwlp_start_o[1][15]",
+                "hwlp_start_o[1][14]",
+                "hwlp_start_o[1][13]",
+                "hwlp_start_o[1][12]",
+                "hwlp_start_o[1][11]",
+                "hwlp_start_o[1][10]",
+                "hwlp_start_o[1][9]",
+                "hwlp_start_o[1][8]",
+                "hwlp_start_o[1][7]",
+                "hwlp_start_o[1][6]",
+                "hwlp_start_o[1][5]",
+                "hwlp_start_o[1][4]",
+                "hwlp_start_o[1][3]",
+                "hwlp_start_o[1][2]",
+                "hwlp_start_o[1][1]",
+                "hwlp_start_o[1][0]",
+                "hwlp_start_o[0][31]",
+                "hwlp_start_o[0][30]",
+                "hwlp_start_o[0][29]",
+                "hwlp_start_o[0][28]",
+                "hwlp_start_o[0][27]",
+                "hwlp_start_o[0][26]",
+                "hwlp_start_o[0][25]",
+                "hwlp_start_o[0][24]",
+                "hwlp_start_o[0][23]",
+                "hwlp_start_o[0][22]",
+                "hwlp_start_o[0][21]",
+                "hwlp_start_o[0][20]",
+                "hwlp_start_o[0][19]",
+                "hwlp_start_o[0][18]",
+                "hwlp_start_o[0][17]",
+                "hwlp_start_o[0][16]",
+                "hwlp_start_o[0][15]",
+                "hwlp_start_o[0][14]",
+                "hwlp_start_o[0][13]",
+                "hwlp_start_o[0][12]",
+                "hwlp_start_o[0][11]",
+                "hwlp_start_o[0][10]",
+                "hwlp_start_o[0][9]",
+                "hwlp_start_o[0][8]",
+                "hwlp_start_o[0][7]",
+                "hwlp_start_o[0][6]",
+                "hwlp_start_o[0][5]",
+                "hwlp_start_o[0][4]",
+                "hwlp_start_o[0][3]",
+                "hwlp_start_o[0][2]",
+                "hwlp_start_o[0][1]",
+                "hwlp_start_o[0][0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_end_o",
+            "Direction": "output",
+            "Bits": [
+                "hwlp_end_o[1][31]",
+                "hwlp_end_o[1][30]",
+                "hwlp_end_o[1][29]",
+                "hwlp_end_o[1][28]",
+                "hwlp_end_o[1][27]",
+                "hwlp_end_o[1][26]",
+                "hwlp_end_o[1][25]",
+                "hwlp_end_o[1][24]",
+                "hwlp_end_o[1][23]",
+                "hwlp_end_o[1][22]",
+                "hwlp_end_o[1][21]",
+                "hwlp_end_o[1][20]",
+                "hwlp_end_o[1][19]",
+                "hwlp_end_o[1][18]",
+                "hwlp_end_o[1][17]",
+                "hwlp_end_o[1][16]",
+                "hwlp_end_o[1][15]",
+                "hwlp_end_o[1][14]",
+                "hwlp_end_o[1][13]",
+                "hwlp_end_o[1][12]",
+                "hwlp_end_o[1][11]",
+                "hwlp_end_o[1][10]",
+                "hwlp_end_o[1][9]",
+                "hwlp_end_o[1][8]",
+                "hwlp_end_o[1][7]",
+                "hwlp_end_o[1][6]",
+                "hwlp_end_o[1][5]",
+                "hwlp_end_o[1][4]",
+                "hwlp_end_o[1][3]",
+                "hwlp_end_o[1][2]",
+                "hwlp_end_o[1][1]",
+                "hwlp_end_o[1][0]",
+                "hwlp_end_o[0][31]",
+                "hwlp_end_o[0][30]",
+                "hwlp_end_o[0][29]",
+                "hwlp_end_o[0][28]",
+                "hwlp_end_o[0][27]",
+                "hwlp_end_o[0][26]",
+                "hwlp_end_o[0][25]",
+                "hwlp_end_o[0][24]",
+                "hwlp_end_o[0][23]",
+                "hwlp_end_o[0][22]",
+                "hwlp_end_o[0][21]",
+                "hwlp_end_o[0][20]",
+                "hwlp_end_o[0][19]",
+                "hwlp_end_o[0][18]",
+                "hwlp_end_o[0][17]",
+                "hwlp_end_o[0][16]",
+                "hwlp_end_o[0][15]",
+                "hwlp_end_o[0][14]",
+                "hwlp_end_o[0][13]",
+                "hwlp_end_o[0][12]",
+                "hwlp_end_o[0][11]",
+                "hwlp_end_o[0][10]",
+                "hwlp_end_o[0][9]",
+                "hwlp_end_o[0][8]",
+                "hwlp_end_o[0][7]",
+                "hwlp_end_o[0][6]",
+                "hwlp_end_o[0][5]",
+                "hwlp_end_o[0][4]",
+                "hwlp_end_o[0][3]",
+                "hwlp_end_o[0][2]",
+                "hwlp_end_o[0][1]",
+                "hwlp_end_o[0][0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_cnt_o",
+            "Direction": "output",
+            "Bits": [
+                "hwlp_cnt_o[1][31]",
+                "hwlp_cnt_o[1][30]",
+                "hwlp_cnt_o[1][29]",
+                "hwlp_cnt_o[1][28]",
+                "hwlp_cnt_o[1][27]",
+                "hwlp_cnt_o[1][26]",
+                "hwlp_cnt_o[1][25]",
+                "hwlp_cnt_o[1][24]",
+                "hwlp_cnt_o[1][23]",
+                "hwlp_cnt_o[1][22]",
+                "hwlp_cnt_o[1][21]",
+                "hwlp_cnt_o[1][20]",
+                "hwlp_cnt_o[1][19]",
+                "hwlp_cnt_o[1][18]",
+                "hwlp_cnt_o[1][17]",
+                "hwlp_cnt_o[1][16]",
+                "hwlp_cnt_o[1][15]",
+                "hwlp_cnt_o[1][14]",
+                "hwlp_cnt_o[1][13]",
+                "hwlp_cnt_o[1][12]",
+                "hwlp_cnt_o[1][11]",
+                "hwlp_cnt_o[1][10]",
+                "hwlp_cnt_o[1][9]",
+                "hwlp_cnt_o[1][8]",
+                "hwlp_cnt_o[1][7]",
+                "hwlp_cnt_o[1][6]",
+                "hwlp_cnt_o[1][5]",
+                "hwlp_cnt_o[1][4]",
+                "hwlp_cnt_o[1][3]",
+                "hwlp_cnt_o[1][2]",
+                "hwlp_cnt_o[1][1]",
+                "hwlp_cnt_o[1][0]",
+                "hwlp_cnt_o[0][31]",
+                "hwlp_cnt_o[0][30]",
+                "hwlp_cnt_o[0][29]",
+                "hwlp_cnt_o[0][28]",
+                "hwlp_cnt_o[0][27]",
+                "hwlp_cnt_o[0][26]",
+                "hwlp_cnt_o[0][25]",
+                "hwlp_cnt_o[0][24]",
+                "hwlp_cnt_o[0][23]",
+                "hwlp_cnt_o[0][22]",
+                "hwlp_cnt_o[0][21]",
+                "hwlp_cnt_o[0][20]",
+                "hwlp_cnt_o[0][19]",
+                "hwlp_cnt_o[0][18]",
+                "hwlp_cnt_o[0][17]",
+                "hwlp_cnt_o[0][16]",
+                "hwlp_cnt_o[0][15]",
+                "hwlp_cnt_o[0][14]",
+                "hwlp_cnt_o[0][13]",
+                "hwlp_cnt_o[0][12]",
+                "hwlp_cnt_o[0][11]",
+                "hwlp_cnt_o[0][10]",
+                "hwlp_cnt_o[0][9]",
+                "hwlp_cnt_o[0][8]",
+                "hwlp_cnt_o[0][7]",
+                "hwlp_cnt_o[0][6]",
+                "hwlp_cnt_o[0][5]",
+                "hwlp_cnt_o[0][4]",
+                "hwlp_cnt_o[0][3]",
+                "hwlp_cnt_o[0][2]",
+                "hwlp_cnt_o[0][1]",
+                "hwlp_cnt_o[0][0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_jump_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "hwlp_target_o",
+            "Direction": "output",
+            "Bits": [
+                "hwlp_target_o[31]",
+                "hwlp_target_o[30]",
+                "hwlp_target_o[29]",
+                "hwlp_target_o[28]",
+                "hwlp_target_o[27]",
+                "hwlp_target_o[26]",
+                "hwlp_target_o[25]",
+                "hwlp_target_o[24]",
+                "hwlp_target_o[23]",
+                "hwlp_target_o[22]",
+                "hwlp_target_o[21]",
+                "hwlp_target_o[20]",
+                "hwlp_target_o[19]",
+                "hwlp_target_o[18]",
+                "hwlp_target_o[17]",
+                "hwlp_target_o[16]",
+                "hwlp_target_o[15]",
+                "hwlp_target_o[14]",
+                "hwlp_target_o[13]",
+                "hwlp_target_o[12]",
+                "hwlp_target_o[11]",
+                "hwlp_target_o[10]",
+                "hwlp_target_o[9]",
+                "hwlp_target_o[8]",
+                "hwlp_target_o[7]",
+                "hwlp_target_o[6]",
+                "hwlp_target_o[5]",
+                "hwlp_target_o[4]",
+                "hwlp_target_o[3]",
+                "hwlp_target_o[2]",
+                "hwlp_target_o[1]",
+                "hwlp_target_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_req_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_we_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_type_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "data_type_ex_o[1]",
+                "data_type_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_sign_ext_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "data_sign_ext_ex_o[1]",
+                "data_sign_ext_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_reg_offset_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "data_reg_offset_ex_o[1]",
+                "data_reg_offset_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_load_event_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_misaligned_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "prepost_useincr_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "data_misaligned_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_err_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_err_ack_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "atop_ex_o",
+            "Direction": "output",
+            "Bits": [
+                "atop_ex_o[5]",
+                "atop_ex_o[4]",
+                "atop_ex_o[3]",
+                "atop_ex_o[2]",
+                "atop_ex_o[1]",
+                "atop_ex_o[0]"
+            ]
+        },
+        {
+            "PortName": "irq_i",
+            "Direction": "input",
+            "Bits": [
+                "irq_i[31]",
+                "irq_i[30]",
+                "irq_i[29]",
+                "irq_i[28]",
+                "irq_i[27]",
+                "irq_i[26]",
+                "irq_i[25]",
+                "irq_i[24]",
+                "irq_i[23]",
+                "irq_i[22]",
+                "irq_i[21]",
+                "irq_i[20]",
+                "irq_i[19]",
+                "irq_i[18]",
+                "irq_i[17]",
+                "irq_i[16]",
+                "irq_i[15]",
+                "irq_i[14]",
+                "irq_i[13]",
+                "irq_i[12]",
+                "irq_i[11]",
+                "irq_i[10]",
+                "irq_i[9]",
+                "irq_i[8]",
+                "irq_i[7]",
+                "irq_i[6]",
+                "irq_i[5]",
+                "irq_i[4]",
+                "irq_i[3]",
+                "irq_i[2]",
+                "irq_i[1]",
+                "irq_i[0]"
+            ]
+        },
+        {
+            "PortName": "irq_sec_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mie_bypass_i",
+            "Direction": "input",
+            "Bits": [
+                "mie_bypass_i[31]",
+                "mie_bypass_i[30]",
+                "mie_bypass_i[29]",
+                "mie_bypass_i[28]",
+                "mie_bypass_i[27]",
+                "mie_bypass_i[26]",
+                "mie_bypass_i[25]",
+                "mie_bypass_i[24]",
+                "mie_bypass_i[23]",
+                "mie_bypass_i[22]",
+                "mie_bypass_i[21]",
+                "mie_bypass_i[20]",
+                "mie_bypass_i[19]",
+                "mie_bypass_i[18]",
+                "mie_bypass_i[17]",
+                "mie_bypass_i[16]",
+                "mie_bypass_i[15]",
+                "mie_bypass_i[14]",
+                "mie_bypass_i[13]",
+                "mie_bypass_i[12]",
+                "mie_bypass_i[11]",
+                "mie_bypass_i[10]",
+                "mie_bypass_i[9]",
+                "mie_bypass_i[8]",
+                "mie_bypass_i[7]",
+                "mie_bypass_i[6]",
+                "mie_bypass_i[5]",
+                "mie_bypass_i[4]",
+                "mie_bypass_i[3]",
+                "mie_bypass_i[2]",
+                "mie_bypass_i[1]",
+                "mie_bypass_i[0]"
+            ]
+        },
+        {
+            "PortName": "mip_o",
+            "Direction": "output",
+            "Bits": [
+                "mip_o[31]",
+                "mip_o[30]",
+                "mip_o[29]",
+                "mip_o[28]",
+                "mip_o[27]",
+                "mip_o[26]",
+                "mip_o[25]",
+                "mip_o[24]",
+                "mip_o[23]",
+                "mip_o[22]",
+                "mip_o[21]",
+                "mip_o[20]",
+                "mip_o[19]",
+                "mip_o[18]",
+                "mip_o[17]",
+                "mip_o[16]",
+                "mip_o[15]",
+                "mip_o[14]",
+                "mip_o[13]",
+                "mip_o[12]",
+                "mip_o[11]",
+                "mip_o[10]",
+                "mip_o[9]",
+                "mip_o[8]",
+                "mip_o[7]",
+                "mip_o[6]",
+                "mip_o[5]",
+                "mip_o[4]",
+                "mip_o[3]",
+                "mip_o[2]",
+                "mip_o[1]",
+                "mip_o[0]"
+            ]
+        },
+        {
+            "PortName": "m_irq_enable_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "u_irq_enable_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "irq_ack_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "irq_id_o",
+            "Direction": "output",
+            "Bits": [
+                "irq_id_o[4]",
+                "irq_id_o[3]",
+                "irq_id_o[2]",
+                "irq_id_o[1]",
+                "irq_id_o[0]"
+            ]
+        },
+        {
+            "PortName": "exc_cause_o",
+            "Direction": "output",
+            "Bits": [
+                "exc_cause_o[4]",
+                "exc_cause_o[3]",
+                "exc_cause_o[2]",
+                "exc_cause_o[1]",
+                "exc_cause_o[0]"
+            ]
+        },
+        {
+            "PortName": "debug_mode_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_cause_o",
+            "Direction": "output",
+            "Bits": [
+                "debug_cause_o[2]",
+                "debug_cause_o[1]",
+                "debug_cause_o[0]"
+            ]
+        },
+        {
+            "PortName": "debug_csr_save_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_req_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_single_step_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_ebreakm_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_ebreaku_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "trigger_match_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_p_elw_no_sleep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_havereset_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_running_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_halted_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "wake_from_sleep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "regfile_waddr_wb_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_waddr_wb_i[5]",
+                "regfile_waddr_wb_i[4]",
+                "regfile_waddr_wb_i[3]",
+                "regfile_waddr_wb_i[2]",
+                "regfile_waddr_wb_i[1]",
+                "regfile_waddr_wb_i[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_we_wb_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_we_wb_power_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_wdata_wb_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_wdata_wb_i[31]",
+                "regfile_wdata_wb_i[30]",
+                "regfile_wdata_wb_i[29]",
+                "regfile_wdata_wb_i[28]",
+                "regfile_wdata_wb_i[27]",
+                "regfile_wdata_wb_i[26]",
+                "regfile_wdata_wb_i[25]",
+                "regfile_wdata_wb_i[24]",
+                "regfile_wdata_wb_i[23]",
+                "regfile_wdata_wb_i[22]",
+                "regfile_wdata_wb_i[21]",
+                "regfile_wdata_wb_i[20]",
+                "regfile_wdata_wb_i[19]",
+                "regfile_wdata_wb_i[18]",
+                "regfile_wdata_wb_i[17]",
+                "regfile_wdata_wb_i[16]",
+                "regfile_wdata_wb_i[15]",
+                "regfile_wdata_wb_i[14]",
+                "regfile_wdata_wb_i[13]",
+                "regfile_wdata_wb_i[12]",
+                "regfile_wdata_wb_i[11]",
+                "regfile_wdata_wb_i[10]",
+                "regfile_wdata_wb_i[9]",
+                "regfile_wdata_wb_i[8]",
+                "regfile_wdata_wb_i[7]",
+                "regfile_wdata_wb_i[6]",
+                "regfile_wdata_wb_i[5]",
+                "regfile_wdata_wb_i[4]",
+                "regfile_wdata_wb_i[3]",
+                "regfile_wdata_wb_i[2]",
+                "regfile_wdata_wb_i[1]",
+                "regfile_wdata_wb_i[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_alu_waddr_fw_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_alu_waddr_fw_i[5]",
+                "regfile_alu_waddr_fw_i[4]",
+                "regfile_alu_waddr_fw_i[3]",
+                "regfile_alu_waddr_fw_i[2]",
+                "regfile_alu_waddr_fw_i[1]",
+                "regfile_alu_waddr_fw_i[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_alu_we_fw_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_alu_we_fw_power_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_alu_wdata_fw_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_alu_wdata_fw_i[31]",
+                "regfile_alu_wdata_fw_i[30]",
+                "regfile_alu_wdata_fw_i[29]",
+                "regfile_alu_wdata_fw_i[28]",
+                "regfile_alu_wdata_fw_i[27]",
+                "regfile_alu_wdata_fw_i[26]",
+                "regfile_alu_wdata_fw_i[25]",
+                "regfile_alu_wdata_fw_i[24]",
+                "regfile_alu_wdata_fw_i[23]",
+                "regfile_alu_wdata_fw_i[22]",
+                "regfile_alu_wdata_fw_i[21]",
+                "regfile_alu_wdata_fw_i[20]",
+                "regfile_alu_wdata_fw_i[19]",
+                "regfile_alu_wdata_fw_i[18]",
+                "regfile_alu_wdata_fw_i[17]",
+                "regfile_alu_wdata_fw_i[16]",
+                "regfile_alu_wdata_fw_i[15]",
+                "regfile_alu_wdata_fw_i[14]",
+                "regfile_alu_wdata_fw_i[13]",
+                "regfile_alu_wdata_fw_i[12]",
+                "regfile_alu_wdata_fw_i[11]",
+                "regfile_alu_wdata_fw_i[10]",
+                "regfile_alu_wdata_fw_i[9]",
+                "regfile_alu_wdata_fw_i[8]",
+                "regfile_alu_wdata_fw_i[7]",
+                "regfile_alu_wdata_fw_i[6]",
+                "regfile_alu_wdata_fw_i[5]",
+                "regfile_alu_wdata_fw_i[4]",
+                "regfile_alu_wdata_fw_i[3]",
+                "regfile_alu_wdata_fw_i[2]",
+                "regfile_alu_wdata_fw_i[1]",
+                "regfile_alu_wdata_fw_i[0]"
+            ]
+        },
+        {
+            "PortName": "mult_multicycle_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mhpmevent_minstret_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_load_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_store_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_jump_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_branch_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_branch_taken_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_compressed_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_jr_stall_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_imiss_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_ld_stall_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mhpmevent_pipe_stall_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "perf_imiss_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mcounteren_i",
+            "Direction": "input",
+            "Bits": [
+                "mcounteren_i[31]",
+                "mcounteren_i[30]",
+                "mcounteren_i[29]",
+                "mcounteren_i[28]",
+                "mcounteren_i[27]",
+                "mcounteren_i[26]",
+                "mcounteren_i[25]",
+                "mcounteren_i[24]",
+                "mcounteren_i[23]",
+                "mcounteren_i[22]",
+                "mcounteren_i[21]",
+                "mcounteren_i[20]",
+                "mcounteren_i[19]",
+                "mcounteren_i[18]",
+                "mcounteren_i[17]",
+                "mcounteren_i[16]",
+                "mcounteren_i[15]",
+                "mcounteren_i[14]",
+                "mcounteren_i[13]",
+                "mcounteren_i[12]",
+                "mcounteren_i[11]",
+                "mcounteren_i[10]",
+                "mcounteren_i[9]",
+                "mcounteren_i[8]",
+                "mcounteren_i[7]",
+                "mcounteren_i[6]",
+                "mcounteren_i[5]",
+                "mcounteren_i[4]",
+                "mcounteren_i[3]",
+                "mcounteren_i[2]",
+                "mcounteren_i[1]",
+                "mcounteren_i[0]"
+            ]
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "mhpmevent_pipe_stall_o",
+            "Bits": [
+                "mhpmevent_pipe_stall_o_reg"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_ld_stall_o",
+            "Bits": [
+                "mhpmevent_ld_stall_o_reg"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_imiss_o",
+            "Bits": [
+                "mhpmevent_imiss_o_reg"
+            ]
+        },
+        {
+            "CellName": "mult_clpx_img_ex_o",
+            "Bits": [
+                "mult_clpx_img_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "prepost_useincr_ex_o",
+            "Bits": [
+                "prepost_useincr_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "mult_imm_ex_o",
+            "Bits": [
+                "mult_imm_ex_o_reg[0]",
+                "mult_imm_ex_o_reg[1]",
+                "mult_imm_ex_o_reg[2]",
+                "mult_imm_ex_o_reg[3]",
+                "mult_imm_ex_o_reg[4]"
+            ]
+        },
+        {
+            "CellName": "atop_ex_o",
+            "Bits": [
+                "atop_ex_o_reg[0]",
+                "atop_ex_o_reg[1]",
+                "atop_ex_o_reg[2]",
+                "atop_ex_o_reg[3]",
+                "atop_ex_o_reg[4]",
+                "atop_ex_o_reg[5]"
+            ]
+        },
+        {
+            "CellName": "mult_dot_op_a_ex_o",
+            "Bits": [
+                "mult_dot_op_a_ex_o_reg[0]",
+                "mult_dot_op_a_ex_o_reg[1]",
+                "mult_dot_op_a_ex_o_reg[2]",
+                "mult_dot_op_a_ex_o_reg[3]",
+                "mult_dot_op_a_ex_o_reg[4]",
+                "mult_dot_op_a_ex_o_reg[5]",
+                "mult_dot_op_a_ex_o_reg[6]",
+                "mult_dot_op_a_ex_o_reg[7]",
+                "mult_dot_op_a_ex_o_reg[8]",
+                "mult_dot_op_a_ex_o_reg[9]",
+                "mult_dot_op_a_ex_o_reg[10]",
+                "mult_dot_op_a_ex_o_reg[11]",
+                "mult_dot_op_a_ex_o_reg[12]",
+                "mult_dot_op_a_ex_o_reg[13]",
+                "mult_dot_op_a_ex_o_reg[14]",
+                "mult_dot_op_a_ex_o_reg[15]",
+                "mult_dot_op_a_ex_o_reg[16]",
+                "mult_dot_op_a_ex_o_reg[17]",
+                "mult_dot_op_a_ex_o_reg[18]",
+                "mult_dot_op_a_ex_o_reg[19]",
+                "mult_dot_op_a_ex_o_reg[20]",
+                "mult_dot_op_a_ex_o_reg[21]",
+                "mult_dot_op_a_ex_o_reg[22]",
+                "mult_dot_op_a_ex_o_reg[23]",
+                "mult_dot_op_a_ex_o_reg[24]",
+                "mult_dot_op_a_ex_o_reg[25]",
+                "mult_dot_op_a_ex_o_reg[26]",
+                "mult_dot_op_a_ex_o_reg[27]",
+                "mult_dot_op_a_ex_o_reg[28]",
+                "mult_dot_op_a_ex_o_reg[29]",
+                "mult_dot_op_a_ex_o_reg[30]",
+                "mult_dot_op_a_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_jr_stall_o",
+            "Bits": [
+                "mhpmevent_jr_stall_o_reg"
+            ]
+        },
+        {
+            "CellName": "bmask_a_ex_o",
+            "Bits": [
+                "bmask_a_ex_o_reg[0]",
+                "bmask_a_ex_o_reg[1]",
+                "bmask_a_ex_o_reg[2]",
+                "bmask_a_ex_o_reg[3]",
+                "bmask_a_ex_o_reg[4]"
+            ]
+        },
+        {
+            "CellName": "csr_op_ex_o",
+            "Bits": [
+                "csr_op_ex_o_reg[0]",
+                "csr_op_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "mult_operand_c_ex_o",
+            "Bits": [
+                "mult_operand_c_ex_o_reg[0]",
+                "mult_operand_c_ex_o_reg[1]",
+                "mult_operand_c_ex_o_reg[2]",
+                "mult_operand_c_ex_o_reg[3]",
+                "mult_operand_c_ex_o_reg[4]",
+                "mult_operand_c_ex_o_reg[5]",
+                "mult_operand_c_ex_o_reg[6]",
+                "mult_operand_c_ex_o_reg[7]",
+                "mult_operand_c_ex_o_reg[8]",
+                "mult_operand_c_ex_o_reg[9]",
+                "mult_operand_c_ex_o_reg[10]",
+                "mult_operand_c_ex_o_reg[11]",
+                "mult_operand_c_ex_o_reg[12]",
+                "mult_operand_c_ex_o_reg[13]",
+                "mult_operand_c_ex_o_reg[14]",
+                "mult_operand_c_ex_o_reg[15]",
+                "mult_operand_c_ex_o_reg[16]",
+                "mult_operand_c_ex_o_reg[17]",
+                "mult_operand_c_ex_o_reg[18]",
+                "mult_operand_c_ex_o_reg[19]",
+                "mult_operand_c_ex_o_reg[20]",
+                "mult_operand_c_ex_o_reg[21]",
+                "mult_operand_c_ex_o_reg[22]",
+                "mult_operand_c_ex_o_reg[23]",
+                "mult_operand_c_ex_o_reg[24]",
+                "mult_operand_c_ex_o_reg[25]",
+                "mult_operand_c_ex_o_reg[26]",
+                "mult_operand_c_ex_o_reg[27]",
+                "mult_operand_c_ex_o_reg[28]",
+                "mult_operand_c_ex_o_reg[29]",
+                "mult_operand_c_ex_o_reg[30]",
+                "mult_operand_c_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "pc_ex_o",
+            "Bits": [
+                "pc_ex_o_reg[0]",
+                "pc_ex_o_reg[1]",
+                "pc_ex_o_reg[2]",
+                "pc_ex_o_reg[3]",
+                "pc_ex_o_reg[4]",
+                "pc_ex_o_reg[5]",
+                "pc_ex_o_reg[6]",
+                "pc_ex_o_reg[7]",
+                "pc_ex_o_reg[8]",
+                "pc_ex_o_reg[9]",
+                "pc_ex_o_reg[10]",
+                "pc_ex_o_reg[11]",
+                "pc_ex_o_reg[12]",
+                "pc_ex_o_reg[13]",
+                "pc_ex_o_reg[14]",
+                "pc_ex_o_reg[15]",
+                "pc_ex_o_reg[16]",
+                "pc_ex_o_reg[17]",
+                "pc_ex_o_reg[18]",
+                "pc_ex_o_reg[19]",
+                "pc_ex_o_reg[20]",
+                "pc_ex_o_reg[21]",
+                "pc_ex_o_reg[22]",
+                "pc_ex_o_reg[23]",
+                "pc_ex_o_reg[24]",
+                "pc_ex_o_reg[25]",
+                "pc_ex_o_reg[26]",
+                "pc_ex_o_reg[27]",
+                "pc_ex_o_reg[28]",
+                "pc_ex_o_reg[29]",
+                "pc_ex_o_reg[30]",
+                "pc_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "mult_operand_a_ex_o",
+            "Bits": [
+                "mult_operand_a_ex_o_reg[0]",
+                "mult_operand_a_ex_o_reg[1]",
+                "mult_operand_a_ex_o_reg[2]",
+                "mult_operand_a_ex_o_reg[3]",
+                "mult_operand_a_ex_o_reg[4]",
+                "mult_operand_a_ex_o_reg[5]",
+                "mult_operand_a_ex_o_reg[6]",
+                "mult_operand_a_ex_o_reg[7]",
+                "mult_operand_a_ex_o_reg[8]",
+                "mult_operand_a_ex_o_reg[9]",
+                "mult_operand_a_ex_o_reg[10]",
+                "mult_operand_a_ex_o_reg[11]",
+                "mult_operand_a_ex_o_reg[12]",
+                "mult_operand_a_ex_o_reg[13]",
+                "mult_operand_a_ex_o_reg[14]",
+                "mult_operand_a_ex_o_reg[15]",
+                "mult_operand_a_ex_o_reg[16]",
+                "mult_operand_a_ex_o_reg[17]",
+                "mult_operand_a_ex_o_reg[18]",
+                "mult_operand_a_ex_o_reg[19]",
+                "mult_operand_a_ex_o_reg[20]",
+                "mult_operand_a_ex_o_reg[21]",
+                "mult_operand_a_ex_o_reg[22]",
+                "mult_operand_a_ex_o_reg[23]",
+                "mult_operand_a_ex_o_reg[24]",
+                "mult_operand_a_ex_o_reg[25]",
+                "mult_operand_a_ex_o_reg[26]",
+                "mult_operand_a_ex_o_reg[27]",
+                "mult_operand_a_ex_o_reg[28]",
+                "mult_operand_a_ex_o_reg[29]",
+                "mult_operand_a_ex_o_reg[30]",
+                "mult_operand_a_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "data_reg_offset_ex_o",
+            "Bits": [
+                "data_reg_offset_ex_o_reg[0]",
+                "data_reg_offset_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "regfile_alu_we_ex_o",
+            "Bits": [
+                "regfile_alu_we_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "mult_dot_op_c_ex_o",
+            "Bits": [
+                "mult_dot_op_c_ex_o_reg[0]",
+                "mult_dot_op_c_ex_o_reg[1]",
+                "mult_dot_op_c_ex_o_reg[2]",
+                "mult_dot_op_c_ex_o_reg[3]",
+                "mult_dot_op_c_ex_o_reg[4]",
+                "mult_dot_op_c_ex_o_reg[5]",
+                "mult_dot_op_c_ex_o_reg[6]",
+                "mult_dot_op_c_ex_o_reg[7]",
+                "mult_dot_op_c_ex_o_reg[8]",
+                "mult_dot_op_c_ex_o_reg[9]",
+                "mult_dot_op_c_ex_o_reg[10]",
+                "mult_dot_op_c_ex_o_reg[11]",
+                "mult_dot_op_c_ex_o_reg[12]",
+                "mult_dot_op_c_ex_o_reg[13]",
+                "mult_dot_op_c_ex_o_reg[14]",
+                "mult_dot_op_c_ex_o_reg[15]",
+                "mult_dot_op_c_ex_o_reg[16]",
+                "mult_dot_op_c_ex_o_reg[17]",
+                "mult_dot_op_c_ex_o_reg[18]",
+                "mult_dot_op_c_ex_o_reg[19]",
+                "mult_dot_op_c_ex_o_reg[20]",
+                "mult_dot_op_c_ex_o_reg[21]",
+                "mult_dot_op_c_ex_o_reg[22]",
+                "mult_dot_op_c_ex_o_reg[23]",
+                "mult_dot_op_c_ex_o_reg[24]",
+                "mult_dot_op_c_ex_o_reg[25]",
+                "mult_dot_op_c_ex_o_reg[26]",
+                "mult_dot_op_c_ex_o_reg[27]",
+                "mult_dot_op_c_ex_o_reg[28]",
+                "mult_dot_op_c_ex_o_reg[29]",
+                "mult_dot_op_c_ex_o_reg[30]",
+                "mult_dot_op_c_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "mult_dot_op_b_ex_o",
+            "Bits": [
+                "mult_dot_op_b_ex_o_reg[0]",
+                "mult_dot_op_b_ex_o_reg[1]",
+                "mult_dot_op_b_ex_o_reg[2]",
+                "mult_dot_op_b_ex_o_reg[3]",
+                "mult_dot_op_b_ex_o_reg[4]",
+                "mult_dot_op_b_ex_o_reg[5]",
+                "mult_dot_op_b_ex_o_reg[6]",
+                "mult_dot_op_b_ex_o_reg[7]",
+                "mult_dot_op_b_ex_o_reg[8]",
+                "mult_dot_op_b_ex_o_reg[9]",
+                "mult_dot_op_b_ex_o_reg[10]",
+                "mult_dot_op_b_ex_o_reg[11]",
+                "mult_dot_op_b_ex_o_reg[12]",
+                "mult_dot_op_b_ex_o_reg[13]",
+                "mult_dot_op_b_ex_o_reg[14]",
+                "mult_dot_op_b_ex_o_reg[15]",
+                "mult_dot_op_b_ex_o_reg[16]",
+                "mult_dot_op_b_ex_o_reg[17]",
+                "mult_dot_op_b_ex_o_reg[18]",
+                "mult_dot_op_b_ex_o_reg[19]",
+                "mult_dot_op_b_ex_o_reg[20]",
+                "mult_dot_op_b_ex_o_reg[21]",
+                "mult_dot_op_b_ex_o_reg[22]",
+                "mult_dot_op_b_ex_o_reg[23]",
+                "mult_dot_op_b_ex_o_reg[24]",
+                "mult_dot_op_b_ex_o_reg[25]",
+                "mult_dot_op_b_ex_o_reg[26]",
+                "mult_dot_op_b_ex_o_reg[27]",
+                "mult_dot_op_b_ex_o_reg[28]",
+                "mult_dot_op_b_ex_o_reg[29]",
+                "mult_dot_op_b_ex_o_reg[30]",
+                "mult_dot_op_b_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "csr_access_ex_o",
+            "Bits": [
+                "csr_access_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "mult_is_clpx_ex_o",
+            "Bits": [
+                "mult_is_clpx_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "apu_waddr_ex_o",
+            "Bits": [
+                "apu_waddr_ex_o_reg[0]",
+                "apu_waddr_ex_o_reg[1]",
+                "apu_waddr_ex_o_reg[2]",
+                "apu_waddr_ex_o_reg[3]",
+                "apu_waddr_ex_o_reg[4]",
+                "apu_waddr_ex_o_reg[5]"
+            ]
+        },
+        {
+            "CellName": "alu_operator_ex_o",
+            "Bits": [
+                "alu_operator_ex_o_reg[0]",
+                "alu_operator_ex_o_reg[1]",
+                "alu_operator_ex_o_reg[2]",
+                "alu_operator_ex_o_reg[3]",
+                "alu_operator_ex_o_reg[4]",
+                "alu_operator_ex_o_reg[5]",
+                "alu_operator_ex_o_reg[6]"
+            ]
+        },
+        {
+            "CellName": "alu_operand_c_ex_o",
+            "Bits": [
+                "alu_operand_c_ex_o_reg[0]",
+                "alu_operand_c_ex_o_reg[1]",
+                "alu_operand_c_ex_o_reg[2]",
+                "alu_operand_c_ex_o_reg[3]",
+                "alu_operand_c_ex_o_reg[4]",
+                "alu_operand_c_ex_o_reg[5]",
+                "alu_operand_c_ex_o_reg[6]",
+                "alu_operand_c_ex_o_reg[7]",
+                "alu_operand_c_ex_o_reg[8]",
+                "alu_operand_c_ex_o_reg[9]",
+                "alu_operand_c_ex_o_reg[10]",
+                "alu_operand_c_ex_o_reg[11]",
+                "alu_operand_c_ex_o_reg[12]",
+                "alu_operand_c_ex_o_reg[13]",
+                "alu_operand_c_ex_o_reg[14]",
+                "alu_operand_c_ex_o_reg[15]",
+                "alu_operand_c_ex_o_reg[16]",
+                "alu_operand_c_ex_o_reg[17]",
+                "alu_operand_c_ex_o_reg[18]",
+                "alu_operand_c_ex_o_reg[19]",
+                "alu_operand_c_ex_o_reg[20]",
+                "alu_operand_c_ex_o_reg[21]",
+                "alu_operand_c_ex_o_reg[22]",
+                "alu_operand_c_ex_o_reg[23]",
+                "alu_operand_c_ex_o_reg[24]",
+                "alu_operand_c_ex_o_reg[25]",
+                "alu_operand_c_ex_o_reg[26]",
+                "alu_operand_c_ex_o_reg[27]",
+                "alu_operand_c_ex_o_reg[28]",
+                "alu_operand_c_ex_o_reg[29]",
+                "alu_operand_c_ex_o_reg[30]",
+                "alu_operand_c_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "alu_operand_b_ex_o",
+            "Bits": [
+                "alu_operand_b_ex_o_reg[0]",
+                "alu_operand_b_ex_o_reg[1]",
+                "alu_operand_b_ex_o_reg[2]",
+                "alu_operand_b_ex_o_reg[3]",
+                "alu_operand_b_ex_o_reg[4]",
+                "alu_operand_b_ex_o_reg[5]",
+                "alu_operand_b_ex_o_reg[6]",
+                "alu_operand_b_ex_o_reg[7]",
+                "alu_operand_b_ex_o_reg[8]",
+                "alu_operand_b_ex_o_reg[9]",
+                "alu_operand_b_ex_o_reg[10]",
+                "alu_operand_b_ex_o_reg[11]",
+                "alu_operand_b_ex_o_reg[12]",
+                "alu_operand_b_ex_o_reg[13]",
+                "alu_operand_b_ex_o_reg[14]",
+                "alu_operand_b_ex_o_reg[15]",
+                "alu_operand_b_ex_o_reg[16]",
+                "alu_operand_b_ex_o_reg[17]",
+                "alu_operand_b_ex_o_reg[18]",
+                "alu_operand_b_ex_o_reg[19]",
+                "alu_operand_b_ex_o_reg[20]",
+                "alu_operand_b_ex_o_reg[21]",
+                "alu_operand_b_ex_o_reg[22]",
+                "alu_operand_b_ex_o_reg[23]",
+                "alu_operand_b_ex_o_reg[24]",
+                "alu_operand_b_ex_o_reg[25]",
+                "alu_operand_b_ex_o_reg[26]",
+                "alu_operand_b_ex_o_reg[27]",
+                "alu_operand_b_ex_o_reg[28]",
+                "alu_operand_b_ex_o_reg[29]",
+                "alu_operand_b_ex_o_reg[30]",
+                "alu_operand_b_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "mult_clpx_shift_ex_o",
+            "Bits": [
+                "mult_clpx_shift_ex_o_reg[0]",
+                "mult_clpx_shift_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "mult_operand_b_ex_o",
+            "Bits": [
+                "mult_operand_b_ex_o_reg[0]",
+                "mult_operand_b_ex_o_reg[1]",
+                "mult_operand_b_ex_o_reg[2]",
+                "mult_operand_b_ex_o_reg[3]",
+                "mult_operand_b_ex_o_reg[4]",
+                "mult_operand_b_ex_o_reg[5]",
+                "mult_operand_b_ex_o_reg[6]",
+                "mult_operand_b_ex_o_reg[7]",
+                "mult_operand_b_ex_o_reg[8]",
+                "mult_operand_b_ex_o_reg[9]",
+                "mult_operand_b_ex_o_reg[10]",
+                "mult_operand_b_ex_o_reg[11]",
+                "mult_operand_b_ex_o_reg[12]",
+                "mult_operand_b_ex_o_reg[13]",
+                "mult_operand_b_ex_o_reg[14]",
+                "mult_operand_b_ex_o_reg[15]",
+                "mult_operand_b_ex_o_reg[16]",
+                "mult_operand_b_ex_o_reg[17]",
+                "mult_operand_b_ex_o_reg[18]",
+                "mult_operand_b_ex_o_reg[19]",
+                "mult_operand_b_ex_o_reg[20]",
+                "mult_operand_b_ex_o_reg[21]",
+                "mult_operand_b_ex_o_reg[22]",
+                "mult_operand_b_ex_o_reg[23]",
+                "mult_operand_b_ex_o_reg[24]",
+                "mult_operand_b_ex_o_reg[25]",
+                "mult_operand_b_ex_o_reg[26]",
+                "mult_operand_b_ex_o_reg[27]",
+                "mult_operand_b_ex_o_reg[28]",
+                "mult_operand_b_ex_o_reg[29]",
+                "mult_operand_b_ex_o_reg[30]",
+                "mult_operand_b_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "mult_sel_subword_ex_o",
+            "Bits": [
+                "mult_sel_subword_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "imm_vec_ext_ex_o",
+            "Bits": [
+                "imm_vec_ext_ex_o_reg[0]",
+                "imm_vec_ext_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "alu_is_clpx_ex_o",
+            "Bits": [
+                "alu_is_clpx_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "alu_clpx_shift_ex_o",
+            "Bits": [
+                "alu_clpx_shift_ex_o_reg[0]",
+                "alu_clpx_shift_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "data_sign_ext_ex_o",
+            "Bits": [
+                "data_sign_ext_ex_o_reg[0]",
+                "data_sign_ext_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "mult_en_ex_o",
+            "Bits": [
+                "mult_en_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "apu_en_ex_o",
+            "Bits": [
+                "apu_en_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "alu_en_ex_o",
+            "Bits": [
+                "alu_en_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_load_o",
+            "Bits": [
+                "mhpmevent_load_o_reg"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_compressed_o",
+            "Bits": [
+                "mhpmevent_compressed_o_reg"
+            ]
+        },
+        {
+            "CellName": "apu_lat_ex_o",
+            "Bits": [
+                "apu_lat_ex_o_reg[0]",
+                "apu_lat_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "alu_is_subrot_ex_o",
+            "Bits": [
+                "alu_is_subrot_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "apu_operands_ex_o",
+            "Bits": [
+                "apu_operands_ex_o_reg[0][0]",
+                "apu_operands_ex_o_reg[0][1]",
+                "apu_operands_ex_o_reg[0][2]",
+                "apu_operands_ex_o_reg[0][3]",
+                "apu_operands_ex_o_reg[0][4]",
+                "apu_operands_ex_o_reg[0][5]",
+                "apu_operands_ex_o_reg[0][6]",
+                "apu_operands_ex_o_reg[0][7]",
+                "apu_operands_ex_o_reg[0][8]",
+                "apu_operands_ex_o_reg[0][9]",
+                "apu_operands_ex_o_reg[0][10]",
+                "apu_operands_ex_o_reg[0][11]",
+                "apu_operands_ex_o_reg[0][12]",
+                "apu_operands_ex_o_reg[0][13]",
+                "apu_operands_ex_o_reg[0][14]",
+                "apu_operands_ex_o_reg[0][15]",
+                "apu_operands_ex_o_reg[0][16]",
+                "apu_operands_ex_o_reg[0][17]",
+                "apu_operands_ex_o_reg[0][18]",
+                "apu_operands_ex_o_reg[0][19]",
+                "apu_operands_ex_o_reg[0][20]",
+                "apu_operands_ex_o_reg[0][21]",
+                "apu_operands_ex_o_reg[0][22]",
+                "apu_operands_ex_o_reg[0][23]",
+                "apu_operands_ex_o_reg[0][24]",
+                "apu_operands_ex_o_reg[0][25]",
+                "apu_operands_ex_o_reg[0][26]",
+                "apu_operands_ex_o_reg[0][27]",
+                "apu_operands_ex_o_reg[0][28]",
+                "apu_operands_ex_o_reg[0][29]",
+                "apu_operands_ex_o_reg[0][30]",
+                "apu_operands_ex_o_reg[0][31]",
+                "apu_operands_ex_o_reg[1][0]",
+                "apu_operands_ex_o_reg[1][1]",
+                "apu_operands_ex_o_reg[1][2]",
+                "apu_operands_ex_o_reg[1][3]",
+                "apu_operands_ex_o_reg[1][4]",
+                "apu_operands_ex_o_reg[1][5]",
+                "apu_operands_ex_o_reg[1][6]",
+                "apu_operands_ex_o_reg[1][7]",
+                "apu_operands_ex_o_reg[1][8]",
+                "apu_operands_ex_o_reg[1][9]",
+                "apu_operands_ex_o_reg[1][10]",
+                "apu_operands_ex_o_reg[1][11]",
+                "apu_operands_ex_o_reg[1][12]",
+                "apu_operands_ex_o_reg[1][13]",
+                "apu_operands_ex_o_reg[1][14]",
+                "apu_operands_ex_o_reg[1][15]",
+                "apu_operands_ex_o_reg[1][16]",
+                "apu_operands_ex_o_reg[1][17]",
+                "apu_operands_ex_o_reg[1][18]",
+                "apu_operands_ex_o_reg[1][19]",
+                "apu_operands_ex_o_reg[1][20]",
+                "apu_operands_ex_o_reg[1][21]",
+                "apu_operands_ex_o_reg[1][22]",
+                "apu_operands_ex_o_reg[1][23]",
+                "apu_operands_ex_o_reg[1][24]",
+                "apu_operands_ex_o_reg[1][25]",
+                "apu_operands_ex_o_reg[1][26]",
+                "apu_operands_ex_o_reg[1][27]",
+                "apu_operands_ex_o_reg[1][28]",
+                "apu_operands_ex_o_reg[1][29]",
+                "apu_operands_ex_o_reg[1][30]",
+                "apu_operands_ex_o_reg[1][31]",
+                "apu_operands_ex_o_reg[2][0]",
+                "apu_operands_ex_o_reg[2][1]",
+                "apu_operands_ex_o_reg[2][2]",
+                "apu_operands_ex_o_reg[2][3]",
+                "apu_operands_ex_o_reg[2][4]",
+                "apu_operands_ex_o_reg[2][5]",
+                "apu_operands_ex_o_reg[2][6]",
+                "apu_operands_ex_o_reg[2][7]",
+                "apu_operands_ex_o_reg[2][8]",
+                "apu_operands_ex_o_reg[2][9]",
+                "apu_operands_ex_o_reg[2][10]",
+                "apu_operands_ex_o_reg[2][11]",
+                "apu_operands_ex_o_reg[2][12]",
+                "apu_operands_ex_o_reg[2][13]",
+                "apu_operands_ex_o_reg[2][14]",
+                "apu_operands_ex_o_reg[2][15]",
+                "apu_operands_ex_o_reg[2][16]",
+                "apu_operands_ex_o_reg[2][17]",
+                "apu_operands_ex_o_reg[2][18]",
+                "apu_operands_ex_o_reg[2][19]",
+                "apu_operands_ex_o_reg[2][20]",
+                "apu_operands_ex_o_reg[2][21]",
+                "apu_operands_ex_o_reg[2][22]",
+                "apu_operands_ex_o_reg[2][23]",
+                "apu_operands_ex_o_reg[2][24]",
+                "apu_operands_ex_o_reg[2][25]",
+                "apu_operands_ex_o_reg[2][26]",
+                "apu_operands_ex_o_reg[2][27]",
+                "apu_operands_ex_o_reg[2][28]",
+                "apu_operands_ex_o_reg[2][29]",
+                "apu_operands_ex_o_reg[2][30]",
+                "apu_operands_ex_o_reg[2][31]"
+            ]
+        },
+        {
+            "CellName": "apu_flags_ex_o",
+            "Bits": [
+                "apu_flags_ex_o_reg[0]",
+                "apu_flags_ex_o_reg[1]",
+                "apu_flags_ex_o_reg[2]",
+                "apu_flags_ex_o_reg[3]",
+                "apu_flags_ex_o_reg[4]",
+                "apu_flags_ex_o_reg[5]",
+                "apu_flags_ex_o_reg[6]",
+                "apu_flags_ex_o_reg[7]",
+                "apu_flags_ex_o_reg[8]",
+                "apu_flags_ex_o_reg[9]",
+                "apu_flags_ex_o_reg[10]",
+                "apu_flags_ex_o_reg[11]",
+                "apu_flags_ex_o_reg[12]",
+                "apu_flags_ex_o_reg[13]",
+                "apu_flags_ex_o_reg[14]"
+            ]
+        },
+        {
+            "CellName": "mult_dot_signed_ex_o",
+            "Bits": [
+                "mult_dot_signed_ex_o_reg[0]",
+                "mult_dot_signed_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "data_we_ex_o",
+            "Bits": [
+                "data_we_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "regfile_waddr_ex_o",
+            "Bits": [
+                "regfile_waddr_ex_o_reg[0]",
+                "regfile_waddr_ex_o_reg[1]",
+                "regfile_waddr_ex_o_reg[2]",
+                "regfile_waddr_ex_o_reg[3]",
+                "regfile_waddr_ex_o_reg[4]",
+                "regfile_waddr_ex_o_reg[5]"
+            ]
+        },
+        {
+            "CellName": "mult_signed_mode_ex_o",
+            "Bits": [
+                "mult_signed_mode_ex_o_reg[0]",
+                "mult_signed_mode_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "mult_operator_ex_o",
+            "Bits": [
+                "mult_operator_ex_o_reg[0]",
+                "mult_operator_ex_o_reg[1]",
+                "mult_operator_ex_o_reg[2]"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_minstret_o",
+            "Bits": [
+                "mhpmevent_minstret_o_reg"
+            ]
+        },
+        {
+            "CellName": "regfile_we_ex_o",
+            "Bits": [
+                "regfile_we_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "bmask_b_ex_o",
+            "Bits": [
+                "bmask_b_ex_o_reg[0]",
+                "bmask_b_ex_o_reg[1]",
+                "bmask_b_ex_o_reg[2]",
+                "bmask_b_ex_o_reg[3]",
+                "bmask_b_ex_o_reg[4]"
+            ]
+        },
+        {
+            "CellName": "regfile_alu_waddr_ex_o",
+            "Bits": [
+                "regfile_alu_waddr_ex_o_reg[0]",
+                "regfile_alu_waddr_ex_o_reg[1]",
+                "regfile_alu_waddr_ex_o_reg[2]",
+                "regfile_alu_waddr_ex_o_reg[3]",
+                "regfile_alu_waddr_ex_o_reg[4]",
+                "regfile_alu_waddr_ex_o_reg[5]"
+            ]
+        },
+        {
+            "CellName": "alu_operand_a_ex_o",
+            "Bits": [
+                "alu_operand_a_ex_o_reg[0]",
+                "alu_operand_a_ex_o_reg[1]",
+                "alu_operand_a_ex_o_reg[2]",
+                "alu_operand_a_ex_o_reg[3]",
+                "alu_operand_a_ex_o_reg[4]",
+                "alu_operand_a_ex_o_reg[5]",
+                "alu_operand_a_ex_o_reg[6]",
+                "alu_operand_a_ex_o_reg[7]",
+                "alu_operand_a_ex_o_reg[8]",
+                "alu_operand_a_ex_o_reg[9]",
+                "alu_operand_a_ex_o_reg[10]",
+                "alu_operand_a_ex_o_reg[11]",
+                "alu_operand_a_ex_o_reg[12]",
+                "alu_operand_a_ex_o_reg[13]",
+                "alu_operand_a_ex_o_reg[14]",
+                "alu_operand_a_ex_o_reg[15]",
+                "alu_operand_a_ex_o_reg[16]",
+                "alu_operand_a_ex_o_reg[17]",
+                "alu_operand_a_ex_o_reg[18]",
+                "alu_operand_a_ex_o_reg[19]",
+                "alu_operand_a_ex_o_reg[20]",
+                "alu_operand_a_ex_o_reg[21]",
+                "alu_operand_a_ex_o_reg[22]",
+                "alu_operand_a_ex_o_reg[23]",
+                "alu_operand_a_ex_o_reg[24]",
+                "alu_operand_a_ex_o_reg[25]",
+                "alu_operand_a_ex_o_reg[26]",
+                "alu_operand_a_ex_o_reg[27]",
+                "alu_operand_a_ex_o_reg[28]",
+                "alu_operand_a_ex_o_reg[29]",
+                "alu_operand_a_ex_o_reg[30]",
+                "alu_operand_a_ex_o_reg[31]"
+            ]
+        },
+        {
+            "CellName": "data_type_ex_o",
+            "Bits": [
+                "data_type_ex_o_reg[0]",
+                "data_type_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "data_req_ex_o",
+            "Bits": [
+                "data_req_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "alu_vec_mode_ex_o",
+            "Bits": [
+                "alu_vec_mode_ex_o_reg[0]",
+                "alu_vec_mode_ex_o_reg[1]"
+            ]
+        },
+        {
+            "CellName": "data_load_event_ex_o",
+            "Bits": [
+                "data_load_event_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "branch_in_ex_o",
+            "Bits": [
+                "branch_in_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "data_misaligned_ex_o",
+            "Bits": [
+                "data_misaligned_ex_o_reg"
+            ]
+        },
+        {
+            "CellName": "id_valid_q",
+            "Bits": [
+                "id_valid_q_reg"
+            ]
+        },
+        {
+            "CellName": "apu_op_ex_o",
+            "Bits": [
+                "apu_op_ex_o_reg[0]",
+                "apu_op_ex_o_reg[1]",
+                "apu_op_ex_o_reg[2]",
+                "apu_op_ex_o_reg[3]",
+                "apu_op_ex_o_reg[4]",
+                "apu_op_ex_o_reg[5]"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_branch_o",
+            "Bits": [
+                "mhpmevent_branch_o_reg"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_store_o",
+            "Bits": [
+                "mhpmevent_store_o_reg"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_jump_o",
+            "Bits": [
+                "mhpmevent_jump_o_reg"
+            ]
+        },
+        {
+            "CellName": "mhpmevent_branch_taken_o",
+            "Bits": [
+                "mhpmevent_branch_taken_o_reg"
+            ]
+        }
+    ]
+}

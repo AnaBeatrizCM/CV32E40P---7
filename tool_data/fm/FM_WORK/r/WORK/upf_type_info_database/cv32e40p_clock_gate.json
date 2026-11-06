@@ -1,0 +1,33 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_clock_gate",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/bhv/cv32e40p_sim_clock_gate.sv",
+    "Start Line": 15,
+    "End Line": 30,
+    "Ports": [
+        {
+            "PortName": "clk_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "scan_cg_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "clk_o",
+            "Direction": "output"
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "clk_en",
+            "Bits": [
+                "clk_en_reg"
+            ]
+        }
+    ]
+}

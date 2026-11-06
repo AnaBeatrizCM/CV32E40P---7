@@ -1,0 +1,93 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_sleep_unit_COREV_CLUSTER0",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_sleep_unit.sv",
+    "Start Line": 56,
+    "End Line": 292,
+    "Ports": [
+        {
+            "PortName": "clk_ungated_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "clk_gated_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "scan_cg_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "core_sleep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "fetch_enable_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fetch_enable_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "if_busy_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ctrl_busy_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "lsu_busy_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_busy_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "pulp_clock_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "p_elw_start_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "p_elw_finish_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_p_elw_no_sleep_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "wake_from_sleep_i",
+            "Direction": "input"
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "fetch_enable_q",
+            "Bits": [
+                "fetch_enable_q_reg"
+            ]
+        },
+        {
+            "CellName": "p_elw_busy_q",
+            "Bits": [
+                "p_elw_busy_q_reg"
+            ]
+        },
+        {
+            "CellName": "core_busy_q",
+            "Bits": [
+                "core_busy_q_reg"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+# Master Broadcast File
+time 1793971057
+pid 19523
+log /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/fm/FM_WORK/.cdpl/master.xmen16.19523.log
+tcp 192.168.140.16:34791
+wlog /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/fm/FM_WORK/.cdpl/worker.W1.xmen16.20145.log
+status done

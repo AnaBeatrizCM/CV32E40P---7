@@ -1,0 +1,219 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_int_controller_PULP_SECURE0",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_int_controller.sv",
+    "Start Line": 24,
+    "End Line": 152,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "irq_i",
+            "Direction": "input",
+            "Bits": [
+                "irq_i[31]",
+                "irq_i[30]",
+                "irq_i[29]",
+                "irq_i[28]",
+                "irq_i[27]",
+                "irq_i[26]",
+                "irq_i[25]",
+                "irq_i[24]",
+                "irq_i[23]",
+                "irq_i[22]",
+                "irq_i[21]",
+                "irq_i[20]",
+                "irq_i[19]",
+                "irq_i[18]",
+                "irq_i[17]",
+                "irq_i[16]",
+                "irq_i[15]",
+                "irq_i[14]",
+                "irq_i[13]",
+                "irq_i[12]",
+                "irq_i[11]",
+                "irq_i[10]",
+                "irq_i[9]",
+                "irq_i[8]",
+                "irq_i[7]",
+                "irq_i[6]",
+                "irq_i[5]",
+                "irq_i[4]",
+                "irq_i[3]",
+                "irq_i[2]",
+                "irq_i[1]",
+                "irq_i[0]"
+            ]
+        },
+        {
+            "PortName": "irq_sec_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "irq_req_ctrl_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "irq_sec_ctrl_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "irq_id_ctrl_o",
+            "Direction": "output",
+            "Bits": [
+                "irq_id_ctrl_o[4]",
+                "irq_id_ctrl_o[3]",
+                "irq_id_ctrl_o[2]",
+                "irq_id_ctrl_o[1]",
+                "irq_id_ctrl_o[0]"
+            ]
+        },
+        {
+            "PortName": "irq_wu_ctrl_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mie_bypass_i",
+            "Direction": "input",
+            "Bits": [
+                "mie_bypass_i[31]",
+                "mie_bypass_i[30]",
+                "mie_bypass_i[29]",
+                "mie_bypass_i[28]",
+                "mie_bypass_i[27]",
+                "mie_bypass_i[26]",
+                "mie_bypass_i[25]",
+                "mie_bypass_i[24]",
+                "mie_bypass_i[23]",
+                "mie_bypass_i[22]",
+                "mie_bypass_i[21]",
+                "mie_bypass_i[20]",
+                "mie_bypass_i[19]",
+                "mie_bypass_i[18]",
+                "mie_bypass_i[17]",
+                "mie_bypass_i[16]",
+                "mie_bypass_i[15]",
+                "mie_bypass_i[14]",
+                "mie_bypass_i[13]",
+                "mie_bypass_i[12]",
+                "mie_bypass_i[11]",
+                "mie_bypass_i[10]",
+                "mie_bypass_i[9]",
+                "mie_bypass_i[8]",
+                "mie_bypass_i[7]",
+                "mie_bypass_i[6]",
+                "mie_bypass_i[5]",
+                "mie_bypass_i[4]",
+                "mie_bypass_i[3]",
+                "mie_bypass_i[2]",
+                "mie_bypass_i[1]",
+                "mie_bypass_i[0]"
+            ]
+        },
+        {
+            "PortName": "mip_o",
+            "Direction": "output",
+            "Bits": [
+                "mip_o[31]",
+                "mip_o[30]",
+                "mip_o[29]",
+                "mip_o[28]",
+                "mip_o[27]",
+                "mip_o[26]",
+                "mip_o[25]",
+                "mip_o[24]",
+                "mip_o[23]",
+                "mip_o[22]",
+                "mip_o[21]",
+                "mip_o[20]",
+                "mip_o[19]",
+                "mip_o[18]",
+                "mip_o[17]",
+                "mip_o[16]",
+                "mip_o[15]",
+                "mip_o[14]",
+                "mip_o[13]",
+                "mip_o[12]",
+                "mip_o[11]",
+                "mip_o[10]",
+                "mip_o[9]",
+                "mip_o[8]",
+                "mip_o[7]",
+                "mip_o[6]",
+                "mip_o[5]",
+                "mip_o[4]",
+                "mip_o[3]",
+                "mip_o[2]",
+                "mip_o[1]",
+                "mip_o[0]"
+            ]
+        },
+        {
+            "PortName": "m_ie_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "u_ie_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "current_priv_lvl_i",
+            "Direction": "input",
+            "Bits": [
+                "current_priv_lvl_i[1]",
+                "current_priv_lvl_i[0]"
+            ]
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "irq_sec_q",
+            "Bits": [
+                "irq_sec_q_reg"
+            ]
+        },
+        {
+            "CellName": "irq_q",
+            "Bits": [
+                "irq_q_reg[0]",
+                "irq_q_reg[1]",
+                "irq_q_reg[2]",
+                "irq_q_reg[3]",
+                "irq_q_reg[4]",
+                "irq_q_reg[5]",
+                "irq_q_reg[6]",
+                "irq_q_reg[7]",
+                "irq_q_reg[8]",
+                "irq_q_reg[9]",
+                "irq_q_reg[10]",
+                "irq_q_reg[11]",
+                "irq_q_reg[12]",
+                "irq_q_reg[13]",
+                "irq_q_reg[14]",
+                "irq_q_reg[15]",
+                "irq_q_reg[16]",
+                "irq_q_reg[17]",
+                "irq_q_reg[18]",
+                "irq_q_reg[19]",
+                "irq_q_reg[20]",
+                "irq_q_reg[21]",
+                "irq_q_reg[22]",
+                "irq_q_reg[23]",
+                "irq_q_reg[24]",
+                "irq_q_reg[25]",
+                "irq_q_reg[26]",
+                "irq_q_reg[27]",
+                "irq_q_reg[28]",
+                "irq_q_reg[29]",
+                "irq_q_reg[30]",
+                "irq_q_reg[31]"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_ff_one",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ff_one.sv",
+    "Start Line": 25,
+    "End Line": 99,
+    "Ports": [
+        {
+            "PortName": "in_i",
+            "Direction": "input",
+            "Bits": [
+                "in_i[31]",
+                "in_i[30]",
+                "in_i[29]",
+                "in_i[28]",
+                "in_i[27]",
+                "in_i[26]",
+                "in_i[25]",
+                "in_i[24]",
+                "in_i[23]",
+                "in_i[22]",
+                "in_i[21]",
+                "in_i[20]",
+                "in_i[19]",
+                "in_i[18]",
+                "in_i[17]",
+                "in_i[16]",
+                "in_i[15]",
+                "in_i[14]",
+                "in_i[13]",
+                "in_i[12]",
+                "in_i[11]",
+                "in_i[10]",
+                "in_i[9]",
+                "in_i[8]",
+                "in_i[7]",
+                "in_i[6]",
+                "in_i[5]",
+                "in_i[4]",
+                "in_i[3]",
+                "in_i[2]",
+                "in_i[1]",
+                "in_i[0]"
+            ]
+        },
+        {
+            "PortName": "first_one_o",
+            "Direction": "output",
+            "Bits": [
+                "first_one_o[4]",
+                "first_one_o[3]",
+                "first_one_o[2]",
+                "first_one_o[1]",
+                "first_one_o[0]"
+            ]
+        },
+        {
+            "PortName": "no_ones_o",
+            "Direction": "output"
+        }
+    ],
+    "Cells": []
+}

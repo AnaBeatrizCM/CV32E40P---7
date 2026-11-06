@@ -1,0 +1,862 @@
+{
+    "Version": "X-2025.06-SP3",
+    "Module": "cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0",
+    "Source File": "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv",
+    "Start Line": 31,
+    "End Line": 1623,
+    "Ports": [
+        {
+            "PortName": "clk",
+            "Direction": "input"
+        },
+        {
+            "PortName": "clk_ungated_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "rst_n",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fetch_enable_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ctrl_busy_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "is_decoding_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "is_fetch_failed_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "deassert_we_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "illegal_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ecall_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mret_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "uret_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "dret_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "mret_dec_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "uret_dec_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "dret_dec_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "wfi_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ebrk_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "fencei_insn_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "csr_status_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "hwlp_mask_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "instr_valid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "instr_req_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "pc_set_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "pc_mux_o",
+            "Direction": "output",
+            "Bits": [
+                "pc_mux_o[3]",
+                "pc_mux_o[2]",
+                "pc_mux_o[1]",
+                "pc_mux_o[0]"
+            ]
+        },
+        {
+            "PortName": "exc_pc_mux_o",
+            "Direction": "output",
+            "Bits": [
+                "exc_pc_mux_o[2]",
+                "exc_pc_mux_o[1]",
+                "exc_pc_mux_o[0]"
+            ]
+        },
+        {
+            "PortName": "trap_addr_mux_o",
+            "Direction": "output",
+            "Bits": [
+                "trap_addr_mux_o[1]",
+                "trap_addr_mux_o[0]"
+            ]
+        },
+        {
+            "PortName": "pc_id_i",
+            "Direction": "input",
+            "Bits": [
+                "pc_id_i[31]",
+                "pc_id_i[30]",
+                "pc_id_i[29]",
+                "pc_id_i[28]",
+                "pc_id_i[27]",
+                "pc_id_i[26]",
+                "pc_id_i[25]",
+                "pc_id_i[24]",
+                "pc_id_i[23]",
+                "pc_id_i[22]",
+                "pc_id_i[21]",
+                "pc_id_i[20]",
+                "pc_id_i[19]",
+                "pc_id_i[18]",
+                "pc_id_i[17]",
+                "pc_id_i[16]",
+                "pc_id_i[15]",
+                "pc_id_i[14]",
+                "pc_id_i[13]",
+                "pc_id_i[12]",
+                "pc_id_i[11]",
+                "pc_id_i[10]",
+                "pc_id_i[9]",
+                "pc_id_i[8]",
+                "pc_id_i[7]",
+                "pc_id_i[6]",
+                "pc_id_i[5]",
+                "pc_id_i[4]",
+                "pc_id_i[3]",
+                "pc_id_i[2]",
+                "pc_id_i[1]",
+                "pc_id_i[0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_start_addr_i",
+            "Direction": "input",
+            "Bits": [
+                "hwlp_start_addr_i[1][31]",
+                "hwlp_start_addr_i[1][30]",
+                "hwlp_start_addr_i[1][29]",
+                "hwlp_start_addr_i[1][28]",
+                "hwlp_start_addr_i[1][27]",
+                "hwlp_start_addr_i[1][26]",
+                "hwlp_start_addr_i[1][25]",
+                "hwlp_start_addr_i[1][24]",
+                "hwlp_start_addr_i[1][23]",
+                "hwlp_start_addr_i[1][22]",
+                "hwlp_start_addr_i[1][21]",
+                "hwlp_start_addr_i[1][20]",
+                "hwlp_start_addr_i[1][19]",
+                "hwlp_start_addr_i[1][18]",
+                "hwlp_start_addr_i[1][17]",
+                "hwlp_start_addr_i[1][16]",
+                "hwlp_start_addr_i[1][15]",
+                "hwlp_start_addr_i[1][14]",
+                "hwlp_start_addr_i[1][13]",
+                "hwlp_start_addr_i[1][12]",
+                "hwlp_start_addr_i[1][11]",
+                "hwlp_start_addr_i[1][10]",
+                "hwlp_start_addr_i[1][9]",
+                "hwlp_start_addr_i[1][8]",
+                "hwlp_start_addr_i[1][7]",
+                "hwlp_start_addr_i[1][6]",
+                "hwlp_start_addr_i[1][5]",
+                "hwlp_start_addr_i[1][4]",
+                "hwlp_start_addr_i[1][3]",
+                "hwlp_start_addr_i[1][2]",
+                "hwlp_start_addr_i[1][1]",
+                "hwlp_start_addr_i[1][0]",
+                "hwlp_start_addr_i[0][31]",
+                "hwlp_start_addr_i[0][30]",
+                "hwlp_start_addr_i[0][29]",
+                "hwlp_start_addr_i[0][28]",
+                "hwlp_start_addr_i[0][27]",
+                "hwlp_start_addr_i[0][26]",
+                "hwlp_start_addr_i[0][25]",
+                "hwlp_start_addr_i[0][24]",
+                "hwlp_start_addr_i[0][23]",
+                "hwlp_start_addr_i[0][22]",
+                "hwlp_start_addr_i[0][21]",
+                "hwlp_start_addr_i[0][20]",
+                "hwlp_start_addr_i[0][19]",
+                "hwlp_start_addr_i[0][18]",
+                "hwlp_start_addr_i[0][17]",
+                "hwlp_start_addr_i[0][16]",
+                "hwlp_start_addr_i[0][15]",
+                "hwlp_start_addr_i[0][14]",
+                "hwlp_start_addr_i[0][13]",
+                "hwlp_start_addr_i[0][12]",
+                "hwlp_start_addr_i[0][11]",
+                "hwlp_start_addr_i[0][10]",
+                "hwlp_start_addr_i[0][9]",
+                "hwlp_start_addr_i[0][8]",
+                "hwlp_start_addr_i[0][7]",
+                "hwlp_start_addr_i[0][6]",
+                "hwlp_start_addr_i[0][5]",
+                "hwlp_start_addr_i[0][4]",
+                "hwlp_start_addr_i[0][3]",
+                "hwlp_start_addr_i[0][2]",
+                "hwlp_start_addr_i[0][1]",
+                "hwlp_start_addr_i[0][0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_end_addr_i",
+            "Direction": "input",
+            "Bits": [
+                "hwlp_end_addr_i[1][31]",
+                "hwlp_end_addr_i[1][30]",
+                "hwlp_end_addr_i[1][29]",
+                "hwlp_end_addr_i[1][28]",
+                "hwlp_end_addr_i[1][27]",
+                "hwlp_end_addr_i[1][26]",
+                "hwlp_end_addr_i[1][25]",
+                "hwlp_end_addr_i[1][24]",
+                "hwlp_end_addr_i[1][23]",
+                "hwlp_end_addr_i[1][22]",
+                "hwlp_end_addr_i[1][21]",
+                "hwlp_end_addr_i[1][20]",
+                "hwlp_end_addr_i[1][19]",
+                "hwlp_end_addr_i[1][18]",
+                "hwlp_end_addr_i[1][17]",
+                "hwlp_end_addr_i[1][16]",
+                "hwlp_end_addr_i[1][15]",
+                "hwlp_end_addr_i[1][14]",
+                "hwlp_end_addr_i[1][13]",
+                "hwlp_end_addr_i[1][12]",
+                "hwlp_end_addr_i[1][11]",
+                "hwlp_end_addr_i[1][10]",
+                "hwlp_end_addr_i[1][9]",
+                "hwlp_end_addr_i[1][8]",
+                "hwlp_end_addr_i[1][7]",
+                "hwlp_end_addr_i[1][6]",
+                "hwlp_end_addr_i[1][5]",
+                "hwlp_end_addr_i[1][4]",
+                "hwlp_end_addr_i[1][3]",
+                "hwlp_end_addr_i[1][2]",
+                "hwlp_end_addr_i[1][1]",
+                "hwlp_end_addr_i[1][0]",
+                "hwlp_end_addr_i[0][31]",
+                "hwlp_end_addr_i[0][30]",
+                "hwlp_end_addr_i[0][29]",
+                "hwlp_end_addr_i[0][28]",
+                "hwlp_end_addr_i[0][27]",
+                "hwlp_end_addr_i[0][26]",
+                "hwlp_end_addr_i[0][25]",
+                "hwlp_end_addr_i[0][24]",
+                "hwlp_end_addr_i[0][23]",
+                "hwlp_end_addr_i[0][22]",
+                "hwlp_end_addr_i[0][21]",
+                "hwlp_end_addr_i[0][20]",
+                "hwlp_end_addr_i[0][19]",
+                "hwlp_end_addr_i[0][18]",
+                "hwlp_end_addr_i[0][17]",
+                "hwlp_end_addr_i[0][16]",
+                "hwlp_end_addr_i[0][15]",
+                "hwlp_end_addr_i[0][14]",
+                "hwlp_end_addr_i[0][13]",
+                "hwlp_end_addr_i[0][12]",
+                "hwlp_end_addr_i[0][11]",
+                "hwlp_end_addr_i[0][10]",
+                "hwlp_end_addr_i[0][9]",
+                "hwlp_end_addr_i[0][8]",
+                "hwlp_end_addr_i[0][7]",
+                "hwlp_end_addr_i[0][6]",
+                "hwlp_end_addr_i[0][5]",
+                "hwlp_end_addr_i[0][4]",
+                "hwlp_end_addr_i[0][3]",
+                "hwlp_end_addr_i[0][2]",
+                "hwlp_end_addr_i[0][1]",
+                "hwlp_end_addr_i[0][0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_counter_i",
+            "Direction": "input",
+            "Bits": [
+                "hwlp_counter_i[1][31]",
+                "hwlp_counter_i[1][30]",
+                "hwlp_counter_i[1][29]",
+                "hwlp_counter_i[1][28]",
+                "hwlp_counter_i[1][27]",
+                "hwlp_counter_i[1][26]",
+                "hwlp_counter_i[1][25]",
+                "hwlp_counter_i[1][24]",
+                "hwlp_counter_i[1][23]",
+                "hwlp_counter_i[1][22]",
+                "hwlp_counter_i[1][21]",
+                "hwlp_counter_i[1][20]",
+                "hwlp_counter_i[1][19]",
+                "hwlp_counter_i[1][18]",
+                "hwlp_counter_i[1][17]",
+                "hwlp_counter_i[1][16]",
+                "hwlp_counter_i[1][15]",
+                "hwlp_counter_i[1][14]",
+                "hwlp_counter_i[1][13]",
+                "hwlp_counter_i[1][12]",
+                "hwlp_counter_i[1][11]",
+                "hwlp_counter_i[1][10]",
+                "hwlp_counter_i[1][9]",
+                "hwlp_counter_i[1][8]",
+                "hwlp_counter_i[1][7]",
+                "hwlp_counter_i[1][6]",
+                "hwlp_counter_i[1][5]",
+                "hwlp_counter_i[1][4]",
+                "hwlp_counter_i[1][3]",
+                "hwlp_counter_i[1][2]",
+                "hwlp_counter_i[1][1]",
+                "hwlp_counter_i[1][0]",
+                "hwlp_counter_i[0][31]",
+                "hwlp_counter_i[0][30]",
+                "hwlp_counter_i[0][29]",
+                "hwlp_counter_i[0][28]",
+                "hwlp_counter_i[0][27]",
+                "hwlp_counter_i[0][26]",
+                "hwlp_counter_i[0][25]",
+                "hwlp_counter_i[0][24]",
+                "hwlp_counter_i[0][23]",
+                "hwlp_counter_i[0][22]",
+                "hwlp_counter_i[0][21]",
+                "hwlp_counter_i[0][20]",
+                "hwlp_counter_i[0][19]",
+                "hwlp_counter_i[0][18]",
+                "hwlp_counter_i[0][17]",
+                "hwlp_counter_i[0][16]",
+                "hwlp_counter_i[0][15]",
+                "hwlp_counter_i[0][14]",
+                "hwlp_counter_i[0][13]",
+                "hwlp_counter_i[0][12]",
+                "hwlp_counter_i[0][11]",
+                "hwlp_counter_i[0][10]",
+                "hwlp_counter_i[0][9]",
+                "hwlp_counter_i[0][8]",
+                "hwlp_counter_i[0][7]",
+                "hwlp_counter_i[0][6]",
+                "hwlp_counter_i[0][5]",
+                "hwlp_counter_i[0][4]",
+                "hwlp_counter_i[0][3]",
+                "hwlp_counter_i[0][2]",
+                "hwlp_counter_i[0][1]",
+                "hwlp_counter_i[0][0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_dec_cnt_o",
+            "Direction": "output",
+            "Bits": [
+                "hwlp_dec_cnt_o[1]",
+                "hwlp_dec_cnt_o[0]"
+            ]
+        },
+        {
+            "PortName": "hwlp_jump_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "hwlp_targ_addr_o",
+            "Direction": "output",
+            "Bits": [
+                "hwlp_targ_addr_o[31]",
+                "hwlp_targ_addr_o[30]",
+                "hwlp_targ_addr_o[29]",
+                "hwlp_targ_addr_o[28]",
+                "hwlp_targ_addr_o[27]",
+                "hwlp_targ_addr_o[26]",
+                "hwlp_targ_addr_o[25]",
+                "hwlp_targ_addr_o[24]",
+                "hwlp_targ_addr_o[23]",
+                "hwlp_targ_addr_o[22]",
+                "hwlp_targ_addr_o[21]",
+                "hwlp_targ_addr_o[20]",
+                "hwlp_targ_addr_o[19]",
+                "hwlp_targ_addr_o[18]",
+                "hwlp_targ_addr_o[17]",
+                "hwlp_targ_addr_o[16]",
+                "hwlp_targ_addr_o[15]",
+                "hwlp_targ_addr_o[14]",
+                "hwlp_targ_addr_o[13]",
+                "hwlp_targ_addr_o[12]",
+                "hwlp_targ_addr_o[11]",
+                "hwlp_targ_addr_o[10]",
+                "hwlp_targ_addr_o[9]",
+                "hwlp_targ_addr_o[8]",
+                "hwlp_targ_addr_o[7]",
+                "hwlp_targ_addr_o[6]",
+                "hwlp_targ_addr_o[5]",
+                "hwlp_targ_addr_o[4]",
+                "hwlp_targ_addr_o[3]",
+                "hwlp_targ_addr_o[2]",
+                "hwlp_targ_addr_o[1]",
+                "hwlp_targ_addr_o[0]"
+            ]
+        },
+        {
+            "PortName": "data_req_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_we_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_misaligned_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_load_event_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_err_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "data_err_ack_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "mult_multicycle_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_en_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_read_dep_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_read_dep_for_jalr_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_write_dep_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "apu_stall_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "branch_taken_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ctrl_transfer_insn_in_id_i",
+            "Direction": "input",
+            "Bits": [
+                "ctrl_transfer_insn_in_id_i[1]",
+                "ctrl_transfer_insn_in_id_i[0]"
+            ]
+        },
+        {
+            "PortName": "ctrl_transfer_insn_in_dec_i",
+            "Direction": "input",
+            "Bits": [
+                "ctrl_transfer_insn_in_dec_i[1]",
+                "ctrl_transfer_insn_in_dec_i[0]"
+            ]
+        },
+        {
+            "PortName": "irq_req_ctrl_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "irq_sec_ctrl_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "irq_id_ctrl_i",
+            "Direction": "input",
+            "Bits": [
+                "irq_id_ctrl_i[4]",
+                "irq_id_ctrl_i[3]",
+                "irq_id_ctrl_i[2]",
+                "irq_id_ctrl_i[1]",
+                "irq_id_ctrl_i[0]"
+            ]
+        },
+        {
+            "PortName": "irq_wu_ctrl_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "current_priv_lvl_i",
+            "Direction": "input",
+            "Bits": [
+                "current_priv_lvl_i[1]",
+                "current_priv_lvl_i[0]"
+            ]
+        },
+        {
+            "PortName": "irq_ack_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "irq_id_o",
+            "Direction": "output",
+            "Bits": [
+                "irq_id_o[4]",
+                "irq_id_o[3]",
+                "irq_id_o[2]",
+                "irq_id_o[1]",
+                "irq_id_o[0]"
+            ]
+        },
+        {
+            "PortName": "exc_cause_o",
+            "Direction": "output",
+            "Bits": [
+                "exc_cause_o[4]",
+                "exc_cause_o[3]",
+                "exc_cause_o[2]",
+                "exc_cause_o[1]",
+                "exc_cause_o[0]"
+            ]
+        },
+        {
+            "PortName": "debug_mode_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_cause_o",
+            "Direction": "output",
+            "Bits": [
+                "debug_cause_o[2]",
+                "debug_cause_o[1]",
+                "debug_cause_o[0]"
+            ]
+        },
+        {
+            "PortName": "debug_csr_save_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_req_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_single_step_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_ebreakm_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_ebreaku_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "trigger_match_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "debug_p_elw_no_sleep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_wfi_no_sleep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_havereset_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_running_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "debug_halted_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "wake_from_sleep_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_save_if_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_save_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_save_ex_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_cause_o",
+            "Direction": "output",
+            "Bits": [
+                "csr_cause_o[5]",
+                "csr_cause_o[4]",
+                "csr_cause_o[3]",
+                "csr_cause_o[2]",
+                "csr_cause_o[1]",
+                "csr_cause_o[0]"
+            ]
+        },
+        {
+            "PortName": "csr_irq_sec_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_restore_mret_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_restore_uret_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_restore_dret_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "csr_save_cause_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "regfile_we_id_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_alu_waddr_id_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_alu_waddr_id_i[5]",
+                "regfile_alu_waddr_id_i[4]",
+                "regfile_alu_waddr_id_i[3]",
+                "regfile_alu_waddr_id_i[2]",
+                "regfile_alu_waddr_id_i[1]",
+                "regfile_alu_waddr_id_i[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_we_ex_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_waddr_ex_i",
+            "Direction": "input",
+            "Bits": [
+                "regfile_waddr_ex_i[5]",
+                "regfile_waddr_ex_i[4]",
+                "regfile_waddr_ex_i[3]",
+                "regfile_waddr_ex_i[2]",
+                "regfile_waddr_ex_i[1]",
+                "regfile_waddr_ex_i[0]"
+            ]
+        },
+        {
+            "PortName": "regfile_we_wb_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "regfile_alu_we_fw_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "operand_a_fw_mux_sel_o",
+            "Direction": "output",
+            "Bits": [
+                "operand_a_fw_mux_sel_o[1]",
+                "operand_a_fw_mux_sel_o[0]"
+            ]
+        },
+        {
+            "PortName": "operand_b_fw_mux_sel_o",
+            "Direction": "output",
+            "Bits": [
+                "operand_b_fw_mux_sel_o[1]",
+                "operand_b_fw_mux_sel_o[0]"
+            ]
+        },
+        {
+            "PortName": "operand_c_fw_mux_sel_o",
+            "Direction": "output",
+            "Bits": [
+                "operand_c_fw_mux_sel_o[1]",
+                "operand_c_fw_mux_sel_o[0]"
+            ]
+        },
+        {
+            "PortName": "reg_d_ex_is_reg_a_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_ex_is_reg_b_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_ex_is_reg_c_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_wb_is_reg_a_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_wb_is_reg_b_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_wb_is_reg_c_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_alu_is_reg_a_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_alu_is_reg_b_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "reg_d_alu_is_reg_c_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "halt_if_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "halt_id_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "misaligned_stall_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "jr_stall_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "load_stall_o",
+            "Direction": "output"
+        },
+        {
+            "PortName": "id_ready_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "id_valid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "ex_valid_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "wb_ready_i",
+            "Direction": "input"
+        },
+        {
+            "PortName": "perf_pipeline_stall_o",
+            "Direction": "output"
+        }
+    ],
+    "Cells": [
+        {
+            "CellName": "debug_req_q",
+            "Bits": [
+                "debug_req_q_reg"
+            ]
+        },
+        {
+            "CellName": "debug_force_wakeup_q",
+            "Bits": [
+                "debug_force_wakeup_q_reg"
+            ]
+        },
+        {
+            "CellName": "debug_req_entry_q",
+            "Bits": [
+                "debug_req_entry_q_reg"
+            ]
+        },
+        {
+            "CellName": "illegal_insn_q",
+            "Bits": [
+                "illegal_insn_q_reg"
+            ]
+        },
+        {
+            "CellName": "debug_mode_q",
+            "Bits": [
+                "debug_mode_q_reg"
+            ]
+        },
+        {
+            "CellName": "debug_fsm_cs",
+            "Bits": [
+                "debug_fsm_cs_reg[0]",
+                "debug_fsm_cs_reg[1]",
+                "debug_fsm_cs_reg[2]"
+            ]
+        },
+        {
+            "CellName": "data_err_q",
+            "Bits": [
+                "data_err_q_reg"
+            ]
+        },
+        {
+            "CellName": "jump_done_q",
+            "Bits": [
+                "jump_done_q_reg"
+            ]
+        },
+        {
+            "CellName": "ctrl_fsm_cs",
+            "Bits": [
+                "ctrl_fsm_cs_reg[0]",
+                "ctrl_fsm_cs_reg[1]",
+                "ctrl_fsm_cs_reg[2]",
+                "ctrl_fsm_cs_reg[3]",
+                "ctrl_fsm_cs_reg[4]"
+            ]
+        }
+    ]
+}
