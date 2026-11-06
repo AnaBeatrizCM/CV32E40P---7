@@ -6,7 +6,7 @@
 # VIRTUS CC-UFCG explicit written consent.
 # ----------------------------------------------------------------------
 #
-# Id: dc_syn.v_2026-11-05_by_AnaBeatrizMarinho
+# Id: dc_syn.v_2026-11-05_by_AnaBeatriz_MarcosLeal
 #
 # Project: 		CI Expert 2026
 # Description:	Tamplate to Logic Syntesis
@@ -27,6 +27,7 @@ set DESIGN      "cv32e40p"
 
 # Project directories
 set PRJT_BASE   "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7"
+#set PRJT_BASE   "/home/marcos.leal/Desktop/Physical_Design_MarcosLeal/CV32E40P/CV32E40P---7"
 
 set DB_DIR      "${PRJT_BASE}/db"
 set RTL_DIR     "${PRJT_BASE}/rtl"
@@ -105,21 +106,42 @@ set_app_var hdlin_enable_hier_map true
 #analyze -f verilog -vcs "-verilog +libext+.v +libext+.sv -f ${RTL_DIR}/file.f" -work WORK
 
 # Option 2: Read RTL files manually
-######## ATUALIZAR FILES
-analyze -format verilog ${RTL_DIR}/Register.v
-analyze -format	verilog ${RTL_DIR}/Register_Pipeline_Simple.v
-analyze -format	verilog ${RTL_DIR}/Width_Adjuster.v
-analyze -format	verilog ${RTL_DIR}/CarryIn_Binary.v
-analyze -format	verilog ${RTL_DIR}/Adder_Subtractor_Binary.v
-analyze -format	verilog ${RTL_DIR}/Counter_Binary.v
-analyze -format	verilog ${RTL_DIR}/clock_switchover.v
-
+analyze -format sverilog ${RTL_DIR}/include/cv32e40p_apu_core_pkg.sv
+analyze -format sverilog ${RTL_DIR}/include/cv32e40p_fpu_pkg.sv
+analyze -format sverilog ${RTL_DIR}/include/cv32e40p_pkg.sv
+ 
+analyze -format sverilog ${RTL_DIR}/cv32e40p_if_stage.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_cs_registers.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_register_file_ff.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_load_store_unit.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_id_stage.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_aligner.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_decoder.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_compressed_decoder.sv
+analyze -format sverilog ${RTL_DIR}/../bhv/cv32e40p_sim_clock_gate.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_fifo.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_prefetch_buffer.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_hwloop_regs.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_mult.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_int_controller.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_ex_stage.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_alu_div.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_alu.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_ff_one.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_popcnt.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_apu_disp.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_controller.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_obi_interface.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_prefetch_controller.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_sleep_unit.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_core.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_top.sv
 
 # Elaborate top design
-elaborate ${DESIGN}
+elaborate cv32e40p_top
 
 # Set current design
-current_design ${DESIGN}
+current_design cv32e40p_top
 
 ########################################################################
 # SVF flow commands
@@ -153,8 +175,7 @@ write_sdc ${OUT_DIR}/${DESIGN}_initial.sdc
 ########################################################################
 
 list_designs
-current_design ${DESIGN}
-
+current_design cv32e40p_top
 
 ########################################################################
 ########################################################################

@@ -1,0 +1,132 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+        -verbose
+Design : cv32e40p_top
+Version: X-2025.06-SP2
+Date   : Fri Nov  6 09:33:42 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt0p85v25c (File: /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/db/saed32rvt_tt0p85v25c.db)
+
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cv32e40p_top           70000             saed32rvt_tt0p85v25c
+cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1
+                       70000             saed32rvt_tt0p85v25c
+cv32e40p_sleep_unit_COREV_CLUSTER0
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1
+                       35000             saed32rvt_tt0p85v25c
+cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5
+                       16000             saed32rvt_tt0p85v25c
+cv32e40p_load_store_unit_PULP_OBI0
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_clock_gate    ForQA             saed32rvt_tt0p85v25c
+cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_aligner       8000              saed32rvt_tt0p85v25c
+cv32e40p_compressed_decoder_FPU0_ZFINX0
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0
+                       16000             saed32rvt_tt0p85v25c
+cv32e40p_decoder_COREV_PULP0_COREV_CLUSTER0_A_EXTENSION0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_PULP_SECURE0_USE_PMP0_APU_WOP_CPU6_DEBUG_TRIGGER_EN1
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_int_controller_PULP_SECURE0
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_alu           8000              saed32rvt_tt0p85v25c
+cv32e40p_mult          8000              saed32rvt_tt0p85v25c
+cv32e40p_obi_interface_TRANS_STABLE1
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_fifo_0_32_2   8000              saed32rvt_tt0p85v25c
+cv32e40p_obi_interface_TRANS_STABLE0
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_popcnt        ForQA             saed32rvt_tt0p85v25c
+cv32e40p_ff_one        ForQA             saed32rvt_tt0p85v25c
+cv32e40p_alu_div       8000              saed32rvt_tt0p85v25c
+cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_DW01_add_1
+                       ForQA             saed32rvt_tt0p85v25c
+H13092775116726736024_DP_OP_135_133_6945_1
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_load_store_unit_PULP_OBI0_DP_OP_63_122_5596_1
+                       8000              saed32rvt_tt0p85v25c
+H5944595741556048558_DW01_inc_3
+                       8000              saed32rvt_tt0p85v25c
+H5944595741556048558_DW01_inc_4
+                       8000              saed32rvt_tt0p85v25c
+H5944595741556048558_DW01_inc_5
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_aligner_DP_OP_74_130_8716_1
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_alu_DW01_add_2
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_alu_DW01_add_3
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_mult_DP_OP_94_128_8636_1
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_mult_DP_OP_96_123_4453_1
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_1
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_popcnt_DP_OP_94_125_7206_1
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_alu_div_DP_OP_19_137_1534_1
+                       8000              saed32rvt_tt0p85v25c
+cv32e40p_alu_div_DW01_sub_1
+                       ForQA             saed32rvt_tt0p85v25c
+cv32e40p_alu_div_DW_cmp_1
+                       8000              saed32rvt_tt0p85v25c
+
+
+Global Operating Voltage = 0.85 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 392.0906 uW   (67%)
+  Net Switching Power  = 188.8211 uW   (33%)
+                         ---------
+Total Dynamic Power    = 580.9117 uW  (100%)
+
+Cell Leakage Power     =   1.0116 mW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+                                                                                             i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+sequential       277.2216            1.1741        4.9672e+08          775.1159  (  48.67%)            2132
+combinational    114.8668          187.6464        5.1485e+08          817.3547  (  51.33%)            13920
+---------------------------------------------------------------------------------------------------------
+Total            392.0884 uW       188.8205 uW     1.0116e+09 pW     1.5925e+03 uW
+1

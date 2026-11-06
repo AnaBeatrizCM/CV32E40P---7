@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version X-2025.06-SP2 for linux64 -- Aug 27, 2025
-#@ # Date:   Thu Nov  5 17:33:58 2026
+#@ # Date:   Fri Nov  6 08:28:11 2026
 #@ # Run by: xmen-aluno@xmen16
 #@ 
 
@@ -9256,10 +9256,148 @@ source /Tools/synopsys/syn/X-2025.06-SP2/admin/setup/.synopsys_dc.setup
 #@ # -- End source /Tools/synopsys/syn/X-2025.06-SP2/admin/setup/.synopsys_dc.setup
 
 set DESIGN      "cv32e40p"
-set PRJT_BASE   "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/dc"
+set PRJT_BASE   "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7"
 set DB_DIR      "${PRJT_BASE}/db"
 set RTL_DIR     "${PRJT_BASE}/rtl"
 set OUT_DIR     "${PRJT_BASE}/outputs"
 set RPT_DIR     "${PRJT_BASE}/rpt"
 set SDC_DIR     "${PRJT_BASE}/constraints"
-undo
+set PRE_LAYOUT "${RPT_DIR}/preLayout"
+define_design_lib WORK -path ./WORK
+set_host_options -max_cores 8
+set search_path "$DB_DIR $RTL_DIR"
+set target_library [glob ${DB_DIR}/*.db]
+set search_path "$DB_DIR $RTL_DIR"
+set target_library [glob ${DB_DIR}/*.db]
+set synthetic_library ""
+set link_library "* $target_library $synthetic_library"
+set hdlin_reporting_level comprehensive
+set hdlin_ff_always_sync_set_reset true
+set_app_var hdlin_check_no_latch true
+set_svf ${OUT_DIR}/${DESIGN}.svf
+set_app_var hdlin_enable_hier_map true
+analyze -format sverilog ${RTL_DIR}/include/cv32e40p_apu_core_pkg.sv
+analyze -format sverilog ${RTL_DIR}/include/cv32e40p_fpu_pkg.sv
+analyze -format sverilog ${RTL_DIR}/include/cv32e40p_pkg.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_if_stage.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_cs_registers.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_register_file_ff.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_load_store_unit.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_id_stage.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_aligner.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_decoder.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_compressed_decoder.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_fifo.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_prefetch_buffer.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_hwloop_regs.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_mult.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_int_controller.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_ex_stage.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_alu_div.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_alu.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_ff_one.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_popcnt.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_apu_disp.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_controller.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_obi_interface.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_prefetch_controller.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_sleep_unit.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_core.sv
+analyze -format sverilog ${RTL_DIR}/cv32e40p_top.sv
+elaborate ${DESIGN}
+elaborate ${DESIGN}
+elaborate cv32e40p_top$
+elaborate cv32e40p_top
+current_design ${DESIGN}
+current_design cv32e40p_top
+set_verification_top
+link
+uniquify
+analyze -format sverilog ${RTL_DIR}/../bhv/cv32e40p_sim_clock_gate.sv
+elaborate cv32e40p_top
+current_design cv32e40p_top
+set_verification_top
+link
+uniquify
+write_sdc ${OUT_DIR}/${DESIGN}_initial.sdc
+list_designs
+current_design ${DESIGN}
+current_design cv32e40p_top
+set STAGE "01_precompile"
+file mkdir ${RPT_DIR}/${STAGE}
+file mkdir ${RPT_DIR}/${STAGE}
+check_design  > ${RPT_DIR}/${STAGE}/${DESIGN}_check_design.rpt
+check_timing  > ${RPT_DIR}/${STAGE}/${DESIGN}_check_timing.rpt
+report_clock  > ${RPT_DIR}/${STAGE}/${DESIGN}_report_clock.rpt
+check_design  > ${RPT_DIR}/${STAGE}/${DESIGN}_check_design.rpt
+check_timing  > ${RPT_DIR}/${STAGE}/${DESIGN}_check_timing.rpt
+report_clock  > ${RPT_DIR}/${STAGE}/${DESIGN}_report_clock.rpt
+write_file -format ddc -hier -out ${OUT_DIR}/${DESIGN}_gtech.ddc
+set_fix_multiple_port_nets -all -buffer_constants [all_designs]
+compile_ultra -incremental -no_autoungroup
+set STAGE "02_compile"
+file mkdir ${RPT_DIR}/${STAGE}
+report_timing                       > ${RPT_DIR}/${STAGE}/${DESIGN}_report_timing.rpt
+report_qor                          > ${RPT_DIR}/${STAGE}/${DESIGN}_report_qor.rpt
+report_area -designware             > ${RPT_DIR}/${STAGE}/${DESIGN}_report_area_dw.rpt
+report_area -hierarchy -nosplit     > ${RPT_DIR}/${STAGE}/${DESIGN}_report_area_hierarchy.rpt
+report_power -verbose               > ${RPT_DIR}/${STAGE}/${DESIGN}_report_power.rpt
+report_clock_gating                 > ${RPT_DIR}/${STAGE}/${DESIGN}_report_clock_gating.rpt
+analyze_datapath                    > ${RPT_DIR}/${STAGE}/${DESIGN}_analyze_datapath.rpt
+compile_ultra -incremental -no_autoungroup
+set STAGE "03_incrcompile"
+file mkdir ${RPT_DIR}/${STAGE}
+report_timing                       > ${RPT_DIR}/${STAGE}/${DESIGN}_report_timing.rpt
+report_qor                          > ${RPT_DIR}/${STAGE}/${DESIGN}_report_qor.rpt
+report_power -verbose               > ${RPT_DIR}/${STAGE}/${DESIGN}_report_power.rpt
+report_clock_gating                 > ${RPT_DIR}/${STAGE}/${DESIGN}_report_clock_gating.rpt
+optimize_netlist -area -no_boundary_optimization
+set STAGE "04_optnetlist"
+file mkdir ${RPT_DIR}/${STAGE}
+report_timing                       > ${RPT_DIR}/${STAGE}/${DESIGN}_report_timing.rpt
+report_qor                          > ${RPT_DIR}/${STAGE}/${DESIGN}_report_qor.rpt
+report_power -verbose               > ${RPT_DIR}/${STAGE}/${DESIGN}_report_power.rpt
+report_clock_gating                 > ${RPT_DIR}/${STAGE}/${DESIGN}_report_clock_gating.rpt
+write_file -format ddc     -hier -out ${OUT_DIR}/${DESIGN}.ddc
+write_file -format verilog -hier -out ${OUT_DIR}/${DESIGN}.v
+write_sdc ${OUT_DIR}/${DESIGN}.sdc
+write_sdf ${OUT_DIR}/${DESIGN}.sdf
+exec gzip -f ${OUT_DIR}/${DESIGN}.sdf
+if {[shell_is_in_topographical_mode]} {
+    write_parasitics -format reduced -out ${OUT_DIR}/${DESIGN}_mapped.spf
+}
+set STAGE "05_final"
+file mkdir ${RPT_DIR}/${STAGE}
+check_design                        > ${RPT_DIR}/${STAGE}/${DESIGN}_check_design.rpt
+check_timing                        > ${RPT_DIR}/${STAGE}/${DESIGN}_check_timing.rpt
+report_constraint -all_violators -significant_digits 4                                     > ${RPT_DIR}/${STAGE}/${DESIGN}_constraints_violators.rpt
+report_timing -significant_digits 4                                     > ${RPT_DIR}/${STAGE}/${DESIGN}_report_timing_setup.rpt
+report_timing -delay_type min -significant_digits 4                                     > ${RPT_DIR}/${STAGE}/${DESIGN}_report_timing_hold.rpt
+report_qor -significant_digits 4    > ${RPT_DIR}/${STAGE}/${DESIGN}_report_qor.rpt
+report_clock_gating                 > ${RPT_DIR}/${STAGE}/${DESIGN}_report_clock_gating.rpt
+report_disable_timing               > ${RPT_DIR}/${STAGE}/${DESIGN}_report_disable_timing.rpt
+report_area -designware             > ${RPT_DIR}/${STAGE}/${DESIGN}_report_area_dw.rpt
+report_area -hierarchy -nosplit     > ${RPT_DIR}/${STAGE}/${DESIGN}_report_area_hierarchy.rpt
+report_power -hierarchy -verbose    > ${RPT_DIR}/${STAGE}/${DESIGN}_report_power.rpt
+report_cell                         > ${RPT_DIR}/${STAGE}/${DESIGN}_report_cell.rpt
+echo " " > ${RPT_DIR}/${STAGE}/${DESIGN}_latch_inferred.rpt
+redirect -tee ${RPT_DIR}/${STAGE}/${DESIGN}_latch_inferred.rpt -append {
+    echo "**********************************"
+    echo "* Inferred Latches Report"
+    echo "* Design Name: $DESIGN"
+    echo "**********************************"
+    echo " "
+
+    echo "${DESIGN} has [sizeof_collection [all_registers -level_sensitive]] latches"
+    echo " "
+
+    if {[sizeof_collection [all_registers -level_sensitive]] > 0} {
+        foreach instance [get_object_name [all_registers -level_sensitive]] {
+            echo "Latch instance name: $instance -> latch cell name: [get_attr $instance ref_name]"
+        }
+    }
+}
+set_svf -append ${OUT_DIR}/${DESIGN}.svf
+echo "*********************************************************************************"
+puts "Logic synthesis for ${DESIGN} has been completed."
+echo "*********************************************************************************"

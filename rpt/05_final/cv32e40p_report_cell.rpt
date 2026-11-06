@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : cell
+Design : cv32e40p_top
+Version: X-2025.06-SP2
+Date   : Fri Nov  6 09:37:16 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U2                        INVX0_RVT       saed32rvt_tt0p85v25c
+                                                          1.270720  
+U4                        INVX0_RVT       saed32rvt_tt0p85v25c
+                                                          1.270720  
+core_i                    cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1
+                                                          48266.520527
+                                                                    h, n, p
+--------------------------------------------------------------------------------
+Total 3 cells                                             48269.061967
+1

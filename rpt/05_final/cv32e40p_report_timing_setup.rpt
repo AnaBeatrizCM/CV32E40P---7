@@ -1,0 +1,154 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cv32e40p_top
+Version: X-2025.06-SP2
+Date   : Fri Nov  6 09:36:56 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: core_i/id_stage_i/csr_access_ex_o_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: instr_addr_o[31]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1
+                     35000                 saed32rvt_tt0p85v25c
+  cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1
+                     70000                 saed32rvt_tt0p85v25c
+  cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1
+                     8000                  saed32rvt_tt0p85v25c
+  cv32e40p_int_controller_PULP_SECURE0
+                     8000                  saed32rvt_tt0p85v25c
+  cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0
+                     8000                  saed32rvt_tt0p85v25c
+  cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2
+                     8000                  saed32rvt_tt0p85v25c
+  cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0
+                     8000                  saed32rvt_tt0p85v25c
+  cv32e40p_top       70000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  core_i/id_stage_i/csr_access_ex_o_reg/CLK (DFFARX1_RVT)
+                                                        0.0000     0.0000 r
+  core_i/id_stage_i/csr_access_ex_o_reg/QN (DFFARX1_RVT)
+                                                        0.1467     0.1467 r
+  core_i/id_stage_i/U227/Y (INVX4_RVT)                  0.1123     0.2589 f
+  core_i/id_stage_i/csr_access_ex_o (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1)
+                                                        0.0000     0.2589 f
+  core_i/U19/Y (AND2X1_RVT)                             0.9213     1.1803 f
+  core_i/cs_registers_i/csr_addr_i[4] (cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1)
+                                                        0.0000     1.1803 f
+  core_i/cs_registers_i/U332/Y (INVX0_RVT)              0.3271     1.5074 r
+  core_i/cs_registers_i/U1478/Y (NAND4X0_RVT)           0.1075     1.6149 f
+  core_i/cs_registers_i/U1477/Y (INVX0_RVT)             0.0725     1.6873 r
+  core_i/cs_registers_i/U1474/Y (AND2X1_RVT)            0.0777     1.7651 r
+  core_i/cs_registers_i/U21/Y (AND2X2_RVT)              0.1129     1.8780 r
+  core_i/cs_registers_i/U920/Y (NAND2X0_RVT)            0.1416     2.0196 f
+  core_i/cs_registers_i/U1249/Y (INVX0_RVT)             0.0962     2.1158 r
+  core_i/cs_registers_i/U1250/Y (INVX0_RVT)             0.0869     2.2027 f
+  core_i/cs_registers_i/U872/Y (OA22X1_RVT)             0.1105     2.3133 f
+  core_i/cs_registers_i/U871/Y (AO22X1_RVT)             0.0935     2.4068 f
+  core_i/cs_registers_i/mie_bypass_o[30] (cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1)
+                                                        0.0000     2.4068 f
+  core_i/id_stage_i/mie_bypass_i[30] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1)
+                                                        0.0000     2.4068 f
+  core_i/id_stage_i/int_controller_i/mie_bypass_i[30] (cv32e40p_int_controller_PULP_SECURE0)
+                                                        0.0000     2.4068 f
+  core_i/id_stage_i/int_controller_i/U132/Y (AO22X1_RVT)
+                                                        0.2127     2.6196 f
+  core_i/id_stage_i/int_controller_i/U131/Y (AO221X1_RVT)
+                                                        0.0743     2.6939 f
+  core_i/id_stage_i/int_controller_i/U130/Y (AO21X1_RVT)
+                                                        0.0647     2.7586 f
+  core_i/id_stage_i/int_controller_i/U129/Y (AO21X1_RVT)
+                                                        0.0622     2.8208 f
+  core_i/id_stage_i/int_controller_i/U128/Y (AO221X1_RVT)
+                                                        0.0747     2.8955 f
+  core_i/id_stage_i/int_controller_i/U127/Y (AO21X1_RVT)
+                                                        0.0647     2.9603 f
+  core_i/id_stage_i/int_controller_i/U126/Y (AO21X1_RVT)
+                                                        0.0619     3.0222 f
+  core_i/id_stage_i/int_controller_i/U125/Y (AO21X1_RVT)
+                                                        0.0619     3.0841 f
+  core_i/id_stage_i/int_controller_i/U124/Y (AO21X1_RVT)
+                                                        0.0619     3.1460 f
+  core_i/id_stage_i/int_controller_i/U123/Y (AO21X1_RVT)
+                                                        0.0619     3.2079 f
+  core_i/id_stage_i/int_controller_i/U122/Y (AO21X1_RVT)
+                                                        0.0622     3.2702 f
+  core_i/id_stage_i/int_controller_i/U121/Y (AO221X1_RVT)
+                                                        0.0747     3.3448 f
+  core_i/id_stage_i/int_controller_i/U116/Y (AO21X1_RVT)
+                                                        0.0647     3.4096 f
+  core_i/id_stage_i/int_controller_i/U115/Y (AO21X1_RVT)
+                                                        0.0619     3.4715 f
+  core_i/id_stage_i/int_controller_i/U114/Y (AO21X1_RVT)
+                                                        0.0652     3.5367 f
+  core_i/id_stage_i/int_controller_i/U50/Y (AND2X1_RVT)
+                                                        0.0668     3.6035 f
+  core_i/id_stage_i/int_controller_i/irq_req_ctrl_o (cv32e40p_int_controller_PULP_SECURE0)
+                                                        0.0000     3.6035 f
+  core_i/id_stage_i/controller_i/irq_req_ctrl_i (cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0)
+                                                        0.0000     3.6035 f
+  core_i/id_stage_i/controller_i/U329/Y (NAND2X0_RVT)   0.0664     3.6699 r
+  core_i/id_stage_i/controller_i/U293/Y (NAND3X0_RVT)   0.1011     3.7710 f
+  core_i/id_stage_i/controller_i/U279/Y (INVX0_RVT)     0.0909     3.8619 r
+  core_i/id_stage_i/controller_i/U268/Y (AND3X1_RVT)    0.0848     3.9467 r
+  core_i/id_stage_i/controller_i/U48/Y (NAND4X0_RVT)    0.0700     4.0167 f
+  core_i/id_stage_i/controller_i/U39/Y (AND4X1_RVT)     0.1190     4.1357 f
+  core_i/id_stage_i/controller_i/U45/Y (AND2X1_RVT)     0.0819     4.2176 f
+  core_i/id_stage_i/controller_i/U16/Y (INVX4_RVT)      0.1324     4.3500 r
+  core_i/id_stage_i/controller_i/pc_set_o (cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0)
+                                                        0.0000     4.3500 r
+  core_i/id_stage_i/pc_set_o (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1)
+                                                        0.0000     4.3500 r
+  core_i/if_stage_i/pc_set_i (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0)
+                                                        0.0000     4.3500 r
+  core_i/if_stage_i/prefetch_buffer_i/branch_i (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0)
+                                                        0.0000     4.3500 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_i (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2)
+                                                        0.0000     4.3500 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U58/Y (INVX0_RVT)
+                                                        0.9691     5.3190 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U74/Y (NAND2X0_RVT)
+                                                        0.1150     5.4340 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U77/Y (INVX0_RVT)
+                                                        0.0867     5.5207 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U52/Y (AOI22X1_RVT)
+                                                        0.1096     5.6303 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U173/Y (NAND2X0_RVT)
+                                                        0.0531     5.6834 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/trans_addr_o[31] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2)
+                                                        0.0000     5.6834 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/trans_addr_i[31] (cv32e40p_obi_interface_TRANS_STABLE0)
+                                                        0.0000     5.6834 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U53/Y (AO22X1_RVT)
+                                                        0.0723     5.7558 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/obi_addr_o[31] (cv32e40p_obi_interface_TRANS_STABLE0)
+                                                        0.0000     5.7558 f
+  core_i/if_stage_i/prefetch_buffer_i/instr_addr_o[31] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0)
+                                                        0.0000     5.7558 f
+  core_i/if_stage_i/instr_addr_o[31] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0)
+                                                        0.0000     5.7558 f
+  core_i/instr_addr_o[31] (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1)
+                                                        0.0000     5.7558 f
+  instr_addr_o[31] (out)                                0.0005     5.7562 f
+  data arrival time                                                5.7562
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

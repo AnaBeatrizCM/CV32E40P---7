@@ -1,0 +1,39 @@
+Current design is 'cv32e40p_top'.
+Current design is 'cv32e40p_top'.
+
+***************************************************
+Estimate of Datapath Content
+
+Extracted Datapath:    area =  15.1%,  parts =   8
+Singleton Datapath:    area =  10.5%,  parts =  58
+
+Total Datapath:        area =  25.6%,  parts =  66
+
+***************************************************
+
+Estimate of Datapath Types
+
+
+Singletons:
+                        out width
+  component     count   min   max     ave
+  ----------------------------------------
+  DW01_add          5     3    37    27.2
+  DW01_sub          3     2    32    13.0
+  DW01_inc          6     2    64    33.0
+  DW01_dec          6     2    32     7.7
+  DW_cmp           26     2    32    10.2
+  DW_leftsh         4    32    32    32.0
+  DW_rightsh        9     9    63    20.4
+  ----------------------------------------
+
+
+Extracted Datapaths:
+                        out width
+  operation     count   min   max     ave
+  ----------------------------------------
+  + -              48     2    34    13.6
+  *                 8    18    34    25.2
+  ?                 1     6     6     6.0
+
+***************************************************

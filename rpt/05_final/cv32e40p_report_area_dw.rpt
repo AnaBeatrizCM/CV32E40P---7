@@ -1,0 +1,71 @@
+ 
+****************************************
+Report : area
+Design : cv32e40p_top
+Version: X-2025.06-SP2
+Date   : Fri Nov  6 09:37:11 2026
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_tt0p85v25c (File: /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/db/saed32rvt_tt0p85v25c.db)
+
+Number of ports:                         9222
+Number of nets:                         23382
+Number of cells:                        16607
+Number of combinational cells:          12884
+Number of sequential cells:              2132
+Number of macros/black boxes:               0
+Number of buf/inv:                       2434
+Number of references:                       2
+
+Combinational area:              33094.123465
+Buf/Inv area:                     3347.838943
+Noncombinational area:           15174.938502
+Macro/Black Box area:                0.000000
+Net Interconnect area:           18494.281853
+
+Total cell area:                 48269.061967
+Total area:                      66763.343820
+
+Area of detected synthetic parts
+--------------------------------
+                                                Perc. of
+  Module             Implem.  Count       Area cell area
+  ------------------ -------  ----- ---------- ---------
+  DP_OP_135_133_6945     str      1   152.9947      0.3%
+  DP_OP_19_137_1534      str      1   292.7739      0.6%
+  DP_OP_63_122_5596      str      1   278.2878      0.6%
+  DP_OP_74_130_8716      str      1   104.9615      0.2%
+  DP_OP_94_125_7206      str      1   142.0665      0.3%
+  DP_OP_94_128_8636      str      1  4007.3752      8.3%
+  DP_OP_96_123_4453      str      1  2090.0767      4.3%
+  DW01_add           apparch      3   357.0723      0.7%
+  DW01_inc           apparch      3   631.2941      1.3%
+  DW01_sub           apparch      1   144.0997      0.3%
+  DW_cmp             apparch      1   290.7405      0.6%
+  ------------------ -------  ----- ---------- ---------
+  DP_OP Subtotal:                 7  7068.5362     14.6%
+  Total:                         15  8491.7428     17.6%
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                                    Estimated  Perc. of
+  Module            Implem.  Count       Area cell area
+  ----------------- -------  ----- ---------- ---------
+  DP_OP_224_126_418     str      1    49.7374      0.1%
+  DW01_add          apparch      2    93.0784      0.2%
+  DW01_dec          apparch      5    47.6549      0.1%
+  DW01_inc          apparch      3    16.7735      0.0%
+  DW01_sub          apparch      2    20.5174      0.0%
+  DW_cmp            apparch     25  1145.3696      2.4%
+  DW_leftsh            astr      4   677.7287      1.4%
+  DW_rightsh           astr      9  1725.7898      3.6%
+  ----------------- -------  ----- ---------- ---------
+  DP_OP Subtotal:                1    49.7374      0.1%
+  Total:                        51  3776.6496      7.8%
+
+Subtotal of datapath(DP_OP) cell area:  7118.2736  14.7%  (estimated)
+Total synthetic cell area:              12268.3923  25.4%  (estimated)
+
+1

@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : cv32e40p_top
+Version: X-2025.06-SP2
+Date   : Fri Nov  6 09:37:02 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: core_i/id_stage_i/controller_i/debug_fsm_cs_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: debug_running_o
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0
+                     8000                  saed32rvt_tt0p85v25c
+  cv32e40p_top       70000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  core_i/id_stage_i/controller_i/debug_fsm_cs_reg[1]/CLK (DFFARX1_RVT)
+                                                        0.0000     0.0000 r
+  core_i/id_stage_i/controller_i/debug_fsm_cs_reg[1]/Q (DFFARX1_RVT)
+                                                        0.1566     0.1566 f
+  core_i/id_stage_i/controller_i/debug_running_o (cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0)
+                                                        0.0000     0.1566 f
+  core_i/id_stage_i/debug_running_o (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1)
+                                                        0.0000     0.1566 f
+  core_i/debug_running_o (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1)
+                                                        0.0000     0.1566 f
+  debug_running_o (out)                                 0.0007     0.1572 f
+  data arrival time                                                0.1572
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

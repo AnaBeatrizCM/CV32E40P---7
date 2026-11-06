@@ -1,0 +1,25 @@
+ 
+****************************************
+Report : disable_timing
+Design : cv32e40p_top
+Version: X-2025.06-SP2
+Date   : Fri Nov  6 09:37:07 2026
+****************************************
+
+
+
+Flags:       c  case-analysis
+             f  false net arc
+             C  Conditional arc
+             l  loop breaking
+             u  user-defined
+             m  modes
+
+
+  Cell or Port        From        To             Sense               Flag
+--------------------------------------------------------------------------------
+
+  instr_addr_o[0]                                                    c
+  instr_addr_o[1]                                                    c
+
+1

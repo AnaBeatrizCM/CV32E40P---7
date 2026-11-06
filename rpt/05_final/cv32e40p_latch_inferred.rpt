@@ -1,0 +1,9 @@
+ 
+**********************************
+* Inferred Latches Report
+* Design Name: cv32e40p
+**********************************
+ 
+cv32e40p has 1 latches
+ 
+Latch instance name: core_i/sleep_unit_i/core_clock_gate_i/clk_en_reg -> latch cell name: LATCHX1_RVT
