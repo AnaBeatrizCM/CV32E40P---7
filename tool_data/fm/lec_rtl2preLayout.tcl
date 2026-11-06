@@ -70,36 +70,36 @@ set_svf ${SVF_FILE}
 
 read_db -r ${LIB_DB}
 
-read_verilog ${RTL_DIR}/include/cv32e40p_apu_core_pkg.sv
-read_verilog ${RTL_DIR}/include/cv32e40p_fpu_pkg.sv
-read_verilog ${RTL_DIR}/include/cv32e40p_pkg.sv
+read_sverilog ${RTL_DIR}/include/cv32e40p_apu_core_pkg.sv
+read_sverilog ${RTL_DIR}/include/cv32e40p_fpu_pkg.sv
+read_sverilog ${RTL_DIR}/include/cv32e40p_pkg.sv
  
-read_verilog ${RTL_DIR}/cv32e40p_if_stage.sv
-read_verilog ${RTL_DIR}/cv32e40p_cs_registers.sv
-read_verilog ${RTL_DIR}/cv32e40p_register_file_ff.sv
-read_verilog ${RTL_DIR}/cv32e40p_load_store_unit.sv
-read_verilog ${RTL_DIR}/cv32e40p_id_stage.sv
-read_verilog ${RTL_DIR}/cv32e40p_aligner.sv
-read_verilog ${RTL_DIR}/cv32e40p_decoder.sv
-read_verilog ${RTL_DIR}/cv32e40p_compressed_decoder.sv
-read_verilog ${RTL_DIR}/../bhv/cv32e40p_sim_clock_gate.sv
-read_verilog ${RTL_DIR}/cv32e40p_fifo.sv
-read_verilog ${RTL_DIR}/cv32e40p_prefetch_buffer.sv
-read_verilog ${RTL_DIR}/cv32e40p_hwloop_regs.sv
-read_verilog ${RTL_DIR}/cv32e40p_mult.sv
-read_verilog ${RTL_DIR}/cv32e40p_int_controller.sv
-read_verilog ${RTL_DIR}/cv32e40p_ex_stage.sv
-read_verilog ${RTL_DIR}/cv32e40p_alu_div.sv
-read_verilog ${RTL_DIR}/cv32e40p_alu.sv
-read_verilog ${RTL_DIR}/cv32e40p_ff_one.sv
-read_verilog ${RTL_DIR}/cv32e40p_popcnt.sv
-read_verilog ${RTL_DIR}/cv32e40p_apu_disp.sv
-read_verilog ${RTL_DIR}/cv32e40p_controller.sv
-read_verilog ${RTL_DIR}/cv32e40p_obi_interface.sv
-read_verilog ${RTL_DIR}/cv32e40p_prefetch_controller.sv
-read_verilog ${RTL_DIR}/cv32e40p_sleep_unit.sv
-read_verilog ${RTL_DIR}/cv32e40p_core.sv
-read_verilog ${RTL_DIR}/cv32e40p_top.sv
+read_sverilog ${RTL_DIR}/cv32e40p_if_stage.sv
+read_sverilog ${RTL_DIR}/cv32e40p_cs_registers.sv
+read_sverilog ${RTL_DIR}/cv32e40p_register_file_ff.sv
+read_sverilog ${RTL_DIR}/cv32e40p_load_store_unit.sv
+read_sverilog ${RTL_DIR}/cv32e40p_id_stage.sv
+read_sverilog ${RTL_DIR}/cv32e40p_aligner.sv
+read_sverilog ${RTL_DIR}/cv32e40p_decoder.sv
+read_sverilog ${RTL_DIR}/cv32e40p_compressed_decoder.sv
+read_sverilog ${RTL_DIR}/../bhv/cv32e40p_sim_clock_gate.sv
+read_sverilog ${RTL_DIR}/cv32e40p_fifo.sv
+read_sverilog ${RTL_DIR}/cv32e40p_prefetch_buffer.sv
+read_sverilog ${RTL_DIR}/cv32e40p_hwloop_regs.sv
+read_sverilog ${RTL_DIR}/cv32e40p_mult.sv
+read_sverilog ${RTL_DIR}/cv32e40p_int_controller.sv
+read_sverilog ${RTL_DIR}/cv32e40p_ex_stage.sv
+read_sverilog ${RTL_DIR}/cv32e40p_alu_div.sv
+read_sverilog ${RTL_DIR}/cv32e40p_alu.sv
+read_sverilog ${RTL_DIR}/cv32e40p_ff_one.sv
+read_sverilog ${RTL_DIR}/cv32e40p_popcnt.sv
+read_sverilog ${RTL_DIR}/cv32e40p_apu_disp.sv
+read_sverilog ${RTL_DIR}/cv32e40p_controller.sv
+read_sverilog ${RTL_DIR}/cv32e40p_obi_interface.sv
+read_sverilog ${RTL_DIR}/cv32e40p_prefetch_controller.sv
+read_sverilog ${RTL_DIR}/cv32e40p_sleep_unit.sv
+read_sverilog ${RTL_DIR}/cv32e40p_core.sv
+read_sverilog ${RTL_DIR}/cv32e40p_top.sv
 
 set_top r:/WORK/cv32e40p_top
 
@@ -117,7 +117,7 @@ read_db -i ${LIB_DB}
 
 read_verilog -i ${IMP_NETLIST}
 
-set_top i:/WORK/${DESIGN}
+set_top i:/WORK/cv32e40p_top
 
 
 ########################################################################
