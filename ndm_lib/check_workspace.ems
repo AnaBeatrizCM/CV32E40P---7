@@ -1,0 +1,366 @@
+<Database>
+versionNumber:2
+Name/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/ndm_lib/check_workspace.ems
+Creation TimeFri Nov 13 14:58:54 2026
+Modified TimeFri Nov 13 14:58:56 2026
+Design Name
+Library Name
+</Database>
+<RuleCount>
+LM-0051
+LM-0061
+LM-0341
+LM-0501
+LM-0522
+LM-054294
+LM-17543
+LMUI-0091
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+LM-005Information
+LM-006Warningpara1saed32rvt_tt0p85v25c10para246510para3arc10
+LM-054Informationpara1AND2X1_RVT10
+LM-054Informationpara1AND2X2_RVT10
+LM-054Informationpara1AND2X4_RVT10
+LM-054Informationpara1AND3X1_RVT10
+LM-054Informationpara1AND3X2_RVT10
+LM-054Informationpara1AND3X4_RVT10
+LM-054Informationpara1AND4X1_RVT10
+LM-054Informationpara1AND4X2_RVT10
+LM-054Informationpara1AND4X4_RVT10
+LM-054Informationpara1ANTENNA_RVT10
+LM-054Informationpara1AO21X1_RVT10
+LM-054Informationpara1AO21X2_RVT10
+LM-054Informationpara1AO221X1_RVT10
+LM-054Informationpara1AO221X2_RVT10
+LM-054Informationpara1AO222X1_RVT10
+LM-054Informationpara1AO222X2_RVT10
+LM-054Informationpara1AO22X1_RVT10
+LM-054Informationpara1AO22X2_RVT10
+LM-054Informationpara1AOBUFX1_RVT10
+LM-054Informationpara1AOBUFX2_RVT10
+LM-054Informationpara1AOBUFX4_RVT10
+LM-054Informationpara1AODFFARX1_RVT10
+LM-054Informationpara1AODFFARX2_RVT10
+LM-054Informationpara1AODFFNARX1_RVT10
+LM-054Informationpara1AODFFNARX2_RVT10
+LM-054Informationpara1AOI21X1_RVT10
+LM-054Informationpara1AOI21X2_RVT10
+LM-054Informationpara1AOI221X1_RVT10
+LM-054Informationpara1AOI221X2_RVT10
+LM-054Informationpara1AOI222X1_RVT10
+LM-054Informationpara1AOI222X2_RVT10
+LM-054Informationpara1AOI22X1_RVT10
+LM-054Informationpara1AOI22X2_RVT10
+LM-054Informationpara1AOINVX1_RVT10
+LM-054Informationpara1AOINVX2_RVT10
+LM-054Informationpara1AOINVX4_RVT10
+LM-054Informationpara1BSLEX1_RVT10
+LM-054Informationpara1BSLEX2_RVT10
+LM-054Informationpara1BSLEX4_RVT10
+LM-054Informationpara1BUSKP_RVT10
+LM-054Informationpara1CGLNPRX2_RVT10
+LM-054Informationpara1CGLNPRX8_RVT10
+LM-054Informationpara1CGLNPSX16_RVT10
+LM-054Informationpara1CGLNPSX2_RVT10
+LM-054Informationpara1CGLNPSX4_RVT10
+LM-054Informationpara1CGLNPSX8_RVT10
+LM-054Informationpara1CGLPPRX2_RVT10
+LM-054Informationpara1CGLPPRX8_RVT10
+LM-054Informationpara1CGLPPSX16_RVT10
+LM-054Informationpara1CGLPPSX2_RVT10
+LM-054Informationpara1CGLPPSX4_RVT10
+LM-054Informationpara1CGLPPSX8_RVT10
+LM-054Informationpara1CLOAD1_RVT10
+LM-054Informationpara1DCAP_RVT10
+LM-054Informationpara1DEC24X1_RVT10
+LM-054Informationpara1DEC24X2_RVT10
+LM-054Informationpara1DELLN1X2_RVT10
+LM-054Informationpara1DELLN2X2_RVT10
+LM-054Informationpara1DELLN3X2_RVT10
+LM-054Informationpara1DFFARX1_RVT10
+LM-054Informationpara1DFFARX2_RVT10
+LM-054Informationpara1DFFASRX1_RVT10
+LM-054Informationpara1DFFASRX2_RVT10
+LM-054Informationpara1DFFASX1_RVT10
+LM-054Informationpara1DFFASX2_RVT10
+LM-054Informationpara1DFFNARX1_RVT10
+LM-054Informationpara1DFFNARX2_RVT10
+LM-054Informationpara1DFFNASRNX1_RVT10
+LM-054Informationpara1DFFNASRNX2_RVT10
+LM-054Informationpara1DFFNASRQX1_RVT10
+LM-054Informationpara1DFFNASRQX2_RVT10
+LM-054Informationpara1DFFNASRX1_RVT10
+LM-054Informationpara1DFFNASRX2_RVT10
+LM-054Informationpara1DFFNASX1_RVT10
+LM-054Informationpara1DFFNASX2_RVT10
+LM-054Informationpara1DFFNX1_RVT10
+LM-054Informationpara1DFFNX2_RVT10
+LM-054Informationpara1DFFSSRX1_RVT10
+LM-054Informationpara1DFFSSRX2_RVT10
+LM-054Informationpara1DFFX1_RVT10
+LM-054Informationpara1DFFX2_RVT10
+LM-054Informationpara1DHFILLH2_RVT10
+LM-054Informationpara1DHFILLHL2_RVT10
+LM-054Informationpara1DHFILLHLHLS11_RVT10
+LM-054Informationpara1FADDX1_RVT10
+LM-054Informationpara1FADDX2_RVT10
+LM-054Informationpara1HADDX1_RVT10
+LM-054Informationpara1HADDX2_RVT10
+LM-054Informationpara1IBUFFX16_RVT10
+LM-054Informationpara1IBUFFX2_RVT10
+LM-054Informationpara1IBUFFX32_RVT10
+LM-054Informationpara1IBUFFX4_RVT10
+LM-054Informationpara1IBUFFX8_RVT10
+LM-054Informationpara1INVX0_RVT10
+LM-054Informationpara1INVX16_RVT10
+LM-054Informationpara1INVX1_RVT10
+LM-054Informationpara1INVX2_RVT10
+LM-054Informationpara1INVX32_RVT10
+LM-054Informationpara1INVX4_RVT10
+LM-054Informationpara1INVX8_RVT10
+LM-054Informationpara1ISOLANDAOX1_RVT10
+LM-054Informationpara1ISOLANDAOX2_RVT10
+LM-054Informationpara1ISOLANDAOX4_RVT10
+LM-054Informationpara1ISOLANDAOX8_RVT10
+LM-054Informationpara1ISOLANDX1_RVT10
+LM-054Informationpara1ISOLANDX2_RVT10
+LM-054Informationpara1ISOLANDX4_RVT10
+LM-054Informationpara1ISOLANDX8_RVT10
+LM-054Informationpara1ISOLORAOX1_RVT10
+LM-054Informationpara1ISOLORAOX2_RVT10
+LM-054Informationpara1ISOLORAOX4_RVT10
+LM-054Informationpara1ISOLORAOX8_RVT10
+LM-054Informationpara1ISOLORX1_RVT10
+LM-054Informationpara1ISOLORX2_RVT10
+LM-054Informationpara1ISOLORX4_RVT10
+LM-054Informationpara1ISOLORX8_RVT10
+LM-054Informationpara1LARX1_RVT10
+LM-054Informationpara1LARX2_RVT10
+LM-054Informationpara1LASRNX1_RVT10
+LM-054Informationpara1LASRNX2_RVT10
+LM-054Informationpara1LASRQX1_RVT10
+LM-054Informationpara1LASRQX2_RVT10
+LM-054Informationpara1LASRX1_RVT10
+LM-054Informationpara1LASRX2_RVT10
+LM-054Informationpara1LASX1_RVT10
+LM-054Informationpara1LASX2_RVT10
+LM-054Informationpara1LATCHX1_RVT10
+LM-054Informationpara1LATCHX2_RVT10
+LM-054Informationpara1LNANDX1_RVT10
+LM-054Informationpara1LNANDX2_RVT10
+LM-054Informationpara1MUX21X1_RVT10
+LM-054Informationpara1MUX21X2_RVT10
+LM-054Informationpara1MUX41X1_RVT10
+LM-054Informationpara1MUX41X2_RVT10
+LM-054Informationpara1NAND2X0_RVT10
+LM-054Informationpara1NAND2X1_RVT10
+LM-054Informationpara1NAND2X2_RVT10
+LM-054Informationpara1NAND2X4_RVT10
+LM-054Informationpara1NAND3X0_RVT10
+LM-054Informationpara1NAND3X1_RVT10
+LM-054Informationpara1NAND3X2_RVT10
+LM-054Informationpara1NAND3X4_RVT10
+LM-054Informationpara1NAND4X0_RVT10
+LM-054Informationpara1NAND4X1_RVT10
+LM-054Informationpara1NBUFFX16_RVT10
+LM-054Informationpara1NBUFFX2_RVT10
+LM-054Informationpara1NBUFFX32_RVT10
+LM-054Informationpara1NBUFFX4_RVT10
+LM-054Informationpara1NBUFFX8_RVT10
+LM-054Informationpara1NMT1_RVT10
+LM-054Informationpara1NMT2_RVT10
+LM-054Informationpara1NMT3_RVT10
+LM-054Informationpara1NOR2X0_RVT10
+LM-054Informationpara1NOR2X1_RVT10
+LM-054Informationpara1NOR2X2_RVT10
+LM-054Informationpara1NOR2X4_RVT10
+LM-054Informationpara1NOR3X0_RVT10
+LM-054Informationpara1NOR3X1_RVT10
+LM-054Informationpara1NOR3X2_RVT10
+LM-054Informationpara1NOR3X4_RVT10
+LM-054Informationpara1NOR4X0_RVT10
+LM-054Informationpara1NOR4X1_RVT10
+LM-054Informationpara1OA21X1_RVT10
+LM-054Informationpara1OA21X2_RVT10
+LM-054Informationpara1OA221X1_RVT10
+LM-054Informationpara1OA221X2_RVT10
+LM-054Informationpara1OA222X1_RVT10
+LM-054Informationpara1OA222X2_RVT10
+LM-054Informationpara1OA22X1_RVT10
+LM-054Informationpara1OA22X2_RVT10
+LM-054Informationpara1OAI21X1_RVT10
+LM-054Informationpara1OAI21X2_RVT10
+LM-054Informationpara1OAI221X1_RVT10
+LM-054Informationpara1OAI221X2_RVT10
+LM-054Informationpara1OAI222X1_RVT10
+LM-054Informationpara1OAI222X2_RVT10
+LM-054Informationpara1OAI22X1_RVT10
+LM-054Informationpara1OAI22X2_RVT10
+LM-054Informationpara1OR2X1_RVT10
+LM-054Informationpara1OR2X2_RVT10
+LM-054Informationpara1OR2X4_RVT10
+LM-054Informationpara1OR3X1_RVT10
+LM-054Informationpara1OR3X2_RVT10
+LM-054Informationpara1OR3X4_RVT10
+LM-054Informationpara1OR4X1_RVT10
+LM-054Informationpara1OR4X2_RVT10
+LM-054Informationpara1OR4X4_RVT10
+LM-054Informationpara1PGX1_RVT10
+LM-054Informationpara1PGX2_RVT10
+LM-054Informationpara1PGX4_RVT10
+LM-054Informationpara1PMT1_RVT10
+LM-054Informationpara1PMT2_RVT10
+LM-054Informationpara1PMT3_RVT10
+LM-054Informationpara1RDFFARX1_RVT10
+LM-054Informationpara1RDFFARX2_RVT10
+LM-054Informationpara1RDFFNARX1_RVT10
+LM-054Informationpara1RDFFNARX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRARX1_RVT10
+LM-054Informationpara1RDFFNSRARX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRARX2_RVT10
+LM-054Informationpara1RDFFNSRARX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASRNX1_RVT10
+LM-054Informationpara1RDFFNSRASRNX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASRNX2_RVT10
+LM-054Informationpara1RDFFNSRASRNX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASRQX1_RVT10
+LM-054Informationpara1RDFFNSRASRQX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASRQX2_RVT10
+LM-054Informationpara1RDFFNSRASRQX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASRX1_RVT10
+LM-054Informationpara1RDFFNSRASRX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASRX2_RVT10
+LM-054Informationpara1RDFFNSRASRX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASX1_RVT10
+LM-054Informationpara1RDFFNSRASX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRASX2_RVT10
+LM-054Informationpara1RDFFNSRASX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRX1_RVT10
+LM-054Informationpara1RDFFNSRX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFNSRX2_RVT10
+LM-054Informationpara1RDFFNSRX2_RVT10
+LM-054Informationpara1RDFFNX1_RVT10
+LM-054Informationpara1RDFFNX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRARX1_RVT10
+LM-054Informationpara1RDFFSRARX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRARX2_RVT10
+LM-054Informationpara1RDFFSRARX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRASRX1_RVT10
+LM-054Informationpara1RDFFSRASRX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRASRX2_RVT10
+LM-054Informationpara1RDFFSRASRX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRASX1_RVT10
+LM-054Informationpara1RDFFSRASX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRASX2_RVT10
+LM-054Informationpara1RDFFSRASX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRSSRX1_RVT10
+LM-054Informationpara1RDFFSRSSRX1_RVT10
+LM-054Informationpara1RDFFSRSSRX2_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRX1_RVT10
+LM-054Informationpara1RDFFSRX1_RVT10
+LM-175Informationpara1related power/ground10para2RDFFSRX2_RVT10
+LM-054Informationpara1RDFFSRX2_RVT10
+LM-054Informationpara1RDFFX1_RVT10
+LM-054Informationpara1RDFFX2_RVT10
+LM-054Informationpara1RSDFFARX1_RVT10
+LM-054Informationpara1RSDFFARX2_RVT10
+LM-054Informationpara1RSDFFNARX1_RVT10
+LM-054Informationpara1RSDFFNARX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRARX1_RVT10
+LM-054Informationpara1RSDFFNSRARX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRARX2_RVT10
+LM-054Informationpara1RSDFFNSRARX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASRNX1_RVT10
+LM-054Informationpara1RSDFFNSRASRNX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASRNX2_RVT10
+LM-054Informationpara1RSDFFNSRASRNX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASRQX1_RVT10
+LM-054Informationpara1RSDFFNSRASRQX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASRQX2_RVT10
+LM-054Informationpara1RSDFFNSRASRQX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASRX1_RVT10
+LM-054Informationpara1RSDFFNSRASRX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASRX2_RVT10
+LM-054Informationpara1RSDFFNSRASRX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASX1_RVT10
+LM-054Informationpara1RSDFFNSRASX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRASX2_RVT10
+LM-054Informationpara1RSDFFNSRASX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRX1_RVT10
+LM-054Informationpara1RSDFFNSRX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFNSRX2_RVT10
+LM-054Informationpara1RSDFFNSRX2_RVT10
+LM-054Informationpara1RSDFFNX1_RVT10
+LM-054Informationpara1RSDFFNX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRARX1_RVT10
+LM-054Informationpara1RSDFFSRARX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRARX2_RVT10
+LM-054Informationpara1RSDFFSRARX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRASRX1_RVT10
+LM-054Informationpara1RSDFFSRASRX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRASRX2_RVT10
+LM-054Informationpara1RSDFFSRASRX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRASX1_RVT10
+LM-054Informationpara1RSDFFSRASX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRASX2_RVT10
+LM-054Informationpara1RSDFFSRASX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRSSRX1_RVT10
+LM-054Informationpara1RSDFFSRSSRX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRSSRX2_RVT10
+LM-054Informationpara1RSDFFSRSSRX2_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRX1_RVT10
+LM-054Informationpara1RSDFFSRX1_RVT10
+LM-175Informationpara1related power/ground10para2RSDFFSRX2_RVT10
+LM-054Informationpara1RSDFFSRX2_RVT10
+LM-054Informationpara1RSDFFX1_RVT10
+LM-054Informationpara1RSDFFX2_RVT10
+LM-054Informationpara1SDFFARX1_RVT10
+LM-054Informationpara1SDFFARX2_RVT10
+LM-054Informationpara1SDFFASRSX1_RVT10
+LM-054Informationpara1SDFFASRSX2_RVT10
+LM-054Informationpara1SDFFASRX1_RVT10
+LM-054Informationpara1SDFFASRX2_RVT10
+LM-054Informationpara1SDFFASX1_RVT10
+LM-054Informationpara1SDFFASX2_RVT10
+LM-054Informationpara1SDFFNARX1_RVT10
+LM-054Informationpara1SDFFNARX2_RVT10
+LM-054Informationpara1SDFFNASRX1_RVT10
+LM-054Informationpara1SDFFNASRX2_RVT10
+LM-054Informationpara1SDFFNASX1_RVT10
+LM-054Informationpara1SDFFNASX2_RVT10
+LM-054Informationpara1SDFFNX1_RVT10
+LM-054Informationpara1SDFFNX2_RVT10
+LM-054Informationpara1SDFFSSRX1_RVT10
+LM-054Informationpara1SDFFSSRX2_RVT10
+LM-054Informationpara1SDFFX1_RVT10
+LM-054Informationpara1SDFFX2_RVT10
+LM-054Informationpara1SHFILL128_RVT10
+LM-054Informationpara1SHFILL1_RVT10
+LM-054Informationpara1SHFILL2_RVT10
+LM-054Informationpara1SHFILL3_RVT10
+LM-054Informationpara1SHFILL64_RVT10
+LM-054Informationpara1TIEH_RVT10
+LM-054Informationpara1TIEL_RVT10
+LM-054Informationpara1TNBUFFX16_RVT10
+LM-054Informationpara1TNBUFFX1_RVT10
+LM-054Informationpara1TNBUFFX2_RVT10
+LM-054Informationpara1TNBUFFX32_RVT10
+LM-054Informationpara1TNBUFFX4_RVT10
+LM-054Informationpara1TNBUFFX8_RVT10
+LM-054Informationpara1XNOR2X1_RVT10
+LM-054Informationpara1XNOR2X2_RVT10
+LM-054Informationpara1XNOR3X1_RVT10
+LM-054Informationpara1XNOR3X2_RVT10
+LM-054Informationpara1XOR2X1_RVT10
+LM-054Informationpara1XOR2X2_RVT10
+LM-054Informationpara1XOR3X1_RVT10
+LM-054Informationpara1XOR3X2_RVT10
+LM-034Informationpara129410para2s10para3294 with a design view (283 had ports reordered);10
+LM-052Informationpara15610para2s10
+LMUI-009Warningpara1-allow_missing10para2option10para3physical_only10
+LM-050Informationpara15610para2s10
+LM-052Informationpara129410para2s10
+</Messages>
