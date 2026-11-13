@@ -26,14 +26,16 @@
 set DESIGN      "cv32e40p"
 
 # Project directories
-set PRJT_BASE   "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7"
-#set PRJT_BASE   "/home/marcos.leal/Desktop/Physical_Design_MarcosLeal/CV32E40P/CV32E40P---7"
+#set PRJT_BASE   "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7"
+set PRJT_BASE   "/home/marcos.leal/Desktop/Physical_Design_MarcosLeal/CV32E40P/CV32E40P---7"
 
 set DB_DIR      "${PRJT_BASE}/db"
 set RTL_DIR     "${PRJT_BASE}/rtl"
-set OUT_DIR     "${PRJT_BASE}/outputs"
-set RPT_DIR     "${PRJT_BASE}/rpt"
-
+#set OUT_DIR     "${PRJT_BASE}/outputs"
+#set RPT_DIR     "${PRJT_BASE}/rpt"
+set OUT_DIR "${PRJT_BASE}/outputs/${CORNER}"
+set RPT_DIR "${PRJT_BASE}/rpt/${CORNER}"
+file mkdir $OUT_DIR $RPT_DIR
 
 # Optional directories
 set SDC_DIR     "${PRJT_BASE}/constraints"
@@ -64,8 +66,12 @@ set_host_options -max_cores 8
 # Search path
 set search_path "$DB_DIR $RTL_DIR"
 
+# Escolha: tt0p85v25c | ss0p75v125c | ff0p95v25c
+set CORNER "tt0p85v25c"
+
 # Target libraries
-set target_library [glob ${DB_DIR}/*.db]
+#set target_library [glob ${DB_DIR}/*.db]
+set target_library "${DB_DIR}/saed32rvt_${CORNER}.db"
 
 # Synthetic library
 set synthetic_library ""
@@ -165,7 +171,8 @@ uniquify
 
 # Load SDC constraints
 # Prefer source when the SDC contains Tcl commands
-# source ${SDC_DIR}/${DESIGN}.sdc
+
+source ${SDC_DIR}/cv32e40p_core.sdc
 
 # If you do not have an SDC yet, you may generate a temporary one
 write_sdc ${OUT_DIR}/${DESIGN}_initial.sdc
@@ -204,7 +211,10 @@ write_file -format ddc -hier -out ${OUT_DIR}/${DESIGN}_gtech.ddc
 set_fix_multiple_port_nets -all -buffer_constants [all_designs]
 
 # First compile
-compile_ultra -incremental -no_autoungroup
+compile_ultra -no_autoungroup
+
+#Demais compilações
+#compile_ultra -incremental -no_autoungroup
 
 
 ########################################################################
