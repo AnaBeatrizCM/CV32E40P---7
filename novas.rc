@@ -227,14 +227,14 @@ version = Verdi_X-2025.06-SP2
 autoSaveSession = FALSE
 TclAutoSource = 
 cmd_enter_form = FALSE
-ColorThemeModern = bright
 SyncBrowserDir = TRUE
-version = Verdi_X-2025.06-SP2
 recent_commands_nWave = getSignal,hierarchyName
 recent_commands_Verdi = tbvDebugStop,hbInvokeSignalPane,hbInvokeWave,tbvDebugRunContinue
+FindBarVisible = 
+ColorThemeModern = bright
+version = Verdi_X-2025.06-SP2
 prevColorThemeModern = bright
 SignalCaseInSensitive = FALSE
-FindBarVisible = 
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
 [Globals]
@@ -338,6 +338,15 @@ containerHeight = 800
 HB_designTreeFont = *-adobe-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-*
 Text_font = COURIER12
 nMemory_font = Fixed 14
+Wave_legend_window_font = -f COURIER12 -c ID_CYAN5
+Wave_value_window_font = -f COURIER12 -c ID_CYAN5
+Wave_curve_window_font = -f COURIER12 -c ID_CYAN5
+Wave_group_name_font = -f COURIER12 -c ID_GREEN5
+Wave_ruler_value_font = -f COURIER12 -c ID_CYAN5
+Wave_analog_ruler_value_font = -f COURIER12 -c ID_CYAN5
+Wave_comment_string_font = -f COURIER12 -c ID_RED5
+Wave_getsignal_form_font = -f COURIER12
+Text_annotFont = FIXED12
 [OtherEditor]
 cmd1 = "xterm -font 9x15 -fg black -bg gray -e"
 name = "vi"
@@ -387,7 +396,7 @@ qWaveSignalDialog = 1519,492,800,479
 unknownSave_SaveSignal(s)NotFound = 330,371,590,340
 unknownSave = 405,403,461,245
 QwWarnMsgDlg = 970,581,701,301
-QwUserAskDlg = 825,502,324,128
+QwUserAskDlg = 1029,502,324,128
 [Safety]
 RegisterObject = ID_RED4
 CoreObject = ID_ORANGE5
@@ -397,11 +406,11 @@ ErrorObject = ID_GRAY5
 AnnotateSignal = TRUE
 HighlightSafetyObject = TRUE
 [Session Cache]
-2 = string (session file name)
 3 = string (session file name)
 4 = string (session file name)
 5 = string (session file name)
-1 = /tmp/vcs_20261105200850_12815/verdi_11_05_2026_xmen-aluno_13567/novas_autosave.ses
+1 = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/verdiLog/novas_autosave.ses
+2 = /tmp/vcs_20261105200850_12815/verdi_11_05_2026_xmen-aluno_13567/novas_autosave.ses
 [Simulation]
 scsPath = scsim
 scsOption = 
@@ -464,18 +473,18 @@ iscCmdSep = FALSE
 ScsDebugAll = FALSE
 NoAppendOption = FALSE
 invokeSimPath = work
+uvmAware = TRUE
+smartlog = TRUE
 simType = vcssv
 bSVTBMode = TRUE
 SimMode = TRUE
 interactiveDebugging = TRUE
 KeepBreakPoints = FALSE
-vcs_svPath = simv_tb
-uvmAware = TRUE
-smartlog = TRUE
-vcs_svOption = +firmware=example_tb/core/custom/hello_world.hex +maxcycles=10000  -sml=verdi
+vcs_svPath = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/simv_tb
+vcs_svOption = +firmware=example_tb/core/custom/hello_world.hex +maxcycles=10000 -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE -ucli2Proc -ucli
 [SimulationPlus2]
-eventDumpUnfinish = FALSE
 dumpPowerRoot = FALSE
+eventDumpUnfinish = FALSE
 [Source]
 wordWrapOn = TRUE
 viewReuse = TRUE
@@ -501,14 +510,14 @@ annotateFSMLimitNum = -1
 restoredItemsLimitNum = 100000
 [SourceVHDL]
 vhSimType = ModelSim
-ohSimType = VerilogXL
+ohSimType = VCS
 [TclShell]
 nLineSize = 1024
 [Test]
 verbose_progress = FALSE
 [TestBenchBrowser]
--showUVMDynamicHierTreeWin = FALSE
 DataViewTooltip = TRUE
+-showUVMDynamicHierTreeWin = FALSE
 [Text]
 hdlTypeName = blue4
 hdlLibrary = blue4
@@ -592,7 +601,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = FIXED12
 [Text.1]
-viewport = 547 256 900 700 45
+viewport = 547 256 1309 700 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -674,8 +683,8 @@ Button3 = "Next ? Time" "#${Arg:Next Time} $stop;.\n"
 Button2 = "Next 1000 Time" "#1000 $stop;.\n"
 Button1 = "Dump All Signals" "$fsdbDumpvars;\n"
 [VIA]
-viaLogViewerDefaultRuleOneSearchForm = "share/VIA/Apps/PredefinedRules/Misc/Onesearch_rule.rc"
 viaLogViewerDefaultRuleInterForm = "share/VIA/Apps/PredefinedRules/UVM_OVM_i_rule.rc"
+viaLogViewerDefaultRuleOneSearchForm = "share/VIA/Apps/PredefinedRules/Misc/Onesearch_rule.rc"
 [VIA.interactiveDebug.preference]
 DefaultDisplayTimeUnit = "1.000000ns"
 DefaultLogTimeUnit = "1.000000ns"
@@ -740,44 +749,44 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = "Message"
-width = 2000
-visualIndex = 5
+name = "Severity"
+width = 60
+visualIndex = 2
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
 isColFilterColorCoding = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = "Time"
-width = 60
-visualIndex = 0
-isHidden = FALSE
-isUserChangeColumnVisible = FALSE
-isColFilterColorCoding = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
-name = "Code"
-width = 60
-visualIndex = 3
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-isColFilterColorCoding = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
-name = "Type"
-width = 60
-visualIndex = 4
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-isColFilterColorCoding = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = "Block's First Line"
 width = 120
 visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 isColFilterColorCoding = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column5]
-name = "Severity"
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+name = "Time"
 width = 60
-visualIndex = 2
+visualIndex = 0
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+isColFilterColorCoding = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = "Code"
+width = 60
+visualIndex = 3
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+isColFilterColorCoding = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = "Type"
+width = 60
+visualIndex = 4
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+isColFilterColorCoding = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column5]
+name = "Message"
+width = 2000
+visualIndex = 5
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
 isColFilterColorCoding = FALSE
@@ -857,8 +866,11 @@ ShowDeltaTime = TRUE
 WaveExtendLastTick = TRUE
 displayMessageLabelOnly = TRUE
 AutoApplySeverityColor = TRUE
+scope_to_save_with_macro
+open_file_dir
+open_rc_file_dir
 getSignalForm = 1519 492 800 479 165 387 391 91
-viewPort = 0 11 596 307 100 65
+viewPort = 0 11 871 299 100 65
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -998,7 +1010,6 @@ displayDeltaY = FALSE
 signal_rc_abspath = TRUE
 signal_rc_no_natural_bus_range = FALSE
 save_scope_with_macro = FALSE
-scope_to_save_with_macro
 FitAnaByBusSize = FALSE
 DisplayVerticalZoomTools = FALSE
 DisplayIndicateBar = FALSE
@@ -1027,8 +1038,6 @@ printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
 RecentFile1 = "\"/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/inter.fsdb\""
 open_file_time_range = FALSE
-open_file_dir
-open_rc_file_dir
 legend_window_font = -f COURIER12 -c ID_CYAN5
 value_window_font = -f COURIER12 -c ID_CYAN5
 curve_window_font = -f COURIER12 -c ID_CYAN5
@@ -1036,18 +1045,18 @@ group_name_font = -f COURIER12 -c ID_GREEN5
 ruler_value_font = -f COURIER12 -c ID_CYAN5
 analog_ruler_value_font = -f COURIER12 -c ID_CYAN5
 comment_string_font = -f COURIER12 -c ID_RED5
-getsignal_form_font = -f COURIER12
+getsignal_form_font = -f COURIER12 
 SigsCheckNum = on 1000
 filter_synthesized_net = off n
 filterOutNet = on
 exclude_signal_with_prefix = off n
 synthesizeNetOnly = on
-filter_synthesized_instance = off
+filter_synthesized_instance = off 
 filterOutInstance = on
 showGroupTree = TRUE
 hierGroupDelim = /
 MsgSeverityColor = {y \"Severity\"==\"1\" ID_RED5} {y \"Severity\"==\"2\" ID_RED6} {y \"Severity\"==\"3\" ID_RED7} {y \"Severity\"==\"4\" ID_RED8} {y \"Severity\"==\"5\" ID_ORANGE5} {y \"Severity\"==\"6\" ID_ORANGE6} {y \"Severity\"==\"7\" ID_ORANGE7} {y \"Severity\"==\"8\" \
-ID_GREEN7} {y \"Severity\"==\"9\" ID_GREEN6} {y \"Severity\"==\"10\" ID_GREEN5}
+ID_GREEN7} {y \"Severity\"==\"9\" ID_GREEN6} {y \"Severity\"==\"10\" ID_GREEN5} 
 waveDblClkActiveTrace = on
 SEQShowComparisonIcon = TRUE
 SEQAddDriverLoadInSameGroup = TRUE
@@ -1127,6 +1136,7 @@ ShowMergeMenuItem = FALSE
 fsmScoreMode = Transition
 lazyLoadingPrompt = TRUE
 [eco]
+NameRule = 
 IsFreezeSilicon = FALSE
 cellQuantityManagement = FALSE
 ManageMode = INSTANCE_NAME
@@ -1134,11 +1144,10 @@ SpareCellsPinsManagement = TRUE
 LogCommitReport = FALSE
 InputPinStatus = 1
 OutputPinStatus = 2
-NameRule = 
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
 UserName = xmen-aluno
-CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time}
+CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time} 
 PrefixN = eco_n
 PrefixP = eco_p
 PrefixI = eco_i
@@ -1404,7 +1413,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 11 596 307 100 65
+viewPort = 0 11 871 299 100 65
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

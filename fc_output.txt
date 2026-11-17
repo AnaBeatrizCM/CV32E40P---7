@@ -1,0 +1,35 @@
+ 
+                              Fusion Compiler (TM)
+
+                Version X-2025.06-SP3 for linux64 - Feb 27, 2026
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+fc_shell> help set_ref_libs
+ set_ref_libs         # Set reference libraries
+fc_shell> open_lib /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/ndm_lib/saed32rvt_tt0p85v25c.ndm
+Information: Loading library file '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/ndm_lib/saed32rvt_tt0p85v25c.ndm' (FILE-007)
+{saed32rvt_tt0p85v25c}
+fc_shell> 
+fc_shell> get_lib_cells */*
+{saed32rvt_tt0p85v25c/AND2X1_RVT saed32rvt_tt0p85v25c/AND2X2_RVT saed32rvt_tt0p85v25c/AND2X4_RVT saed32rvt_tt0p85v25c/AND3X1_RVT saed32rvt_tt0p85v25c/AND3X2_RVT saed32rvt_tt0p85v25c/AND3X4_RVT saed32rvt_tt0p85v25c/AND4X1_RVT saed32rvt_tt0p85v25c/AND4X2_RVT saed32rvt_tt0p85v25c/AND4X4_RVT saed32rvt_tt0p85v25c/ANTENNA_RVT saed32rvt_tt0p85v25c/AO21X1_RVT saed32rvt_tt0p85v25c/AO21X2_RVT saed32rvt_tt0p85v25c/AO221X1_RVT saed32rvt_tt0p85v25c/AO221X2_RVT saed32rvt_tt0p85v25c/AO222X1_RVT saed32rvt_tt0p85v25c/AO222X2_RVT saed32rvt_tt0p85v25c/AO22X1_RVT saed32rvt_tt0p85v25c/AO22X2_RVT saed32rvt_tt0p85v25c/AOBUFX1_RVT saed32rvt_tt0p85v25c/AOBUFX2_RVT saed32rvt_tt0p85v25c/AOBUFX4_RVT saed32rvt_tt0p85v25c/AODFFARX1_RVT saed32rvt_tt0p85v25c/AODFFARX2_RVT saed32rvt_tt0p85v25c/AODFFNARX1_RVT saed32rvt_tt0p85v25c/AODFFNARX2_RVT saed32rvt_tt0p85v25c/AOI21X1_RVT saed32rvt_tt0p85v25c/AOI21X2_RVT saed32rvt_tt0p85v25c/AOI221X1_RVT saed32rvt_tt0p85v25c/AOI221X2_RVT saed32rvt_tt0p85v25c/AOI222X1_RVT saed32rvt_tt0p85v25c/AOI222X2_RVT saed32rvt_tt0p85v25c/AOI22X1_RVT saed32rvt_tt0p85v25c/AOI22X2_RVT saed32rvt_tt0p85v25c/AOINVX1_RVT saed32rvt_tt0p85v25c/AOINVX2_RVT saed32rvt_tt0p85v25c/AOINVX4_RVT saed32rvt_tt0p85v25c/BSLEX1_RVT saed32rvt_tt0p85v25c/BSLEX2_RVT saed32rvt_tt0p85v25c/BSLEX4_RVT saed32rvt_tt0p85v25c/BUSKP_RVT saed32rvt_tt0p85v25c/CGLNPRX2_RVT saed32rvt_tt0p85v25c/CGLNPRX8_RVT saed32rvt_tt0p85v25c/CGLNPSX16_RVT saed32rvt_tt0p85v25c/CGLNPSX2_RVT saed32rvt_tt0p85v25c/CGLNPSX4_RVT saed32rvt_tt0p85v25c/CGLNPSX8_RVT saed32rvt_tt0p85v25c/CGLPPRX2_RVT saed32rvt_tt0p85v25c/CGLPPRX8_RVT saed32rvt_tt0p85v25c/CGLPPSX16_RVT saed32rvt_tt0p85v25c/CGLPPSX2_RVT saed32rvt_tt0p85v25c/CGLPPSX4_RVT saed32rvt_tt0p85v25c/CGLPPSX8_RVT saed32rvt_tt0p85v25c/CLOAD1_RVT saed32rvt_tt0p85v25c/DCAP_RVT saed32rvt_tt0p85v25c/DEC24X1_RVT saed32rvt_tt0p85v25c/DEC24X2_RVT saed32rvt_tt0p85v25c/DELLN1X2_RVT saed32rvt_tt0p85v25c/DELLN2X2_RVT saed32rvt_tt0p85v25c/DELLN3X2_RVT saed32rvt_tt0p85v25c/DFFARX1_RVT saed32rvt_tt0p85v25c/DFFARX2_RVT saed32rvt_tt0p85v25c/DFFASRX1_RVT saed32rvt_tt0p85v25c/DFFASRX2_RVT saed32rvt_tt0p85v25c/DFFASX1_RVT saed32rvt_tt0p85v25c/DFFASX2_RVT saed32rvt_tt0p85v25c/DFFNARX1_RVT saed32rvt_tt0p85v25c/DFFNARX2_RVT saed32rvt_tt0p85v25c/DFFNASRNX1_RVT saed32rvt_tt0p85v25c/DFFNASRNX2_RVT saed32rvt_tt0p85v25c/DFFNASRQX1_RVT saed32rvt_tt0p85v25c/DFFNASRQX2_RVT saed32rvt_tt0p85v25c/DFFNASRX1_RVT saed32rvt_tt0p85v25c/DFFNASRX2_RVT saed32rvt_tt0p85v25c/DFFNASX1_RVT saed32rvt_tt0p85v25c/DFFNASX2_RVT saed32rvt_tt0p85v25c/DFFNX1_RVT saed32rvt_tt0p85v25c/DFFNX2_RVT saed32rvt_tt0p85v25c/DFFSSRX1_RVT saed32rvt_tt0p85v25c/DFFSSRX2_RVT saed32rvt_tt0p85v25c/DFFX1_RVT saed32rvt_tt0p85v25c/DFFX2_RVT saed32rvt_tt0p85v25c/DHFILLH2_RVT saed32rvt_tt0p85v25c/DHFILLHL2_RVT saed32rvt_tt0p85v25c/DHFILLHLHLS11_RVT saed32rvt_tt0p85v25c/FADDX1_RVT saed32rvt_tt0p85v25c/FADDX2_RVT saed32rvt_tt0p85v25c/HADDX1_RVT saed32rvt_tt0p85v25c/HADDX2_RVT saed32rvt_tt0p85v25c/IBUFFX16_RVT saed32rvt_tt0p85v25c/IBUFFX2_RVT saed32rvt_tt0p85v25c/IBUFFX32_RVT saed32rvt_tt0p85v25c/IBUFFX4_RVT saed32rvt_tt0p85v25c/IBUFFX8_RVT saed32rvt_tt0p85v25c/INVX0_RVT saed32rvt_tt0p85v25c/INVX16_RVT saed32rvt_tt0p85v25c/INVX1_RVT saed32rvt_tt0p85v25c/INVX2_RVT saed32rvt_tt0p85v25c/INVX32_RVT saed32rvt_tt0p85v25c/INVX4_RVT saed32rvt_tt0p85v25c/INVX8_RVT ...}
+fc_shell> get_lib_cells */*TIE*
+{saed32rvt_tt0p85v25c/TIEH_RVT saed32rvt_tt0p85v25c/TIEL_RVT}
+fc_shell> get_lib_cells */*FILL*
+{saed32rvt_tt0p85v25c/DHFILLH2_RVT saed32rvt_tt0p85v25c/DHFILLHL2_RVT saed32rvt_tt0p85v25c/DHFILLHLHLS11_RVT saed32rvt_tt0p85v25c/SHFILL128_RVT saed32rvt_tt0p85v25c/SHFILL1_RVT saed32rvt_tt0p85v25c/SHFILL2_RVT saed32rvt_tt0p85v25c/SHFILL3_RVT saed32rvt_tt0p85v25c/SHFILL64_RVT}
+fc_shell> 

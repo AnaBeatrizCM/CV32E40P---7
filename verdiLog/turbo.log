@@ -1,0 +1,4 @@
+Command Line: /Tools/synopsys/verdi/X-2025.06-SP2/platform/LINUXAMD64/bin/Novas -ssf inter.fsdb
+uname(Linux xmen16 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Fri Dec 12 10:42:53 UTC 2025 x86_64)
+KdbImportParallelMixAllLib time 0.003797 0.001016 0.002074 delta 11923456 11923456 total 1292808192 1292808192
+au time 52.650031 2.476218 0.239236 delta 289087488 289087488 total 1371353088 1371353088
