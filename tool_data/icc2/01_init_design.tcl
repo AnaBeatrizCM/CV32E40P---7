@@ -5,8 +5,7 @@
 # Use, copy or distribuition of this code is not allowed without
 # VIRTUS CC-UFCG explicit written consent.
 # -------------------------------------------------------------------------------------
-#
-# Id: initial_design.tcl_2026-04-15_by_LuizHenriqueNascimento
+# Id: initial_design.tcl_2026-11-17_by_AnaBeatriz
 #
 # Project: 		CI Expert/UFCG - Physical Design Track
 # Description:	Design initialization Script:
@@ -19,13 +18,13 @@
 ###############################################################################
 # Tech & ICC2 Setup
 ###############################################################################
-source      /home/luiz.henrique/physical_Design_Luiz/backend/tools/icc2/setup/tech_setup.tcl
-source      /home/luiz.henrique/physical_Design_Luiz/backend/tools/icc2/setup/icc2_setup.tcl
+source      "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/icc2_setup.tcl" 
+source      "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/tech_setup.tcl" 
 
 ###############################################################################
 # Design Setup
 ###############################################################################
-set DESIGN_STAGE        "init_design"
+set DESIGN_STAGE        "cv32e40p"
 
 printvar search_path
 printvar link_library
@@ -66,7 +65,7 @@ report_lib  $PRJT_BASE/dlib/${DESIGN}.dlib \
 ################################################################################
 # ICC2 Import prelayout netlist
 ################################################################################
-read_verilog $PRJT_BASE/outputs/preLayout_instr_decoder.v -top ${DESIGN}
+read_verilog $PRJT_BASE/outputs/preLayout_cv32e40.v -top ${DESIGN}
 # Make sure that all cells in the netlist are found in the libs reference
 link_block
 current_block
@@ -82,7 +81,7 @@ set_svf    ${OUT_DIR}/$DESIGN.svf
 ################################################################################
 # Create analysis scenarios
 ################################################################################
-#source <path/to/scenarios.tcl> -echo -verbose
+#source  $PRJT_BASE/tool_data/icc2/setup/scenarios.tcl> -echo -verbose
 
 #current_scenario tc
 
@@ -119,6 +118,3 @@ after 5000
 start_gui 
 return
 exit
-
-
-
