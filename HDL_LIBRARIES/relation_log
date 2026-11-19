@@ -1,0 +1,10 @@
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_id_stage.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_int_controller.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ex_stage.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_controller.sv
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_core.sv

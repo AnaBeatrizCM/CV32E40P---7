@@ -39,9 +39,9 @@ set REFERENCE_LIBRARY [list \
 #-----------------------------------------------------------------------------------------------
 # TLU plus file (similar to captable) FALTA!
 set TLUPLUS_TYP_FILE   "$TECH_DIR/saed32nm_1p9m_nominal.tluplus"
-# set TLUPLUS_MAX_FILE   ""
-# set TLUPLUS_MIN_FILE   ""
-set TLUPLUS_MAP_FILE   "$TECH_DIR/saed32nm_1p9m_layer.map"
+set TLUPLUS_MIN_FILE   "$TECH_DIR/saed32nm_1p9m_Cmin.tluplus"
+set TLUPLUS_MAX_FILE   "$TECH_DIR/saed32nm_1p9m_Cmax.tluplus"
+set TLUPLUS_MAP_FILE   "$TECH_DIR/saed32nm_fc_layer.map"
 #-----------------------------------------------------------------------------------------------
 
 ###############################################################################

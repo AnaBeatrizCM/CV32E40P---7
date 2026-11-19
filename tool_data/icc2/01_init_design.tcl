@@ -71,10 +71,11 @@ report_lib  $PRJT_BASE/dlib/${DESIGN}.dlib \
 set DESIGN_RTL_DIR "${PRJT_BASE}/rtl"
 set RTL_MANIFEST   "${PRJT_BASE}/cv32e40p_manifest.flist"
 
-read_verilog -sv -f $RTL_MANIFEST
+analyze -format sverilog -vcs "-f ${RTL_MANIFEST}"
 elaborate cv32e40p_top
 
-link_block
+set_top_module cv32e40p_top
+#link_block
 current_block
 
 #sizeof_collection [get_flat_cells]

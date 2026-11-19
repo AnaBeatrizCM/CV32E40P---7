@@ -97,8 +97,8 @@ foreach cornerName $cornerNames {
                           -early_temperature 125 \
                           -late_spec maxTLU \
                           -late_temperature 125 \
-
                           -library ${DESIGN}.dlib
+
 #------------ Corner TT ------------------------------------------
 current_corner corner_tt
 set_operating_conditions -analysis_type on_chip_variation \

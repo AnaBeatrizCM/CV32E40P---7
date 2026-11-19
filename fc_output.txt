@@ -20,16 +20,1045 @@
 
 
 Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
-fc_shell> help set_ref_libs
- set_ref_libs         # Set reference libraries
-fc_shell> open_lib /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/ndm_lib/saed32rvt_tt0p85v25c.ndm
-Information: Loading library file '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/ndm_lib/saed32rvt_tt0p85v25c.ndm' (FILE-007)
-{saed32rvt_tt0p85v25c}
+fc_shell> source      "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/tech_setup.tcl"
+********************************************************************************
+********************************************************************************
+[VIRTUS-CC] INFO: The Technology Setup for the cv32e40p has been completed.
+********************************************************************************
+********************************************************************************
+fc_shell> source      "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/icc2_setup.tcl"
+********************************************************************************
+********************************************************************************
+[VIRTUS-CC] INFO: The IC Compiler II Setup for the cv32e40p has been completed.
+********************************************************************************
+********************************************************************************
 fc_shell> 
-fc_shell> get_lib_cells */*
-{saed32rvt_tt0p85v25c/AND2X1_RVT saed32rvt_tt0p85v25c/AND2X2_RVT saed32rvt_tt0p85v25c/AND2X4_RVT saed32rvt_tt0p85v25c/AND3X1_RVT saed32rvt_tt0p85v25c/AND3X2_RVT saed32rvt_tt0p85v25c/AND3X4_RVT saed32rvt_tt0p85v25c/AND4X1_RVT saed32rvt_tt0p85v25c/AND4X2_RVT saed32rvt_tt0p85v25c/AND4X4_RVT saed32rvt_tt0p85v25c/ANTENNA_RVT saed32rvt_tt0p85v25c/AO21X1_RVT saed32rvt_tt0p85v25c/AO21X2_RVT saed32rvt_tt0p85v25c/AO221X1_RVT saed32rvt_tt0p85v25c/AO221X2_RVT saed32rvt_tt0p85v25c/AO222X1_RVT saed32rvt_tt0p85v25c/AO222X2_RVT saed32rvt_tt0p85v25c/AO22X1_RVT saed32rvt_tt0p85v25c/AO22X2_RVT saed32rvt_tt0p85v25c/AOBUFX1_RVT saed32rvt_tt0p85v25c/AOBUFX2_RVT saed32rvt_tt0p85v25c/AOBUFX4_RVT saed32rvt_tt0p85v25c/AODFFARX1_RVT saed32rvt_tt0p85v25c/AODFFARX2_RVT saed32rvt_tt0p85v25c/AODFFNARX1_RVT saed32rvt_tt0p85v25c/AODFFNARX2_RVT saed32rvt_tt0p85v25c/AOI21X1_RVT saed32rvt_tt0p85v25c/AOI21X2_RVT saed32rvt_tt0p85v25c/AOI221X1_RVT saed32rvt_tt0p85v25c/AOI221X2_RVT saed32rvt_tt0p85v25c/AOI222X1_RVT saed32rvt_tt0p85v25c/AOI222X2_RVT saed32rvt_tt0p85v25c/AOI22X1_RVT saed32rvt_tt0p85v25c/AOI22X2_RVT saed32rvt_tt0p85v25c/AOINVX1_RVT saed32rvt_tt0p85v25c/AOINVX2_RVT saed32rvt_tt0p85v25c/AOINVX4_RVT saed32rvt_tt0p85v25c/BSLEX1_RVT saed32rvt_tt0p85v25c/BSLEX2_RVT saed32rvt_tt0p85v25c/BSLEX4_RVT saed32rvt_tt0p85v25c/BUSKP_RVT saed32rvt_tt0p85v25c/CGLNPRX2_RVT saed32rvt_tt0p85v25c/CGLNPRX8_RVT saed32rvt_tt0p85v25c/CGLNPSX16_RVT saed32rvt_tt0p85v25c/CGLNPSX2_RVT saed32rvt_tt0p85v25c/CGLNPSX4_RVT saed32rvt_tt0p85v25c/CGLNPSX8_RVT saed32rvt_tt0p85v25c/CGLPPRX2_RVT saed32rvt_tt0p85v25c/CGLPPRX8_RVT saed32rvt_tt0p85v25c/CGLPPSX16_RVT saed32rvt_tt0p85v25c/CGLPPSX2_RVT saed32rvt_tt0p85v25c/CGLPPSX4_RVT saed32rvt_tt0p85v25c/CGLPPSX8_RVT saed32rvt_tt0p85v25c/CLOAD1_RVT saed32rvt_tt0p85v25c/DCAP_RVT saed32rvt_tt0p85v25c/DEC24X1_RVT saed32rvt_tt0p85v25c/DEC24X2_RVT saed32rvt_tt0p85v25c/DELLN1X2_RVT saed32rvt_tt0p85v25c/DELLN2X2_RVT saed32rvt_tt0p85v25c/DELLN3X2_RVT saed32rvt_tt0p85v25c/DFFARX1_RVT saed32rvt_tt0p85v25c/DFFARX2_RVT saed32rvt_tt0p85v25c/DFFASRX1_RVT saed32rvt_tt0p85v25c/DFFASRX2_RVT saed32rvt_tt0p85v25c/DFFASX1_RVT saed32rvt_tt0p85v25c/DFFASX2_RVT saed32rvt_tt0p85v25c/DFFNARX1_RVT saed32rvt_tt0p85v25c/DFFNARX2_RVT saed32rvt_tt0p85v25c/DFFNASRNX1_RVT saed32rvt_tt0p85v25c/DFFNASRNX2_RVT saed32rvt_tt0p85v25c/DFFNASRQX1_RVT saed32rvt_tt0p85v25c/DFFNASRQX2_RVT saed32rvt_tt0p85v25c/DFFNASRX1_RVT saed32rvt_tt0p85v25c/DFFNASRX2_RVT saed32rvt_tt0p85v25c/DFFNASX1_RVT saed32rvt_tt0p85v25c/DFFNASX2_RVT saed32rvt_tt0p85v25c/DFFNX1_RVT saed32rvt_tt0p85v25c/DFFNX2_RVT saed32rvt_tt0p85v25c/DFFSSRX1_RVT saed32rvt_tt0p85v25c/DFFSSRX2_RVT saed32rvt_tt0p85v25c/DFFX1_RVT saed32rvt_tt0p85v25c/DFFX2_RVT saed32rvt_tt0p85v25c/DHFILLH2_RVT saed32rvt_tt0p85v25c/DHFILLHL2_RVT saed32rvt_tt0p85v25c/DHFILLHLHLS11_RVT saed32rvt_tt0p85v25c/FADDX1_RVT saed32rvt_tt0p85v25c/FADDX2_RVT saed32rvt_tt0p85v25c/HADDX1_RVT saed32rvt_tt0p85v25c/HADDX2_RVT saed32rvt_tt0p85v25c/IBUFFX16_RVT saed32rvt_tt0p85v25c/IBUFFX2_RVT saed32rvt_tt0p85v25c/IBUFFX32_RVT saed32rvt_tt0p85v25c/IBUFFX4_RVT saed32rvt_tt0p85v25c/IBUFFX8_RVT saed32rvt_tt0p85v25c/INVX0_RVT saed32rvt_tt0p85v25c/INVX16_RVT saed32rvt_tt0p85v25c/INVX1_RVT saed32rvt_tt0p85v25c/INVX2_RVT saed32rvt_tt0p85v25c/INVX32_RVT saed32rvt_tt0p85v25c/INVX4_RVT saed32rvt_tt0p85v25c/INVX8_RVT ...}
-fc_shell> get_lib_cells */*TIE*
-{saed32rvt_tt0p85v25c/TIEH_RVT saed32rvt_tt0p85v25c/TIEL_RVT}
-fc_shell> get_lib_cells */*FILL*
-{saed32rvt_tt0p85v25c/DHFILLH2_RVT saed32rvt_tt0p85v25c/DHFILLHL2_RVT saed32rvt_tt0p85v25c/DHFILLHLHLS11_RVT saed32rvt_tt0p85v25c/SHFILL128_RVT saed32rvt_tt0p85v25c/SHFILL1_RVT saed32rvt_tt0p85v25c/SHFILL2_RVT saed32rvt_tt0p85v25c/SHFILL3_RVT saed32rvt_tt0p85v25c/SHFILL64_RVT}
+fc_shell> ###############################################################################
+fc_shell> # Design Setup
+fc_shell> ###############################################################################
+fc_shell> set DESIGN_STAGE        "01_init_design"
+01_init_design
 fc_shell> 
+fc_shell> printvar search_path
+search_path          = ". /Tools/synopsys/fusioncompiler/X-2025.06-SP3/dw/syn_ver /Tools/synopsys/fusioncompiler/X-2025.06-SP3/dw/sim_ver /Tools/synopsys/fusioncompiler/X-2025.06-SP3/libraries/syn"
+fc_shell> printvar link_library
+link_library         = ""
+fc_shell> 
+fc_shell> ###############################################################################
+fc_shell> # ICC2 Create Design Library
+fc_shell> ###############################################################################
+fc_shell> 
+fc_shell> #create_lib -technology $TECH_FILE -ref_libs $REFERENCE_LIBRARY ../../../outputs/${DESIGN}.dlib
+fc_shell> 
+fc_shell> if { [file exists $PRJT_BASE/dlib/${DESIGN}.dlib] } {
+    file delete -force $PRJT_BASE/dlib/${DESIGN}.dlib
+}
+fc_shell> 
+fc_shell> 
+fc_shell> create_lib -ref_libs $REFERENCE_LIBRARY ${DLIB_DIR}/${DESIGN}.dlib
+{cv32e40p.dlib}
+fc_shell> save_lib
+Saving library 'cv32e40p.dlib'
+1
+fc_shell> ###############################################################################
+fc_shell> # ICC2 Open created library
+fc_shell> ###############################################################################
+fc_shell> # Open created design library
+fc_shell> open_lib             ${DLIB_DIR}/${DESIGN}.dlib
+Information: Incrementing open_count of library 'cv32e40p.dlib' to 2. (LIB-017)
+{cv32e40p.dlib}
+fc_shell> 
+fc_shell> report_lib  $PRJT_BASE/dlib/${DESIGN}.dlib             -nosplit             -timing_arcs             -parasitic_tech             -physical             -antenna             -routability             -pattern_must_join_pin             -placement_constraints             -wire_tracks             -wire_track_colors             -verbose             -include_db_mapping
+****************************************
+Report : library
+Library: cv32e40p.dlib
+Version: X-2025.06-SP3
+Date   : Thu Nov 19 17:45:06 2026
+****************************************
+
+Full name: /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/dlib/cv32e40p.dlib:cv32e40p.dlib
+File name: /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/dlib/cv32e40p.dlib
+Design count: 0
+No timing data.
+
+
+No parasitic tech data.
+
+
+--------------------------------------------------------------------------------
+** Physical Data:
+
+
+Site Name        Width         Height              XY Symmetry        Default
+------------------------------------------------------------------------------------------
+unit             0.152u        1.672u              --                 true
+
+Layer Name        Mask Name        Direction        Pitch          Track Offset
+------------------------------------------------------------------------------------------
+M1                metal1           --               0.152u         --
+M2                metal2           --               0.152u         --
+M3                metal3           --               0.304u         --
+M4                metal4           --               0.304u         --
+M5                metal5           --               0.608u         --
+M6                metal6           --               0.608u         --
+M7                metal7           --               1.216u         --
+M8                metal8           --               1.216u         --
+M9                metal9           --               2.432u         --
+MRDL              metal10          --               4.864u         --
+
+Source        File Name
+------------------------------------------------------------------------------------------
+NDM           /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/dlib/cv32e40p.dlib
+TF            /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m.tf
+
+Summary of Library Views
+--------------------------------------------------------------------------------
+timing(t):        0
+layout(l):        0
+design(d):        0
+ frame(f):        0
+
+Summary of Library Design Types
+--------------------------------------------------------------------------------
+
+Summary of Library Pins
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+** Antenna Data:
+
+Total number of cells missing gate area and diode protection antenna properties: 0 (out of 0)
+
+
+
+#BEGIN_REPORT_ROUTABILITY
+
+#END_REPORT_ROUTABILITY
+
+#BEGIN_REPORT_PATTERN_MUST_JOIN_PIN
+
+#END_REPORT_PATTERN_MUST_JOIN_PIN
+
+#BEGIN_REPORT_WIRE_TRACKS
+
+Information: Use current library as the technology library. (FRAM-017)
+#END_REPORT_WIRE_TRACKS
+
+#BEGIN_REPORT_WIRE_TRACK_COLORS
+
+Information: Use current library as the technology library. (FRAM-017)
+#END_REPORT_WIRE_TRACK_COLORS
+
+#BEGIN_REPORT_PLACEMENT_CONSTRAINTS
+
+#END_REPORT_PLACEMENT_CONSTRAINTS
+
+
+1
+fc_shell> 
+fc_shell> ################################################################################
+fc_shell> # ICC2 Import prelayout netlist
+fc_shell> ################################################################################
+fc_shell> #read_verilog $PRJT_BASE/outputs/preLayout_cv32e40.v -top ${DESIGN}
+fc_shell> # Make sure that all cells in the netlist are found in the libs reference
+fc_shell> 
+fc_shell> set DESIGN_RTL_DIR "${PRJT_BASE}/rtl"
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl
+fc_shell> set RTL_MANIFEST   "${PRJT_BASE}/cv32e40p_manifest.flist"
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/cv32e40p_manifest.flist
+fc_shell> 
+fc_shell> analyze -format sverilog -vcs "-f ${RTL_MANIFEST}"
+Information: By default, the HDL template library is 'WORK' (LBR-??).
+Running PRESTO HDLC
+Parsing vcs commands file -f /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/cv32e40p_manifest.flist
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_apu_core_pkg.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_apu_core_pkg.sv:22: Overwriting existing design element 'cv32e40p_apu_core_pkg' with newer version. (VER-64)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_apu_core_pkg.sv:22: The package cv32e40p_apu_core_pkg has already been analyzed. It is being replaced. (VER-26)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_apu_core_pkg.sv:25: Parameter keyword used in local parameter declaration. (VER-329)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_fpu_pkg.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_fpu_pkg.sv:38: Overwriting existing design element 'cv32e40p_fpu_pkg' with newer version. (VER-64)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_fpu_pkg.sv:38: The package cv32e40p_fpu_pkg has already been analyzed. It is being replaced. (VER-26)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv:26: Overwriting existing design element 'cv32e40p_pkg' with newer version. (VER-64)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv:26: The package cv32e40p_pkg has already been analyzed. It is being replaced. (VER-26)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/include/cv32e40p_pkg.sv:37: Parameter keyword used in local parameter declaration. (VER-329)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_if_stage.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_if_stage.sv:102: Overwriting existing design element 'cv32e40p_if_stage' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:142: Overwriting existing design element 'cv32e40p_cs_registers' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_register_file_ff.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_register_file_ff.sv:66: Overwriting existing design element 'cv32e40p_register_file' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_load_store_unit.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_load_store_unit.sv:75: Overwriting existing design element 'cv32e40p_load_store_unit' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_id_stage.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_id_stage.sv:258: Overwriting existing design element 'cv32e40p_id_stage' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_aligner.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_aligner.sv:45: Overwriting existing design element 'cv32e40p_aligner' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:165: Overwriting existing design element 'cv32e40p_decoder' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_compressed_decoder.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_compressed_decoder.sv:37: Overwriting existing design element 'cv32e40p_compressed_decoder' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_fifo.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_fifo.sv:40: Overwriting existing design element 'cv32e40p_fifo' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_buffer.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_buffer.sv:60: Overwriting existing design element 'cv32e40p_prefetch_buffer' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_hwloop_regs.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_hwloop_regs.sv:52: Overwriting existing design element 'cv32e40p_hwloop_regs' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:71: Overwriting existing design element 'cv32e40p_mult' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_int_controller.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_int_controller.sv:50: Overwriting existing design element 'cv32e40p_int_controller' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ex_stage.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ex_stage.sv:167: Overwriting existing design element 'cv32e40p_ex_stage' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu_div.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu_div.sv:52: Overwriting existing design element 'cv32e40p_alu_div' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:55: Overwriting existing design element 'cv32e40p_alu' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ff_one.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ff_one.sv:34: Overwriting existing design element 'cv32e40p_ff_one' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_popcnt.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_popcnt.sv:30: Overwriting existing design element 'cv32e40p_popcnt' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_apu_disp.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_apu_disp.sv:69: Overwriting existing design element 'cv32e40p_apu_disp' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv:207: Overwriting existing design element 'cv32e40p_controller' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_obi_interface.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_obi_interface.sv:71: Overwriting existing design element 'cv32e40p_obi_interface' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_controller.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_controller.sv:80: Overwriting existing design element 'cv32e40p_prefetch_controller' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_sleep_unit.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_sleep_unit.sv:88: Overwriting existing design element 'cv32e40p_sleep_unit' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_core.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_core.sv:103: Overwriting existing design element 'cv32e40p_core' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_top.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_top.sv:82: Overwriting existing design element 'cv32e40p_top' with newer version. (VER-64)
+Compiling source file /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/../bhv/cv32e40p_sim_clock_gate.sv
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/../bhv/cv32e40p_sim_clock_gate.sv:22: Overwriting existing design element 'cv32e40p_clock_gate' with newer version. (VER-64)
+Presto compilation completed successfully.
+Elapsed = 00:00:00.17, CPU = 00:00:00.12
+1
+fc_shell> elaborate cv32e40p_top
+Presto compilation completed successfully. (cv32e40p_top)
+Module: cv32e40p_top, Ports: 379, Input: 266, Output: 113, Inout: 0
+Module: cv32e40p_top, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_top report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_core instantiated from 'cv32e40p_top' with the parameters {COREV_PULP=0,COREV_CLUSTER=0,FPU=0,FPU_ADDMUL_LAT=0,FPU_OTHERS_LAT=0,ZFINX=0,NUM_MHPMCOUNTERS=1}. (ELAB-193)
+Presto compilation completed successfully. (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1)
+Module: cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1, Ports: 537, Input: 305, Output: 232, Inout: 0
+Module: cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_sleep_unit instantiated from 'cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1' with the parameters {COREV_CLUSTER=0}. (ELAB-193)
+
+Inferred memory devices in process in routine 'cv32e40p_sleep_unit_COREV_CLUSTER0' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_sleep_unit.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+| fetch_enable_q_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  | 138  |
+|   core_busy_q_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 138  |
+==================================================================================
+Presto compilation completed successfully. (cv32e40p_sleep_unit_COREV_CLUSTER0)
+Module: cv32e40p_sleep_unit_COREV_CLUSTER0, Ports: 16, Input: 13, Output: 3, Inout: 0
+Module: cv32e40p_sleep_unit_COREV_CLUSTER0, Registers: 2, Async set/reset: 2, Sync set/reset: 0
+Information:  Module cv32e40p_sleep_unit_COREV_CLUSTER0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_if_stage instantiated from 'cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1' with the parameters {COREV_PULP=0,PULP_OBI=0,PULP_SECURE=0,FPU=0,ZFINX=0}. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_if_stage.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    132     |    user/user     | always block at line 131 |
+|    138     |    user/user     | always block at line 131 |
+|    144     |    user/user     | always block at line 131 |
+|    159     |    user/user     | always block at line 155 |
+============================================================
+
+Inferred memory devices in process in routine 'cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_if_stage.sv'.
+======================================================================================
+|      Register Name      |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+======================================================================================
+| illegal_c_insn_id_o_reg | Flip-flop |   1   |  N  | N  | None  | Async | N  | 230  |
+|  instr_valid_id_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 230  |
+|  instr_rdata_id_o_reg   | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 230  |
+|  is_fetch_failed_o_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  | 230  |
+|       pc_id_o_reg       | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 230  |
+| is_compressed_id_o_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  | 230  |
+======================================================================================
+Presto compilation completed successfully. (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0)
+Module: cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0, Ports: 535, Input: 399, Output: 136, Inout: 0
+Module: cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0, Registers: 68, Async set/reset: 68, Sync set/reset: 0
+Information:  Module cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0 report end. (ELAB-965)
+Information: Elaboration parameter ID file created in '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/HDL_LIBRARIES/moduleparamid'. (ELAB-2055)
+Information: Elaborating HDL template WORK:cv32e40p_id_stage instantiated from 'cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1' with the parameters PARAM_ID=1. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_id_stage.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    525     |    user/user     | always block at line 524 |
+|    574     |    user/user     | always block at line 573 |
+|    598     |    auto/auto     | always block at line 597 |
+|    610     |    user/user     | always block at line 609 |
+|    618     |    auto/auto     | always block at line 617 |
+|    638     |    user/user     | always block at line 637 |
+|    656     |    auto/auto     | always block at line 655 |
+|    684     |    auto/auto     | always block at line 683 |
+|    705     |    auto/auto     | always block at line 704 |
+|    729     |    auto/auto     | always block at line 728 |
+|    749     |    user/user     | always block at line 748 |
+|    755     |    user/user     | always block at line 754 |
+|    764     |    user/user     | always block at line 763 |
+|    770     |    user/user     | always block at line 769 |
+|    785     |    user/user     | always block at line 784 |
+============================================================
+
+Inferred memory devices in process in routine 'cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_id_stage.sv'.
+===========================================================================================
+|        Register Name         |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+===========================================================================================
+|      branch_in_ex_o_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|       alu_en_ex_o_reg        | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|    alu_operator_ex_o_reg     | Flip-flop |   7   |  Y  | Y  | Async | Async | N  | 1426 |
+|    alu_operand_a_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|    alu_operand_b_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|    alu_operand_c_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|       bmask_a_ex_o_reg       | Flip-flop |   5   |  Y  | Y  | None  | Async | N  | 1426 |
+|       bmask_b_ex_o_reg       | Flip-flop |   5   |  Y  | Y  | None  | Async | N  | 1426 |
+|     imm_vec_ext_ex_o_reg     | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|    alu_vec_mode_ex_o_reg     | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|   alu_clpx_shift_ex_o_reg    | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|     alu_is_clpx_ex_o_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|    alu_is_subrot_ex_o_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|    mult_operator_ex_o_reg    | Flip-flop |   3   |  Y  | Y  | None  | Async | N  | 1426 |
+|   mult_operand_a_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|   mult_operand_b_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|   mult_operand_c_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|       mult_en_ex_o_reg       | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|  mult_sel_subword_ex_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|  mult_signed_mode_ex_o_reg   | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|      mult_imm_ex_o_reg       | Flip-flop |   5   |  Y  | Y  | None  | Async | N  | 1426 |
+|    mult_dot_op_a_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|    mult_dot_op_b_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|    mult_dot_op_c_ex_o_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|   mult_dot_signed_ex_o_reg   | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|    mult_is_clpx_ex_o_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|   mult_clpx_shift_ex_o_reg   | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|    mult_clpx_img_ex_o_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|       apu_en_ex_o_reg        | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|       apu_op_ex_o_reg        | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 1426 |
+|       apu_lat_ex_o_reg       | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|    apu_operands_ex_o_reg     | Flip-flop |  96   |  Y  | Y  | None  | Async | N  | 1426 |
+|      apu_flags_ex_o_reg      | Flip-flop |  15   |  Y  | Y  | None  | Async | N  | 1426 |
+|      apu_waddr_ex_o_reg      | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 1426 |
+|    regfile_waddr_ex_o_reg    | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 1426 |
+|     regfile_we_ex_o_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|  regfile_alu_waddr_ex_o_reg  | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 1426 |
+|   regfile_alu_we_ex_o_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|   prepost_useincr_ex_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|     csr_access_ex_o_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|       csr_op_ex_o_reg        | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|       data_we_ex_o_reg       | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|      data_type_ex_o_reg      | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|    data_sign_ext_ex_o_reg    | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|   data_reg_offset_ex_o_reg   | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 1426 |
+|      data_req_ex_o_reg       | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|   data_load_event_ex_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|        atop_ex_o_reg         | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 1426 |
+|   data_misaligned_ex_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1426 |
+|         pc_ex_o_reg          | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1426 |
+|  mhpmevent_pipe_stall_o_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|        id_valid_q_reg        | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|   mhpmevent_minstret_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|     mhpmevent_load_o_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|    mhpmevent_store_o_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|     mhpmevent_jump_o_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|    mhpmevent_branch_o_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|  mhpmevent_compressed_o_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+| mhpmevent_branch_taken_o_reg | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|   mhpmevent_jr_stall_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|    mhpmevent_imiss_o_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+|   mhpmevent_ld_stall_o_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1641 |
+===========================================================================================
+Presto compilation completed successfully. (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1)
+Module: cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1, Ports: 1191, Input: 275, Output: 916, Inout: 0
+Module: cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1, Registers: 537, Async set/reset: 537, Sync set/reset: 0
+Information:  Module cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_ex_stage instantiated from 'cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1' with the parameters {COREV_PULP=0,FPU=0,APU_NARGS_CPU=3,APU_WOP_CPU=6,APU_NDSFLAGS_CPU=15,APU_NUSFLAGS_CPU=5}. (ELAB-193)
+
+Inferred memory devices in process in routine 'cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_ex_stage.sv'.
+====================================================================================
+|     Register Name     |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+====================================================================================
+|  regfile_we_lsu_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 452  |
+| regfile_waddr_lsu_reg | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 452  |
+====================================================================================
+Presto compilation completed successfully. (cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+Module: cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5, Ports: 843, Input: 610, Output: 233, Inout: 0
+Module: cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5, Registers: 7, Async set/reset: 7, Sync set/reset: 0
+Information:  Module cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_load_store_unit instantiated from 'cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1' with the parameters {PULP_OBI=0}. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_load_store_unit.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    120     |    auto/auto     | always block at line 119 |
+|    123     |    auto/auto     | always block at line 119 |
+|    131     |    auto/auto     | always block at line 119 |
+|    143     |    auto/auto     | always block at line 119 |
+|    156     |    auto/auto     | always block at line 119 |
+|    173     |    auto/auto     | always block at line 172 |
+|    223     |    auto/auto     | always block at line 222 |
+|    233     |    auto/auto     | always block at line 232 |
+|    263     |    auto/auto     | always block at line 262 |
+|    292     |    auto/auto     | always block at line 291 |
+|    332     |    auto/auto     | always block at line 328 |
+|    419     |    user/user     | always block at line 418 |
+============================================================
+
+Inferred memory devices in process in routine 'cv32e40p_load_store_unit_PULP_OBI0' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_load_store_unit.sv'.
+====================================================================================
+|     Register Name     |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+====================================================================================
+| data_load_event_q_reg | Flip-flop |   1   |  N  | N  | None  | Async | N  | 184  |
+|    data_type_q_reg    | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 184  |
+|  rdata_offset_q_reg   | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 184  |
+|  data_sign_ext_q_reg  | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 184  |
+|     data_we_q_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 184  |
+|      rdata_q_reg      | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 299  |
+|       cnt_q_reg       | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 442  |
+====================================================================================
+Presto compilation completed successfully. (cv32e40p_load_store_unit_PULP_OBI0)
+Module: cv32e40p_load_store_unit_PULP_OBI0, Ports: 265, Input: 151, Output: 114, Inout: 0
+Module: cv32e40p_load_store_unit_PULP_OBI0, Registers: 42, Async set/reset: 42, Sync set/reset: 0
+Information:  Module cv32e40p_load_store_unit_PULP_OBI0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_cs_registers instantiated from 'cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1' with the parameters PARAM_ID=2. (ELAB-193)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:177: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1278: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:886: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:923: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:932: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:941: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:962: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1027: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1180: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1213: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1220: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1399: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1468: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1468: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv:1468: Statement unreachable (Branch condition impossible to meet). (VER-61)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv'
+=============================================================
+|    Line    |  full/ parallel  |       block location      |
+=============================================================
+|    262     |    auto/auto     | always block at line 258  |
+|    460     |    auto/auto     | always block at line 458  |
+|    920     |     no/auto      | always block at line 885  |
+|    1041    |    user/user     | always block at line 885  |
+|    1044    |    user/user     | always block at line 885  |
+|    1089    |    auto/auto     | always block at line 1085 |
+=============================================================
+
+Inferred memory devices in process in routine 'cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_cs_registers.sv'.
+=========================================================================================================
+|               Register Name                |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+=========================================================================================================
+|              mtvec_mode_q_reg              | Flip-flop |   2   |  N  | Y  | Async | Async | N  | 1178 |
+|               mstatus_q_reg                | Flip-flop |   7   |  Y  | Y  | Async | Async | N  | 1178 |
+|                 mepc_q_reg                 | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1178 |
+|                mcause_q_reg                | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 1178 |
+|                 depc_q_reg                 | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1178 |
+|                 dcsr_q_reg                 | Flip-flop |  30   |  Y  | Y  | Async | Async | N  | 1178 |
+|              dscratch0_q_reg               | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1178 |
+|              dscratch1_q_reg               | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1178 |
+|               mscratch_q_reg               | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1178 |
+|                 mie_q_reg                  | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1178 |
+|                mtvec_q_reg                 | Flip-flop |  24   |  Y  | Y  | None  | Async | N  | 1178 |
+|    gen_trigger_regs.tmatch_value_q_reg     | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 1267 |
+| gen_trigger_regs.tmatch_control_exec_q_reg | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1267 |
+|             mhpmcounter_q_reg              | Flip-flop |  192  |  Y  | Y  | None  | Async | N  | 1464 |
+|              mhpmevent_q_reg               | Flip-flop |  16   |  Y  | Y  | None  | Async | N  | 1495 |
+|            mcountinhibit_q_reg             | Flip-flop |   3   |  Y  | Y  | Async | None  | N  | 1528 |
+=========================================================================================================
+Presto compilation completed successfully. (cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1)
+Module: cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1, Ports: 1371, Input: 474, Output: 897, Inout: 0
+Module: cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1, Registers: 507, Async set/reset: 507, Sync set/reset: 0
+Information:  Module cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_clock_gate instantiated from 'cv32e40p_sleep_unit_COREV_CLUSTER0'. (ELAB-193)
+
+Inferred memory devices in process in routine 'cv32e40p_clock_gate' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/../bhv/cv32e40p_sim_clock_gate.sv'.
+==============================================================================
+|    Register Name    | Type  | Width | Bus | MB |  Set  | Reset | ST | Line |
+==============================================================================
+|     clk_en_reg      | Latch |   1   |  N  | N  | None  | None  | -  |  24  |
+==============================================================================
+Presto compilation completed successfully. (cv32e40p_clock_gate)
+Module: cv32e40p_clock_gate, Ports: 4, Input: 3, Output: 1, Inout: 0
+Module: cv32e40p_clock_gate, Registers: 1, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_clock_gate report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_prefetch_buffer instantiated from 'cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0' with the parameters {PULP_OBI=0,COREV_PULP=0}. (ELAB-193)
+Presto compilation completed successfully. (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0)
+Module: cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0, Ports: 173, Input: 106, Output: 67, Inout: 0
+Module: cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_aligner instantiated from 'cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0'. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_aligner.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|    102     |    auto/auto     | always block at line 91 |
+===========================================================
+  state register: state
+
+Inferred memory devices in process in routine 'cv32e40p_aligner' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_aligner.sv'.
+===================================================================================
+|    Register Name     |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+===================================================================================
+| hwlp_update_pc_q_reg | Flip-flop |   1   |  N  | N  | None  | Async | N  |  66  |
+|      state_reg       | Flip-flop |   3   |  Y  | Y  | None  | Async | N  |  66  |
+|    r_instr_h_reg     | Flip-flop |  16   |  Y  | Y  | None  | Async | N  |  66  |
+|   hwlp_addr_q_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  |  66  |
+|       pc_q_reg       | Flip-flop |  32   |  Y  | Y  | None  | Async | N  |  66  |
+| aligner_ready_q_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  |  66  |
+===================================================================================
+Presto compilation completed successfully. (cv32e40p_aligner)
+Module: cv32e40p_aligner, Ports: 168, Input: 102, Output: 66, Inout: 0
+Module: cv32e40p_aligner, Registers: 85, Async set/reset: 85, Sync set/reset: 0
+Information:  Module cv32e40p_aligner report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_compressed_decoder instantiated from 'cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0' with the parameters {FPU=0,ZFINX=0}. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_compressed_decoder.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     52     |    user/user     | always block at line 48 |
+|     55     |    user/user     | always block at line 48 |
+|    195     |    user/user     | always block at line 48 |
+|    272     |    user/user     | always block at line 48 |
+|    339     |    user/user     | always block at line 48 |
+|    436     |    user/user     | always block at line 48 |
+===========================================================
+Presto compilation completed successfully. (cv32e40p_compressed_decoder_FPU0_ZFINX0)
+Module: cv32e40p_compressed_decoder_FPU0_ZFINX0, Ports: 66, Input: 32, Output: 34, Inout: 0
+Module: cv32e40p_compressed_decoder_FPU0_ZFINX0, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_compressed_decoder_FPU0_ZFINX0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_register_file instantiated from 'cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1' with the parameters {ADDR_WIDTH=6,DATA_WIDTH=32,FPU=0,ZFINX=0}. (ELAB-193)
+
+Inferred memory devices in process in routine 'cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_register_file_ff.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|       mem_reg       | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 116  |
+|       mem_reg       | Flip-flop |  992  |  Y  | Y  | None  | Async | N  | 129  |
+==================================================================================
+Presto compilation completed successfully. (cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0)
+Module: cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0, Ports: 195, Input: 99, Output: 96, Inout: 0
+Module: cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0, Registers: 1024, Async set/reset: 1024, Sync set/reset: 0
+Information:  Module cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_decoder instantiated from 'cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1' with the parameters PARAM_ID=3. (ELAB-193)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:892: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:902: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:904: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1348: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1359: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1361: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1478: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:731: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:843: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1094: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1114: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1191: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1216: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1310: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1013: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1444: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1379: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1514: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1517: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1523: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1496: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1557: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1560: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1566: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1540: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:1577: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:2914: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv:533: Statement unreachable (Branch condition impossible to meet). (VER-61)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_decoder.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    293     |    user/user     | always block at line 198 |
+|    342     |    user/user     | always block at line 198 |
+|    376     |    user/user     | always block at line 198 |
+|    401     |    user/user     | always block at line 198 |
+|    487     |    user/user     | always block at line 198 |
+|    925     |    user/user     | always block at line 198 |
+|    2683    |    user/user     | always block at line 198 |
+|    2704    |    user/user     | always block at line 198 |
+|    2775    |    user/user     | always block at line 198 |
+|    2788    |    auto/auto     | always block at line 198 |
+============================================================
+Presto compilation completed successfully. (cv32e40p_decoder_COREV_PULP0_COREV_CLUSTER0_A_EXTENSION0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_PULP_SECURE0_USE_PMP0_APU_WOP_CPU6_DEBUG_TRIGGER_EN1)
+Module: cv32e40p_decoder_COREV_PULP0_COREV_CLUSTER0_A_EXTENSION0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_PULP_SECURE0_USE_PMP0_APU_WOP_CPU6_DEBUG_TRIGGER_EN1, Ports: 196, Input: 74, Output: 122, Inout: 0
+Module: cv32e40p_decoder_COREV_PULP0_COREV_CLUSTER0_A_EXTENSION0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_PULP_SECURE0_USE_PMP0_APU_WOP_CPU6_DEBUG_TRIGGER_EN1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_decoder_COREV_PULP0_COREV_CLUSTER0_A_EXTENSION0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_PULP_SECURE0_USE_PMP0_APU_WOP_CPU6_DEBUG_TRIGGER_EN1 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_controller instantiated from 'cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1' with the parameters {COREV_CLUSTER=0,COREV_PULP=0,FPU=0}. (ELAB-193)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv:952: Statement unreachable (Branch condition impossible to meet). (VER-61)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv:992: Statement unreachable (Branch condition impossible to meet). (VER-61)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv'
+=============================================================
+|    Line    |  full/ parallel  |       block location      |
+=============================================================
+|    330     |    user/user     | always block at line 256  |
+|    541     |    user/user     | always block at line 256  |
+|    677     |    user/user     | always block at line 256  |
+|    932     |    user/user     | always block at line 256  |
+|    1054    |    user/user     | always block at line 256  |
+|    1122    |    user/user     | always block at line 256  |
+|    1512    |    auto/auto     | always block at line 1508 |
+=============================================================
+  state register: debug_fsm_cs
+
+Inferred memory devices in process in routine 'cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_controller.sv'.
+=======================================================================================
+|      Register Name       |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+=======================================================================================
+| debug_force_wakeup_q_reg | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1433 |
+|     ctrl_fsm_cs_reg      | Flip-flop |   5   |  Y  | Y  | None  | Async | N  | 1433 |
+|     jump_done_q_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1433 |
+|      data_err_q_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1433 |
+|     debug_mode_q_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1433 |
+|    illegal_insn_q_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1433 |
+|  debug_req_entry_q_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1433 |
+|     debug_req_q_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  | 1486 |
+|     debug_fsm_cs_reg     | Flip-flop |   1   |  N  | Y  | Async | Async | N  | 1496 |
+=======================================================================================
+Presto compilation completed successfully. (cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0)
+Module: cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0, Ports: 401, Input: 301, Output: 100, Inout: 0
+Module: cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0, Registers: 15, Async set/reset: 15, Sync set/reset: 0
+Information:  Module cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_int_controller instantiated from 'cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1' with the parameters {PULP_SECURE=0}. (ELAB-193)
+
+Inferred memory devices in process in routine 'cv32e40p_int_controller_PULP_SECURE0' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_int_controller.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|    irq_sec_q_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  |  59  |
+|      irq_q_reg      | Flip-flop |  32   |  Y  | Y  | None  | Async | N  |  59  |
+==================================================================================
+Presto compilation completed successfully. (cv32e40p_int_controller_PULP_SECURE0)
+Module: cv32e40p_int_controller_PULP_SECURE0, Ports: 111, Input: 71, Output: 40, Inout: 0
+Module: cv32e40p_int_controller_PULP_SECURE0, Registers: 33, Async set/reset: 33, Sync set/reset: 0
+Information:  Module cv32e40p_int_controller_PULP_SECURE0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_alu instantiated from 'cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5'. (ELAB-193)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:168: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:266: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:275: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:278: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:284: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:287: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:290: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv:293: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    139     |    auto/auto     | always block at line 116 |
+|    153     |    auto/auto     | always block at line 116 |
+|    217     |    auto/auto     | always block at line 216 |
+|    273     |    auto/auto     | always block at line 272 |
+|    348     |    user/user     | always block at line 345 |
+|    360     |    auto/auto     | always block at line 345 |
+|    394     |    auto/auto     | always block at line 387 |
+|    416     |    user/user     | always block at line 414 |
+|    499     |    user/user     | always block at line 493 |
+|    535     |    user/user     | always block at line 493 |
+|    554     |    user/user     | always block at line 493 |
+|    557     |    user/user     | always block at line 493 |
+|    591     |    user/user     | always block at line 587 |
+|    593     |    user/user     | always block at line 587 |
+|    613     |    user/user     | always block at line 587 |
+|    633     |    user/user     | always block at line 587 |
+|    653     |    user/user     | always block at line 587 |
+|    752     |     no/auto      | always block at line 749 |
+|    777     |    auto/auto     | always block at line 775 |
+|    863     |    user/user     | always block at line 860 |
+|    931     |    user/user     | always block at line 928 |
+============================================================
+Presto compilation completed successfully. (cv32e40p_alu)
+Module: cv32e40p_alu, Ports: 159, Input: 125, Output: 34, Inout: 0
+Module: cv32e40p_alu, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_alu report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_mult instantiated from 'cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5'. (ELAB-193)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:108: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:110: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:111: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:114: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:224: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:266: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:267: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:268: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:269: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:271: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:299: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:300: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:302: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:303: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:305: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv:312: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    140     |     no/auto      | always block at line 128 |
+|    326     |    user/user     | always block at line 323 |
+============================================================
+  state register: mulh_CS
+
+Inferred memory devices in process in routine 'cv32e40p_mult' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_mult.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|  mulh_carry_q_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 199  |
+|     mulh_CS_reg     | Flip-flop |   3   |  Y  | Y  | None  | Async | N  | 199  |
+==================================================================================
+Presto compilation completed successfully. (cv32e40p_mult)
+Module: cv32e40p_mult, Ports: 248, Input: 213, Output: 35, Inout: 0
+Module: cv32e40p_mult, Registers: 4, Async set/reset: 4, Sync set/reset: 0
+Information:  Module cv32e40p_mult report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_obi_interface instantiated from 'cv32e40p_load_store_unit_PULP_OBI0' with the parameters {TRANS_STABLE=1}. (ELAB-193)
+Presto compilation completed successfully. (cv32e40p_obi_interface_TRANS_STABLE1)
+Module: cv32e40p_obi_interface_TRANS_STABLE1, Ports: 224, Input: 113, Output: 111, Inout: 0
+Module: cv32e40p_obi_interface_TRANS_STABLE1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_obi_interface_TRANS_STABLE1 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_prefetch_controller instantiated from 'cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0' with the parameters {DEPTH=2,PULP_OBI=0,COREV_PULP=0}. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_controller.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    168     |    auto/auto     | always block at line 164 |
+|    227     |    auto/auto     | always block at line 226 |
+============================================================
+  state register: state_q
+
+Inferred memory devices in process in routine 'cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_prefetch_controller.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|  trans_addr_q_reg   | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 347  |
+|     state_q_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  | 347  |
+|      cnt_q_reg      | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 347  |
+|   flush_cnt_q_reg   | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 347  |
+==================================================================================
+Presto compilation completed successfully. (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2)
+Module: cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2, Ports: 114, Input: 75, Output: 39, Inout: 0
+Module: cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2, Registers: 37, Async set/reset: 37, Sync set/reset: 0
+Information:  Module cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_fifo instantiated from 'cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0' with the parameters {FALL_THROUGH=1'h0,DATA_WIDTH=32,DEPTH=2}. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_fifo.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    117     |    user/user     | always block at line 111 |
+============================================================
+
+Inferred memory devices in process in routine 'cv32e40p_fifo_0_32_2' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_fifo.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|  status_cnt_q_reg   | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 111  |
+| read_pointer_q_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  | 111  |
+| write_pointer_q_reg | Flip-flop |   1   |  N  | N  | None  | Async | N  | 111  |
+|      mem_q_reg      | Flip-flop |  64   |  Y  | Y  | None  | Async | N  | 140  |
+==================================================================================
+Presto compilation completed successfully. (cv32e40p_fifo_0_32_2)
+Module: cv32e40p_fifo_0_32_2, Ports: 75, Input: 39, Output: 36, Inout: 0
+Module: cv32e40p_fifo_0_32_2, Registers: 68, Async set/reset: 68, Sync set/reset: 0
+Information:  Module cv32e40p_fifo_0_32_2 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_obi_interface instantiated from 'cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0' with the parameters {TRANS_STABLE=0}. (ELAB-193)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_obi_interface.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    132     |    auto/auto     | always block at line 129 |
+============================================================
+  state register: state_q
+
+Inferred memory devices in process in routine 'cv32e40p_obi_interface_TRANS_STABLE0' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_obi_interface.sv'.
+==================================================================================================
+|            Register Name            |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================================
+| gen_no_trans_stable.obi_atop_q_reg  | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 177  |
+|             state_q_reg             | Flip-flop |   1   |  N  | N  | None  | Async | N  | 177  |
+| gen_no_trans_stable.obi_addr_q_reg  | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 177  |
+|  gen_no_trans_stable.obi_we_q_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 177  |
+|  gen_no_trans_stable.obi_be_q_reg   | Flip-flop |   4   |  Y  | Y  | None  | Async | N  | 177  |
+| gen_no_trans_stable.obi_wdata_q_reg | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 177  |
+==================================================================================================
+Presto compilation completed successfully. (cv32e40p_obi_interface_TRANS_STABLE0)
+Module: cv32e40p_obi_interface_TRANS_STABLE0, Ports: 224, Input: 113, Output: 111, Inout: 0
+Module: cv32e40p_obi_interface_TRANS_STABLE0, Registers: 76, Async set/reset: 76, Sync set/reset: 0
+Information:  Module cv32e40p_obi_interface_TRANS_STABLE0 report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_popcnt instantiated from 'cv32e40p_alu'. (ELAB-193)
+Presto compilation completed successfully. (cv32e40p_popcnt)
+Module: cv32e40p_popcnt, Ports: 38, Input: 32, Output: 6, Inout: 0
+Module: cv32e40p_popcnt, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_popcnt report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_ff_one instantiated from 'cv32e40p_alu'. (ELAB-193)
+Presto compilation completed successfully. (cv32e40p_ff_one)
+Module: cv32e40p_ff_one, Ports: 38, Input: 32, Output: 6, Inout: 0
+Module: cv32e40p_ff_one, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information:  Module cv32e40p_ff_one report end. (ELAB-965)
+Information: Elaborating HDL template WORK:cv32e40p_alu_div instantiated from 'cv32e40p_alu'. (ELAB-193)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu_div.sv:102: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu_div.sv:109: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block in file
+        '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu_div.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    135     |    auto/auto     | always block at line 123 |
+============================================================
+  state register: State_SP
+
+Inferred memory devices in process in routine 'cv32e40p_alu_div' in file
+         /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/rtl/cv32e40p_alu_div.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|    ResInv_SP_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 193  |
+|    State_SP_reg     | Flip-flop |   2   |  Y  | Y  | None  | Async | N  | 193  |
+|     AReg_DP_reg     | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 193  |
+|     BReg_DP_reg     | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 193  |
+|    ResReg_DP_reg    | Flip-flop |  32   |  Y  | Y  | None  | Async | N  | 193  |
+|     Cnt_DP_reg      | Flip-flop |   6   |  Y  | Y  | None  | Async | N  | 193  |
+|    RemSel_SP_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 193  |
+|   CompInv_SP_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 193  |
+==================================================================================
+Presto compilation completed successfully. (cv32e40p_alu_div)
+Module: cv32e40p_alu_div, Ports: 111, Input: 78, Output: 33, Inout: 0
+Module: cv32e40p_alu_div, Registers: 107, Async set/reset: 107, Sync set/reset: 0
+Information:  Module cv32e40p_alu_div report end. (ELAB-965)
+Information: Design cv32e40p_top elaboration summary: (FLW-8550)
+Number of modules read: 25
+Top level ports:        379
+Total in all modules
+  Ports:                7682
+  Nets:                 24554
+  Instances:            10329
+Information: Design summary end. (FLW-8551)
+Elapsed = 00:00:01.03, CPU = 00:00:01.01
+1
+fc_shell> set_top_module cv32e40p_top
+Information: User units loaded from library 'saed32rvt_tt0p85v25c' (LNK-040)
+Information: Non-default hdlin app options: (FLW-8560)
+****************************************
+Name                                                    Type       Value      User-value   User-default System-default Scope      Status     Source
+------------------------------------------------------- ---------- ---------- ------------ ------------ -------------- ---------- ---------- ----------
+SNPSee_ac5f1c26be820a73c7644f673fce36a44aaa696f07f8f279 bool       true       true         true         false          global     unlisted   --
+------------------------------------------------------- ---------- ---------- ------------ ------------ -------------- ---------- ---------- ----------
+Information: Added key list 'DesignWare' to design 'cv32e40p_top'. (DWS-0216)
+Elapsed = 00:00:01.16, CPU = 00:00:01.14
+1
+fc_shell> #link_block
+fc_shell> current_block
+{cv32e40p.dlib:cv32e40p_top.design}
+fc_shell> 
+fc_shell> #sizeof_collection [get_flat_cells]
+fc_shell> # sizeof_collection [get_cells -filter pad_cell]
+fc_shell> 
+fc_shell> # Generate SVF for Formality tool
+fc_shell> set_svf    ${OUT_DIR}/$DESIGN.svf
+1
+fc_shell> source  $PRJT_BASE/tool_data/icc2/setup/scenarios.tcl -echo -verbose
+# -------------------------------------------------------------------------------------
+# Copyright (c) 2026 VIRTUS CC-UFCG. All rights reserved
+# VIRTUS CC-UFCG Confidential Proprietary
+# 
+# Use, copy or distribuition of this code is not allowed without
+# VIRTUS CC-UFCG explicit written consent.
+# -------------------------------------------------------------------------------------
+#
+# Id: scenarios.tcl_2026-11-19_by_AnaBeatrizMarinho
+#
+# Project:              Ci Expert - UFCG
+# Description:  Mode, Corner and Scenarios creation.
+#                Analysis settings for scenarios:
+#                * Setup: all or WCCOM/SS
+#                * Hold : all or WCCOM/SS, BCCOM/FF
+#                * Dynamic power: all
+#                * Leakage power: all
+#                * cornerNames --> found in 'operating_conditions' property of a liberty file (.lib) 
+#                                  nomenclature: <operating_conditions>_<temperature>_<voltage>
+#                                  ex.: NCCOM_25c_1p8v or WCLCOM_m40c_1p62v                  
+#                * library --> found in the 'library' property of a liberty file (.lib)
+# -------------------------------------------------------------------------------------
+# Cleanup any previous mode, corner and scenario definitions
+remove_scenarios -all
+1
+remove_modes     -all
+1
+remove_corners   -all
+1
+########################################
+# Create modes
+# set modeNames [list func_slow func_typ func_fast]
+# foreach modeName $modeNames {
+#     create_mode $modeName
+# }
+set modeNames [list  func]
+func
+foreach modeName $modeNames {
+    create_mode $modeName
+}
+########################################
+# Create corners
+# set cornerNames [list corner_tt SS125_1P08 TT25_1P20]
+# foreach cornerName $cornerNames {
+#     create_corner $cornerName
+# }
+set cornerNames [list corner_tt corner_ff corner_ss]
+corner_tt corner_ff corner_ss
+foreach cornerName $cornerNames {
+    create_corner $cornerName
+}
+#------------ Corner FF ------------------------------------------
+current_corner corner_ff
+{corner_ff}
+set_operating_conditions -analysis_type on_chip_variation \
+                          -library saed32rvt_ff0p95v25c
+1
+set_pvt_configuration    -clear_filter all \
+                          -add \
+                          -name rule1 -process_label func_ff \
+                          -process_numbers {1} \
+                          -voltages 0.95 \
+                          -temperatures 25
+Information: Created PVT configuration rule 'rule1' (LIB-071)
+Warning: PVT configuration changes are not applied to open libs (LIB-073)
+
+Current PVT Configuration:
+ rule1:
+  Process Labels :  "func_ff"
+  Process Numbers:  1
+  Voltages       :  0.95
+  Temperatures   :  25
+
+rule1
+read_parasitic_tech         -sanity_check advanced \
+                             -tlup ${TLUPLUS_MIN_FILE} \
+                             -layermap ${TLUPLUS_MAP_FILE} \
+                             -name minTLU
+Warning: Layer mapping file warning. Tech layer 'DIFF' is not a metal/via/mimtop/mimbottom/poly layer defined in technology section. (TLUP-012)
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_Cmin.tluplus is TLUPlus file
+TLUPlus file version: 4
+1
+set_parasitic_parameters    -corners corner_ff \
+                             -early_spec minTLU \
+                             -early_temperature -40 \
+                             -late_spec  minTLU \
+                             -late_temperature -40 \
+                             -library ${DESIGN}.dlib
+1
+#------------ Corner SS ------------------------------------------
+current_corner corner_ss
+{corner_ss}
+set_operating_conditions -analysis_type on_chip_variation \
+                          -library saed32rvt_ss0p75v125c
+1
+set_pvt_configuration -clear_filter all \
+                       -add \
+                       -name rule2 \
+                       -process_label func_ss \
+                       -process_numbers {1} \
+                       -voltages 0.75 \
+                       -temperatures 125
+Information: Created PVT configuration rule 'rule2' (LIB-071)
+Warning: PVT configuration changes are not applied to open libs (LIB-073)
+
+Current PVT Configuration:
+ rule1:
+  Process Labels :  "func_ff"
+  Process Numbers:  1
+  Voltages       :  0.95
+  Temperatures   :  25
+ rule2:
+  Process Labels :  "func_ss"
+  Process Numbers:  1
+  Voltages       :  0.75
+  Temperatures   :  125
+
+rule2
+read_parasitic_tech -sanity_check advanced \
+                     -tlup ${TLUPLUS_MAX_FILE} \
+                     -layermap ${TLUPLUS_MAP_FILE} \
+                     -name maxTLU
+Warning: Layer mapping file warning. Tech layer 'DIFF' is not a metal/via/mimtop/mimbottom/poly layer defined in technology section. (TLUP-012)
+/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_Cmax.tluplus is TLUPlus file
+TLUPlus file version: 4
+1
+set_parasitic_parameters -corners corner_ss \
+                          -early_spec maxTLU \
+                          -early_temperature 125 \
+                          -late_spec maxTLU \
+                          -late_temperature 125 \
+
+1
+-library ${DESIGN}.dlib
+Error: unknown command '-library' (CMD-005)
+Information: script '/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/scenarios.tcl'
+                stopped at line 101 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"-library ${DESIGN}.dlib"
+    (file "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/scenarios.tcl" line 101)
+ -- End Extended Error Info
+fc_shell> exit
+Maximum memory usage for this session: 626.66 MB
+Maximum memory usage for this session including child processes: 626.66 MB
+CPU usage for this session:      7 seconds (  0.00 hours)
+Elapsed time for this session:     86 seconds (  0.02 hours)
+Thank you for using Fusion Compiler.
+
