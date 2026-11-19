@@ -18,13 +18,13 @@
 ###############################################################################
 # Tech & ICC2 Setup
 ###############################################################################
-source      "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/icc2_setup.tcl" 
 source      "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/tech_setup.tcl" 
+source      "/home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tool_data/icc2/setup/icc2_setup.tcl" 
 
 ###############################################################################
 # Design Setup
 ###############################################################################
-set DESIGN_STAGE        "cv32e40p"
+set DESIGN_STAGE        "01_init_design"
 
 printvar search_path
 printvar link_library
@@ -65,12 +65,19 @@ report_lib  $PRJT_BASE/dlib/${DESIGN}.dlib \
 ################################################################################
 # ICC2 Import prelayout netlist
 ################################################################################
-read_verilog $PRJT_BASE/outputs/preLayout_cv32e40.v -top ${DESIGN}
+#read_verilog $PRJT_BASE/outputs/preLayout_cv32e40.v -top ${DESIGN}
 # Make sure that all cells in the netlist are found in the libs reference
+
+set DESIGN_RTL_DIR "${PRJT_BASE}/rtl"
+set RTL_MANIFEST   "${PRJT_BASE}/cv32e40p_manifest.flist"
+
+read_verilog -sv -f $RTL_MANIFEST
+elaborate cv32e40p_top
+
 link_block
 current_block
 
-sizeof_collection [get_flat_cells]
+#sizeof_collection [get_flat_cells]
 # sizeof_collection [get_cells -filter pad_cell]
 
 # Generate SVF for Formality tool
@@ -81,16 +88,18 @@ set_svf    ${OUT_DIR}/$DESIGN.svf
 ################################################################################
 # Create analysis scenarios
 ################################################################################
-#source  $PRJT_BASE/tool_data/icc2/setup/scenarios.tcl> -echo -verbose
+source  $PRJT_BASE/tool_data/icc2/setup/scenarios.tcl -echo -verbose
 
-#current_scenario tc
+current_scenario func_ff
+#current_scenario func_ss
+#current_scenario func_tt
 
 #report_lib -parasitic_tech <file.dlib>
 
-#report_parasitic_parameters > ${RPT_DIR}/report_parasitic_parameters.rpt
+report_parasitic_parameters > ${RPT_DIR}/report_parasitic_parameters.rpt
 
-#get_corners
-#all_corners
+get_corners
+all_corners
 
 # Adding app option to avoid assign in netlist
 #set_app_options -name opt.port.eliminate_verilog_assign -value true

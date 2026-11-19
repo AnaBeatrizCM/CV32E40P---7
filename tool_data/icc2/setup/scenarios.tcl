@@ -6,7 +6,7 @@
 # VIRTUS CC-UFCG explicit written consent.
 # -------------------------------------------------------------------------------------
 #
-# Id: scenarios.tcl_2026-05-04_by_LuizHenriqueNascimento
+# Id: scenarios.tcl_2026-11-19_by_AnaBeatrizMarinho
 #
 # Project: 		Ci Expert - UFCG
 # Description:	Mode, Corner and Scenarios creation.
@@ -34,91 +34,90 @@ remove_corners   -all
 #     create_mode $modeName
 # }
 
-set modeNames [list  <name of the mode>]
+set modeNames [list  func]
 foreach modeName $modeNames {
     create_mode $modeName
 }
 
 ########################################
 # Create corners
-# set cornerNames [list FFm40_1P32 SS125_1P08 TT25_1P20]
+# set cornerNames [list corner_tt SS125_1P08 TT25_1P20]
 # foreach cornerName $cornerNames {
 #     create_corner $cornerName
 # }
 
-set cornerNames [list <name of the mode>]
+set cornerNames [list corner_tt corner_ff corner_ss]
 foreach cornerName $cornerNames {
     create_corner $cornerName
 }
 
 #------------ Corner FF ------------------------------------------
-# current_corner FFm40_1P32
-# set_operating_conditions -analysis_type on_chip_variation \
-#                          -library tcbn65lplt_ccs
+ current_corner corner_ff
+ set_operating_conditions -analysis_type on_chip_variation \
+                          -library saed32rvt_ff0p95v25c
 
-# set_pvt_configuration    -clear_filter all \
-#                          -add \
-#                          -name rule1 -process_label bc \
-#                          -process_numbers {1} \
-#                          -voltages 1.32 \
-#                          -temperatures -40
+ set_pvt_configuration    -clear_filter all \
+                          -add \
+                          -name rule1 -process_label func_ff \
+                          -process_numbers {1} \
+                          -voltages 0.95 \
+                          -temperatures 25
 
-# read_parasitic_tech         -sanity_check advanced \
-#                             -tlup ${TLUPLUS_MIN_FILE} \
-#                             -layermap ${TLUPLUS_MAP_FILE} \
-#                             -name minTLU
+ read_parasitic_tech         -sanity_check advanced \
+                             -tlup ${TLUPLUS_MIN_FILE} \
+                             -layermap ${TLUPLUS_MAP_FILE} \
+                             -name minTLU
 
-# set_parasitic_parameters    -corners FFm40_1P32 \
-#                             -early_spec minTLU \
-#                             -early_temperature -40 \
-#                             -late_spec  minTLU \
-#                             -late_temperature -40 \
-#                             -library ${DESIGN}_icc2.dlib
+ set_parasitic_parameters    -corners corner_ff \
+                             -early_spec minTLU \
+                             -early_temperature -40 \
+                             -late_spec  minTLU \
+                             -late_temperature -40 \
+                             -library ${DESIGN}.dlib
 
 #------------ Corner SS ------------------------------------------
-# current_corner SS125_1P08
-# set_operating_conditions -analysis_type on_chip_variation \
-#                          -library tcbn65lpwc_ccs
+ current_corner corner_ss
+ set_operating_conditions -analysis_type on_chip_variation \
+                          -library saed32rvt_ss0p75v125c
+ set_pvt_configuration -clear_filter all \
+                       -add \
+                       -name rule2 \
+                       -process_label func_ss \
+                       -process_numbers {1} \
+                       -voltages 0.75 \
+                       -temperatures 125
 
-# set_pvt_configuration -clear_filter all \
-#                       -add \
-#                       -name rule2 \
-#                       -process_label wc \
-#                       -process_numbers {1} \
-#                       -voltages 1.08 \
-#                       -temperatures 125
+ read_parasitic_tech -sanity_check advanced \
+                     -tlup ${TLUPLUS_MAX_FILE} \
+                     -layermap ${TLUPLUS_MAP_FILE} \
+                     -name maxTLU
 
-# read_parasitic_tech -sanity_check advanced \
-#                     -tlup ${TLUPLUS_MAX_FILE} \
-#                     -layermap ${TLUPLUS_MAP_FILE} \
-#                     -name maxTLU
+ set_parasitic_parameters -corners corner_ss \
+                          -early_spec maxTLU \
+                          -early_temperature 125 \
+                          -late_spec maxTLU \
+                          -late_temperature 125 \
 
-# set_parasitic_parameters -corners SS125_1P08 \
-#                          -early_spec maxTLU \
-#                          -early_temperature 125 \
-#                          -late_spec maxTLU \
-#                          -late_temperature 125 \
-#                          -library ${DESIGN}_icc2.dlib
-
+                          -library ${DESIGN}.dlib
 #------------ Corner TT ------------------------------------------
-current_corner <set name of the corner TT here>
+current_corner corner_tt
 set_operating_conditions -analysis_type on_chip_variation \
-                         -library <name of the .db>
+                         -library saed32rvt_tt0p85v25c
 
 set_pvt_configuration -clear_filter all \
                       -add \
                       -name rule3 \
-                      -process_label <name of the process> \
+                      -process_label func_tt \
                       -process_numbers {1} \
-                      -voltages <Voltage> \
-                      -temperatures <temp>
+                      -voltages 0.85 \
+                      -temperatures 25
 
 read_parasitic_tech         -sanity_check advanced \
                             -tlup ${TLUPLUS_TYP_FILE} \
                             -layermap ${TLUPLUS_MAP_FILE} \
                             -name typTLU
 
-set_parasitic_parameters    -corners <name of the corner> \
+set_parasitic_parameters    -corners corner_tt \
                             -early_spec typTLU \
                             -early_temperature 25 \
                             -late_spec  typTLU \
@@ -130,26 +129,26 @@ set_parasitic_parameters    -corners <name of the corner> \
 # Scnearios are combinations of modes and corners and are created using <create_scenario>
 # command. Scenarios determine which timing and power analyses are performed.
 
-# create_scenario -name bc -mode func_fast -corner FFm40_1P32
-# create_scenario -name wc -mode func_slow -corner SS125_1P08
-create_scenario -name <name of the process> -mode <name of the mode> -corner <name of the corner>
+create_scenario -name func_ff -mode func -corner corner_ff
+create_scenario -name func_ss -mode func -corner corner_ss
+create_scenario -name func_tt -mode func -corner corner_tt
 
 # Use the set_scenario_status command to enable or disable specific analysis types (such as setup,
 # hold, or power) for each scenario.
 
-# set_scenario_status bc -setup true \
-#                        -hold true \
-#                        -max_capacitance true \
-#                        -min_capacitance true \
-#                        -max_transition true 
+set_scenario_status func_ff -setup true \
+                       -hold true \
+                       -max_capacitance true \
+                       -min_capacitance true \
+                       -max_transition true 
 
-# set_scenario_status wc -setup true \
-#                        -hold true \
-#                        -max_capacitance true \
-#                        -min_capacitance true \
-#                        -max_transition true 
+set_scenario_status func_ss -setup true \
+                       -hold true \
+                       -max_capacitance true \
+                       -min_capacitance true \
+                       -max_transition true 
 
-set_scenario_status <name of the process> -setup true \
+set_scenario_status func_tt -setup true \
                        -hold true \
                        -max_capacitance true \
                        -min_capacitance true \
@@ -162,14 +161,14 @@ report_scenarios -all > ${RPT_DIR}/${DESIGN}_report_scenarios.rpt
 # Load Scenario specific constraints and Settings
 ########################################
 
-# current_scenario bc
-# source ${PRJT_BASE}/../outputs/cnn_wb_top.sdc
+current_scenario func_ff
+source ${PRJT_BASE}/constraints/cv32e40p_core.sdc
 
-# current_scenario wc
-# source ${PRJT_BASE}/../outputs/cnn_wb_top.sdc
+current_scenario func_ss
+source ${PRJT_BASE}/constraints/cv32e40p_core.sdc
 
-current_scenario <name of the scenario>
-source ${PRJT_BASE}/../outputs/cnn_wb_top.sdc
+current_scenario func_tt
+source ${PRJT_BASE}/constraints/cv32e40p_core.sdc
 
 ###############################################################################
 # General output settings
@@ -191,7 +190,7 @@ write_sdc    -output ${OUT_DIR}/write_sdc_${DESIGN}.sdc
 check_timing    > ${RPT_DIR}/check_timing.rpt
 
 # set scenarioNames [list bc wc tc]
-set scenarioNames [list <name of the scenario>]
+set scenarioNames [list func_ff func_ss func_tt]
 foreach scenario $scenarioNames {
     current_scenario $scenario
     report_exceptions        > ${RPT_DIR}/${DESIGN}_report_exceptions_$scenario.rpt

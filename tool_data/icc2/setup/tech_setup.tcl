@@ -22,6 +22,7 @@ set LEF_DIR             "${PRJT_BASE}/lef"
 set TECH_DIR            "${PRJT_BASE}/tech/tf"
 set NDM_DIR             "${PRJT_BASE}/ndm_lib"
 set OUT_DIR             "${PRJT_BASE}/outputs"
+set RPT_DIR 		"${PRJT_BASE}/reports"
 
 
 ###############################################################################
