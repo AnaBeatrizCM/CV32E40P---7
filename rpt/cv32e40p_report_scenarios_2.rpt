@@ -1,0 +1,15 @@
+****************************************
+Report : scenario
+Design : cv32e40p_top
+Version: X-2025.06-SP3
+Date   : Mon Nov 23 11:58:52 2026
+****************************************
+
+                                                                     Leakage  Dynamic                              Cell  Signal
+Name            Mode            Corner          Active  Setup  Hold  Power    Power    Max_tran  Max_cap  Min_cap  EM    EM
+----------------------------------------------------------------------------------------------------------------------------------
+func_ff *       func            corner_ff       true    true   true  true     true     true      true     true     false false
+func_ss *       func            corner_ss       true    true   true  true     true     true      true     true     false false
+func_tt *       func            corner_tt       true    true   true  true     true     true      true     true     false false
+
+1

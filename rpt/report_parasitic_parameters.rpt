@@ -1,0 +1,32 @@
+
+ mapping = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_fc_layer.map 
+
+
+Corner: corner_tt
+ early_spec = typTLU
+ typTLU = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_nominal.tluplus 
+ early_temperature = 25
+ late_spec = typTLU
+ typTLU = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_nominal.tluplus 
+ late_temperature = 25
+
+
+Corner: corner_ff
+ early_spec = minTLU
+ minTLU = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_Cmin.tluplus 
+ early_temperature = -40
+ late_spec = minTLU
+ minTLU = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_Cmin.tluplus 
+ late_temperature = -40
+
+
+Corner: corner_ss
+ early_spec = maxTLU
+ maxTLU = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_Cmax.tluplus 
+ early_temperature = 125
+ late_spec = maxTLU
+ maxTLU = /home/xmen-aluno/physical_design_AnaBeatriz/hands/CV32E40P---7/tech/tf/saed32nm_1p9m_Cmax.tluplus 
+ late_temperature = 125
+
+library = cv32e40p.dlib 
+1

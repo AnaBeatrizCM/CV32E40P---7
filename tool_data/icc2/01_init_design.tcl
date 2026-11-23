@@ -91,11 +91,11 @@ set_svf    ${OUT_DIR}/$DESIGN.svf
 ################################################################################
 source  $PRJT_BASE/tool_data/icc2/setup/scenarios.tcl -echo -verbose
 
-current_scenario func_ff
-#current_scenario func_ss
+current_scenario func_ss
+#current_scenario func_ff
 #current_scenario func_tt
 
-#report_lib -parasitic_tech <file.dlib>
+report_lib -parasitic_tech ${DLIB_DIR}/cv32e40p.dlib
 
 report_parasitic_parameters > ${RPT_DIR}/report_parasitic_parameters.rpt
 
@@ -103,7 +103,7 @@ get_corners
 all_corners
 
 # Adding app option to avoid assign in netlist
-#set_app_options -name opt.port.eliminate_verilog_assign -value true
+set_app_options -name opt.port.eliminate_verilog_assign -value true
 
 ###############################################################################
 # ICC2 Save Design
