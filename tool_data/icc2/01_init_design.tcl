@@ -92,8 +92,8 @@ set_svf    ${OUT_DIR}/$DESIGN.svf
 source  $PRJT_BASE/tool_data/icc2/setup/scenarios.tcl -echo -verbose
 
 current_scenario func_ss
-#current_scenario func_ff
-#current_scenario func_tt
+current_scenario func_ff
+current_scenario func_tt
 
 report_lib -parasitic_tech ${DLIB_DIR}/cv32e40p.dlib
 

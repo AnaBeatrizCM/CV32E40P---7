@@ -54,14 +54,14 @@ foreach cornerName $cornerNames {
 #------------ Corner FF ------------------------------------------
  current_corner corner_ff
  set_operating_conditions -analysis_type on_chip_variation \
-                          -library saed32rvt_ff0p95v25c
+                          -library saed32rvt_ff1p16vn40c
 
  set_pvt_configuration    -clear_filter all \
                           -add \
                           -name rule1 -process_label func_ff \
                           -process_numbers {1} \
-                          -voltages 0.95 \
-                          -temperatures 25
+                          -voltages 1.16 \
+                          -temperatures -40
 
  read_parasitic_tech         -sanity_check advanced \
                              -tlup ${TLUPLUS_MIN_FILE} \
@@ -78,13 +78,13 @@ foreach cornerName $cornerNames {
 #------------ Corner SS ------------------------------------------
  current_corner corner_ss
  set_operating_conditions -analysis_type on_chip_variation \
-                          -library saed32rvt_ss0p75v125c
+                          -library saed32rvt_ss0p7v125c
  set_pvt_configuration -clear_filter all \
                        -add \
                        -name rule2 \
                        -process_label func_ss \
                        -process_numbers {1} \
-                       -voltages 0.75 \
+                       -voltages 0.7 \
                        -temperatures 125
 
  read_parasitic_tech -sanity_check advanced \
@@ -102,14 +102,14 @@ foreach cornerName $cornerNames {
 #------------ Corner TT ------------------------------------------
 current_corner corner_tt
 set_operating_conditions -analysis_type on_chip_variation \
-                         -library saed32rvt_tt0p85v25c
+                         -library saed32rvt_tt1p05v25c
 
 set_pvt_configuration -clear_filter all \
                       -add \
                       -name rule3 \
                       -process_label func_tt \
                       -process_numbers {1} \
-                      -voltages 0.85 \
+                      -voltages 1.05 \
                       -temperatures 25
 
 read_parasitic_tech         -sanity_check advanced \

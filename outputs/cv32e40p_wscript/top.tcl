@@ -2,7 +2,7 @@
 #
 # Design name:  cv32e40p_top
 #
-# Created by fc write_script on Mon Nov 23 11:58:45 2026
+# Created by fc write_script on Fri Nov 27 13:41:19 2026
 #
 ################################################################################
 

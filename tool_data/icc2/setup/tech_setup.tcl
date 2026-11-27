@@ -31,9 +31,8 @@ set RPT_DIR 		"${PRJT_BASE}/reports"
 
 set TECH_FILE           "${TECH_DIR}/saed32nm_1p9m.tf"
 set REFERENCE_LIBRARY [list \
-    ${NDM_DIR}/saed32rvt_tt0p85v25c.ndm \
-    ${NDM_DIR}/saed32rvt_ff0p95v25c.ndm \
-    ${NDM_DIR}/saed32rvt_ss0p75v125c.ndm \
+    ${NDM_DIR}/saed32rvt_c.ndm \
+    ${NDM_DIR}/saed32rvt_physical_only.ndm \
 ]
 
 #-----------------------------------------------------------------------------------------------

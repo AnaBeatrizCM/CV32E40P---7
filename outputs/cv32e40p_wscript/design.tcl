@@ -1,6 +1,6 @@
 ################################################################################
 #
-# Created by fc write_script on Mon Nov 23 11:58:45 2026
+# Created by fc write_script on Fri Nov 27 13:41:19 2026
 #
 ################################################################################
 
@@ -38,6 +38,8 @@ set_app_options -as_user_default -name time.port_output_threshold_fall -value \
 set_app_options -as_user_default -name time.port_slew_derate_from_library \
     -value 1 -quiet
 set_app_options -name gui.batch_x_display -value default -quiet
+set_app_options -block [current_block] -name opt.port.eliminate_verilog_assign \
+    -value true -quiet
 
 ## Encrypted set_app_options
 set dirName [file dirname [file normalize [info script]]]
@@ -59,4 +61,4 @@ if {[sizeof_collection [get_cell_buses -hierarchical -quiet \
 }
 
 restore_mpn_restrictions
-# MD5_SIGNATURE: 008458015DD92B7010EC0B91A9CE3DBF 
+# MD5_SIGNATURE: 4847D44723093FACC7009F7DA7BD60EE 
